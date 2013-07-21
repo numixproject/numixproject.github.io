@@ -13,7 +13,7 @@ body {
 	right: 0;
 	margin: 0;
 	padding: 0;
-	background: #f9f9f9;
+	background: url("noise.jpg") repeat;
 	color: #333333;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
