@@ -175,6 +175,10 @@ footer {
 	margin: 0;
 }
 
+#members {
+	float: left;
+}
+
 ::selection,
 ::-moz-selection {
 	background: #d64937;
