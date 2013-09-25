@@ -138,18 +138,17 @@ section {
 }
 
 .content {
-	padding: 50px 250px;
+	padding: 100px 250px;
 }
 
 .clearfix {
     clear: both;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 #home .content {
     display: table-cell;
     vertical-align: middle;
-	padding: 100px 250px;
 }
 
 #projects {
