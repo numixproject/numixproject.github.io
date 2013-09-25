@@ -5,13 +5,16 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
+html { height: 100%; }
+
 body {
 	margin: 0;
 	padding: 0;
-	background: #333333;
-	color: #f9f9f9;
+	height: 100%;
 	font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
+	background: #ffffff url("noise.png") repeat;
+	color: #333333;
 }
 
 a {
@@ -64,18 +67,22 @@ code {
 }
 
 nav {
-    position: relative;
-    z-index: 10;
-	padding: 10px 150px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 	background: #2d2d2d;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
 	color: #f9f9f9;
 	text-align: right;
-	font-size: 120%;
 }
 
 nav .title {
-	float: left;
+    float: left;
+	padding: 10px 0 10px 250px;
+}
+
+nav #navigation {
+	padding: 10px 250px 10px 0;
 }
 
 nav ul {
@@ -107,35 +114,71 @@ nav .title {
 	color: #dcdcdc;
 }
 
-nav .title .tagline {
-	padding-left: 10px;
-	color: #d64937;
+section {
+    clear: both;
+    margin: 0;
+    padding: 0;
 }
 
-section {
-    right: 0;
-    left: 0;
-	padding: 100px 150px;
+#home {
+    height: 100%;
+	background: #2d2d2d url("bg.jpg") no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #ffffff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+}
+
+#home h1.title {
+    font-size: 300%;
+    font-weight: 300;
+	color: #ffffff;
+}
+
+.content {
+	padding: 50px 250px;
+}
+
+.clearfix {
+    clear: both;
+    padding-bottom: 50px;
+}
+
+#home .content {
+    display: table-cell;
+    vertical-align: middle;
+	padding: 100px 250px;
+}
+
+#projects {
+	background: #f9f9f9 url("noise.png") repeat;
+}
+
+#branding {
+	background: #dedede url("noise.png") repeat;
+}
+
+#about {
+	background: #2d2d2d url("noise.png") repeat;
 }
 
 footer {
-    position: fixed;
-    right: 150px;
-    bottom: 0;
-    left: 150px;
-    z-index: 10;
+    clear: both;
+    padding: 10px 250px;
 	border-top: 1px solid rgba(0,0,0,0.1);
-	color: rgba(255,255,255,0.6);
+	background: #333333;
+	color: #dcdcdc;
 	font-size: 85%;
-    line-height: 50px;
 }
 
 a.button {
-    position: fixed;
+    position: absolute;
     display: block;
     margin: 15px auto;
     padding: 15px;
-	border: 1px solid #d64937;
+	border: none;
 	border-radius: 2px;
 	background-color: #d64937;
     box-shadow: 0 0 3px rgba(0,0,0,0.6);
@@ -144,12 +187,15 @@ a.button {
 }
 
 a.button:hover,
-a.button:hover
-a.button:focus
-a.button:active {
+a.button:focus {
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
     color: #f9f9f9;
     text-decoration: none;
+}
+
+a.button:active {
+    box-shadow: 0 0 3px rgba(0,0,0,0.3),
+                inset 0 0 3px rgba(0,0,0,0.6);
 }
 
 .thumb {
@@ -158,7 +204,6 @@ a.button:active {
     margin: 5px;
     height: 200px;
     width: 200px;
-    
 }
 
 .thumb img {
@@ -183,51 +228,19 @@ a.button:active {
     color: #fff;
 }
 
-.content{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-	background: #2d2d2d url("bg.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: #f9f9f9;
+#projects:target ~ #navigation #link-projects,
+#branding:target ~ #navigation #link-branding,
+#about:target ~ #navigation #link-about {
+	color: #d64937;
 }
 
-.panel {
-	background: #2d2d2d url("bg.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: #f9f9f9;
-    top: -150%;
-    position: absolute;
-    z-index: 2;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-}
-
-.panel:target {
-    top: 0;
-    bottom: 0;
-}
-
-#members:target ~ nav #navigation #link-members,
-#palette:target ~ nav #navigation #link-palette,
-#projects:target ~ nav #navigation #link-projects {
-	border-bottom: 2px solid #d64937;
-}
-
-#colors {
+#palette {
 	display: table;
 	height: 70px;
+	width: 100%;
 }
 
-#colors div {
+#palette div {
 	display: table-cell;
 	padding: 30px;
 	width: 20%;
@@ -238,33 +251,35 @@ a.button:active {
 	transition: .1s ease-in;
 }
 
-#colors div:hover {
+#palette div:hover {
 	-webkit-filter: brightness(95%);
 }
 
-#colors div:nth-of-type(1) {
+#palette div:nth-of-type(1) {
 	background-color: #f9f9f9;
 	color: #333333;
+	border-radius: 2px 0 0 2px;
 }
 
-#colors div:nth-of-type(2) {
+#palette div:nth-of-type(2) {
 	background-color: #dedede;
 	color: #555555;
 }
 
-#colors div:nth-of-type(3) {
+#palette div:nth-of-type(3) {
 	background-color: #d64937;
 	color: #f9f9f9;
 }
 
-#colors div:nth-of-type(4) {
+#palette div:nth-of-type(4) {
 	background-color: #333333;
 	color: #f9f9f9;
 }
 
-#colors div:nth-of-type(5) {
+#palette div:nth-of-type(5) {
 	background-color: #2d2d2d;
 	color: #dcdcdc;
+	border-radius: 0 2px 2px 0;
 }
 
 #container {
@@ -283,7 +298,7 @@ a.button:active {
 }
 
 ::-webkit-scrollbar {
-	overflow:visible;
+	overflow: visible;
 	width: 10px;
 	height: 10px;
 }
