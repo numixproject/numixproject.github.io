@@ -176,7 +176,7 @@ footer {
 }
 
 #members {
-	float: left;
+	padding: auto 15px 15px auto;
 }
 
 ::selection,
