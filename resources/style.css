@@ -332,3 +332,23 @@ a.button:active {
 	border: 1px solid #c14131;
 	background: #d64937;
 }
+
+@media screen and (max-width: 1024px)  {
+nav .title { padding: 10px 0 10px 100px; }
+nav #navigation { padding: 10px 100px 10px 0; }
+.content { padding: 100px 100px; }
+footer { padding: 10px 100px; }
+}
+
+@media screen and (max-width: 960px)  {
+nav .title { padding: 10px 0 10px 50px; }
+nav #navigation { padding: 10px 50px 10px 0; }
+.content { padding: 50px 50px; }
+footer { padding: 10px 50px; }
+}
+
+@media screen and (max-width: 640px)  {
+nav .title { padding: 5px 0 5px 10px; }
+nav #navigation { padding: 5px 10px 5px 0; }
+.content { padding: 10px 10px; }
+footer { padding: 5px 10px; }
