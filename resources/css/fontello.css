@@ -26,6 +26,7 @@
  
 .icon-home:before { content: '\e804'; }
 .icon-heart:before { content: '\e803'; }
+.icon-vector:before { content: '\e800'; }
 .icon-info:before { content: '\e805'; }
 .icon-basket:before { content: '\e807'; }
 .icon-twitter:before { content: '\e80a'; }
