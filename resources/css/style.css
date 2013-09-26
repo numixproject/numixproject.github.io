@@ -8,7 +8,7 @@ body {
     height: 100%;
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
-    background: #fff url(noise.png) repeat;
+    background: #fff url(../img/noise.png) repeat;
     color: #333;
 }
 
@@ -151,7 +151,7 @@ footer a:focus,footer a:hover {
 
 #home {
     height: 100%;
-    background: #2d2d2d url(bg.jpg) no-repeat center center scroll;
+    background: #2d2d2d url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -171,11 +171,11 @@ footer a:focus,footer a:hover {
     vertical-align: middle;
 }
 
-#projects { background: #f9f9f9 url(noise.png) repeat; }
+#projects { background: #f9f9f9 url(../img/noise.png) repeat; }
 
-#branding { background: #dedede url(noise.png) repeat; }
+#branding { background: #dedede url(../img/noise.png) repeat; }
 
-#about { background: #2d2d2d url(noise.png) repeat; }
+#about { background: #2d2d2d url(../img/noise.png) repeat; }
 
 #palette {
     display: table;
