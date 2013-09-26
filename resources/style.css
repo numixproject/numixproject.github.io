@@ -127,10 +127,21 @@ section {
 footer {
     clear: both;
     padding: 10px 250px;
-    border-top: 1px solid #111111;
+    border-top: 1px solid #222;
     background: #333;
     color: #dcdcdc;
     font-size: 85%;
+}
+
+footer a {
+    color: #dedede;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+footer a:focus,footer a:hover {
+    border-bottom: 1px dotted #dcdcdc;
+    text-decoration: none;
 }
 
 #home {
