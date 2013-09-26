@@ -5,12 +5,12 @@
         <title>Numix - Make your desktop beautiful</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <style type="text/css" media="screen">
-        @import url("resources/style.css");
+            @import url("resources/style.css");
         </style>
     </head>
     <body>
         <nav>
-            <div class="title"><a href="#home">Numix</a></div>
+            <div class="title"><a href="#home">Numix <span class="red">Project</span></a></div>
             <div id="navigation">
                 <ul>
                     <li><a id="link-projects" href="#projects">Projects</a></li>
@@ -117,8 +117,8 @@
             &#169; 2013 The Numix Project. The website and all the associated resources are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
         </footer>
     </body>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 

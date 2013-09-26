@@ -70,9 +70,9 @@ h3 {
 code {
     color: #dedede;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 110%;
     font-family: monospace;
-    line-height: 20px;
+    line-height: 120%;
 }
 
 nav {
@@ -86,11 +86,14 @@ nav {
 }
 
 nav .title {
+    color: #dcdcdc;
     float: left;
-    padding: 10px 0 10px 250px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 1% 0 1% 20%;
 }
 
-nav #navigation { padding: 10px 250px 10px 0; }
+nav #navigation { padding: 1% 20% 1% 0; }
 
 nav ul {
     margin: 0;
@@ -101,7 +104,7 @@ nav ul {
 nav ul > li { display: inline; }
 
 nav a {
-    padding: 10px 15px 10px 0;
+    padding: 1% 2% 1% 0;
     color: #dcdcdc;
     text-decoration: none;
     -webkit-transition: .1s ease-in;
@@ -116,17 +119,21 @@ nav a:focus,nav a:hover {
     text-decoration: none;
 }
 
-nav .title { color: #dcdcdc; }
-
 section {
     clear: both;
     margin: 0;
     padding: 0;
 }
 
+section:before {
+    content: "";
+    display: block;
+    height: 5%;
+}
+
 footer {
     clear: both;
-    padding: 10px 250px;
+    padding: 1% 20%;
     border-top: 1px solid #222;
     background: #333;
     color: #dcdcdc;
@@ -225,17 +232,19 @@ footer a:focus,footer a:hover {
     margin: 0;
 }
 
-.content { padding: 100px 250px; }
+.red { color: #d64937; }
+
+.content { padding: 5% 20%; }
 
 .clearfix {
     clear: both;
-    padding-bottom: 100px;
+    padding-bottom: 5%;
 }
 
 .thumb {
     float: left;
     position: relative;
-    margin: 5px;
+    margin: 1%;
     height: 200px;
     width: 200px;
 }
@@ -292,22 +301,9 @@ footer a:focus,footer a:hover {
     background: #d64937;
 }
 
-@media screen and (max-width: 1024px)  {
-nav .title { padding: 10px 0 10px 100px; }
-nav #navigation { padding: 10px 100px 10px 0; }
-.content { padding: 100px 100px; }
-footer { padding: 10px 100px; }
-}
-
-@media screen and (max-width: 960px)  {
-nav .title { padding: 10px 0 10px 50px; }
-nav #navigation { padding: 10px 50px 10px 0; }
-.content { padding: 50px 50px; }
-footer { padding: 10px 50px; }
-}
-
 @media screen and (max-width: 640px)  {
 nav .title { padding: 5px 0 5px 10px; }
 nav #navigation { padding: 5px 10px 5px 0; }
 .content { padding: 10px 10px; }
 footer { padding: 5px 10px; }
+}
