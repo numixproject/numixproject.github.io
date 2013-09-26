@@ -233,6 +233,7 @@ footer a:focus,footer a:hover {
     margin: 1%;
     width: 200px;
     height: 200px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.6);
 }
 
 .thumb img { border-radius: 2px; }
