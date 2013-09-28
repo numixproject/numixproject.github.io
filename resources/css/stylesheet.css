@@ -138,14 +138,14 @@ section {
 footer {
     clear: both;
     padding: 1% 20%;
-    border-top: 1px solid #2d2d2d;
-    background: #333;
-    color: #dcdcdc;
+    border-top: 1px solid #222;
+    background: #2d2d2d;
+    color: #dedede;
     font-size: 85%;
 }
 
 footer a {
-    color: #dcdcdc;
+    color: #dedede;
     text-decoration: none;
     font-weight: 400;
 }
@@ -171,27 +171,43 @@ footer a:focus, footer a:hover {
 #projects {
     background: #f9f9f9;
     color: #333;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 #branding {
     background: #dedede;
     color: #2d2d2d;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 #about {
-    background: #2d2d2d linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent) scroll;
+    background: #2d2d2d linear-gradient(-45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent) scroll;
     -webkit-background-size: 5px 5px;
     -moz-background-size: 5px 5px;
     -o-background-size: 5px 5px;
     background-size: 5px 5px;
     color: #f9f9f9;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 #palette {
     display: table;
     width: 100%;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 3px solid #fff;
     border-radius: 2px;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 #palette div {
@@ -199,10 +215,6 @@ footer a:focus, footer a:hover {
     padding: 30px;
     width: 20%;
     text-align: center;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -o-transition: .3s ease;
-    transition: .3s ease;
 }
 
 #palette div:nth-of-type(1) {
@@ -246,7 +258,7 @@ footer a:focus, footer a:hover {
 .thumb a { border: none; }
 
 .thumb img {
-    border: 5px solid #fff;
+    border: 3px solid #fff;
     border-radius: 2px;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -278,7 +290,7 @@ footer a:focus, footer a:hover {
     display: inline;
     float: left;
     margin: 5% 5% 0 0;
-    border: 5px solid #fff;
+    border: 3px solid #fff;
     border-radius: 2px;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -314,10 +326,7 @@ footer a:focus, footer a:hover {
 
 ::-webkit-scrollbar-button { display: none; }
 
-::-webkit-scrollbar-track { 
-    border: 1px solid #dedede;
-    background: #f9f9f9;
-}
+::-webkit-scrollbar-track { background: #f9f9f9; }
 
 ::-webkit-scrollbar-thumb {
     border: 1px solid #b2b2b2;
