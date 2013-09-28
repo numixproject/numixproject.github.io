@@ -1,14 +1,14 @@
 {
     "projects": [
-        { "name":"Numix GTK3 theme" , "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Numix Light GTK3 theme" , "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Numix uTouch icons" , "url":"http://fav.me/d68rer3", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Numix uTouch icons for Desktop" , "url":"http://fav.me/d6fo94s", "code":"https://code.launchpad.net/numix-icon-theme", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Numix for Plank" , "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Glimpse of the Future (Wallpaper)" , "url":"http://fav.me/d6eqf86", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Name of the Doctor (Wallpaper)" , "url":"Name of the Doctor (Wallpaper)", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Summer Holiday (Wallpaper)" , "url":"http://fav.me/d6ixhgk", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Blooming Spring (Wallpaper)" , "url":"http://fav.me/d6g4jem", "code":"", "thumbnail":"./resources/img/thumb.jpg" },
-        { "name":"Glimpse of the Future (Print)" , "url":"http://fav.me/d6escoi", "code":"", "thumbnail":"./resources/img/thumb.jpg" }
+        { "name":"Numix GTK3 theme" , "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"./resources/img/thumb1.jpg" },
+        { "name":"Numix Light GTK3 theme" , "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"./resources/img/thumb2.jpg" },
+        { "name":"Numix uTouch icons" , "url":"http://fav.me/d68rer3", "code":"", "thumbnail":"./resources/img/thumb3.jpg" },
+        { "name":"Numix uTouch icons for Desktop" , "url":"http://fav.me/d6fo94s", "code":"https://code.launchpad.net/numix-icon-theme", "thumbnail":"./resources/img/thumb4.jpg" },
+        { "name":"Numix for Plank" , "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"./resources/img/thumb5.jpg" },
+        { "name":"Glimpse of the Future (Wallpaper)" , "url":"http://fav.me/d6eqf86", "code":"", "thumbnail":"./resources/img/thumb6.jpg" },
+        { "name":"Name of the Doctor (Wallpaper)" , "url":"Name of the Doctor (Wallpaper)", "code":"", "thumbnail":"./resources/img/thumb7.jpg" },
+        { "name":"Summer Holiday (Wallpaper)" , "url":"http://fav.me/d6ixhgk", "code":"", "thumbnail":"./resources/img/thumb8.jpg" },
+        { "name":"Blooming Spring (Wallpaper)" , "url":"http://fav.me/d6g4jem", "code":"", "thumbnail":"./resources/img/thumb9.jpg" },
+        { "name":"Glimpse of the Future (Print)" , "url":"http://fav.me/d6escoi", "code":"", "thumbnail":"./resources/img/thumb10.jpg" }
     ]
 }
