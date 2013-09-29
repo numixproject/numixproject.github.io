@@ -23,15 +23,14 @@
     text-transform: none;
     line-height: 1em;
 }
- 
-.icon-home:before { content: '\e804'; }
-.icon-heart:before { content: '\e803'; }
-.icon-vector:before { content: '\e800'; }
-.icon-info:before { content: '\e805'; }
-.icon-basket:before { content: '\e807'; }
-.icon-twitter:before { content: '\e80a'; }
-.icon-facebook:before { content: '\e809'; }
-.icon-rss:before { content: '\e806'; }
-.icon-gplus:before { content: '\e80b'; }
-.icon-github:before { content: '\e808'; }
-.icon-search:before { content: '\e802'; }
+
+.icon-home:before { content: '\26fa'; } /* '⛺' */
+.icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-feather:before { content: '\270e'; } /* '✎' */
+.icon-info:before { content: '\2139'; } /* 'ℹ' */
+.icon-shop:before { content: '\21e3'; } /* '⇣' */
+.icon-twitter:before { content: '\ff54'; } /* 'ｔ' */
+.icon-facebook:before { content: '\ff46'; } /* 'ｆ' */
+.icon-gplus:before { content: '\ff47'; } /* 'ｇ' */
+.icon-github:before { content: '\ff5b'; } /* '｛' */
+.icon-search:before { content: '\2315'; } /* '⌕' */

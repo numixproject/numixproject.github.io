@@ -157,6 +157,7 @@ footer a:focus, footer a:hover {
 
 #home {
     height: 100%;
+    background: #2d2d2d;
     background: #2d2d2d url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -187,6 +188,7 @@ footer a:focus, footer a:hover {
 }
 
 #about {
+    background: #2d2d2d;
     background: #2d2d2d linear-gradient(-45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent) scroll;
     -webkit-background-size: 5px 5px;
     -moz-background-size: 5px 5px;
@@ -249,6 +251,10 @@ footer a:focus, footer a:hover {
     padding: 5% 20%;
 }
 
+.thumbgrid {
+    overflow: hidden;
+}
+
 .thumb {
     float: left;
     margin: 0 7% 5% 0;
@@ -309,9 +315,9 @@ footer a:focus, footer a:hover {
     filter: brightness(95%);
 }
 
-.bio {
-    margin: 5% 0;
-}
+.subtitle { color: #dcdcdc; }
+
+.bio { margin: 5% 0; }
 
 ::selection, ::-moz-selection {
     background: #d64937;
