@@ -55,8 +55,6 @@ a.button:active {
     -o-box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
 }
 
-img { border: 0; }
-
 h1 {
     font-weight: 300;
     font-size: xx-large;
@@ -94,13 +92,15 @@ nav {
 
 nav ul {
     margin: 0;
-    padding: 0;
+    padding: 0 20%;
     list-style-type: none;
 }
 
 nav ul > li { display: inline; }
 
 nav a {
+    float: right;
+    padding: 1%;
     color: #dcdcdc;
     text-decoration: none;
     -webkit-transition: .3s ease;
@@ -109,35 +109,27 @@ nav a {
     transition: .3s ease;
 }
 
-nav a:focus, nav a:hover {
+nav a.title {
+    float: left;
+    color: #dcdcdc;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+nav a:focus, nav a:hover, nav a.title:focus, nav a.title:hover {
     border: none;
+    background-color: #333;
     color: #fff;
     text-decoration: none;
 }
 
-nav .navigation { padding: 1% 20% 1% 0; }
-nav .navigation a { padding: 1% 0 1% 2%; }
-
-nav .title {
-    float: left;
-    padding: 1% 0 1% 20%;
-    color: #dcdcdc;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
-nav .title a { font-weight: 400; }
-
-nav .title .red { padding-left: 10px; }
-
 section {
-    clear: both;
     margin: 0;
-    padding: 0;
+    padding: 5% 20%;
 }
 
 footer {
-    clear: both;
     padding: 1% 20%;
     border-top: 1px solid #222;
     background: #2d2d2d;
@@ -207,13 +199,9 @@ footer a:focus, footer a:hover {
 
 .red { color: #d64937; }
 
-.content {
-    padding: 5% 20%;
-}
+.content { padding: 1%; }
 
-.thumbgrid {
-    overflow: hidden;
-}
+.thumbgrid { overflow: hidden; }
 
 .thumb {
     float: left;
@@ -244,7 +232,7 @@ footer a:focus, footer a:hover {
 }
 
 .desc {
-    padding: 5px 0;
+    padding: 1% 0;
     text-align: center;
 }
 
@@ -358,15 +346,16 @@ footer a:focus, footer a:hover {
 
 @media screen and (max-width: 640px) {
     body { font-size: 85%; }
-    nav .navigation { padding: 15px 15px 15px 0; }
-    nav .navigation a { padding: 15px 0 15px 15px; }
-    nav .title { padding: 15px 0 15px 15px; }
-    footer { padding: 15px 15px; }
-    .content { padding: 30px 15px; }
-    .thumb { margin: 0 15px 10px 0; }
+    nav ul { padding: 0 5px; }
+    nav a { padding: 10px; }
+    section { padding: 5px; }
+    footer { padding: 5px; }
+    .content { padding: 10px; }
+    .thumb { margin: 0 10px 10px 0; }
+    .palette { display: block; }
     .palette div {
         display: block;
-        padding: 15px;
+        padding: 10px;
     }
     .profile img { float: none; }
 }
