@@ -52,7 +52,7 @@ footer {
 
 #home { text-shadow: none; }
 
-.thumbgrid::after {
+.thumbgrid:after {
     content: "";
     display: block;
     clear: both;

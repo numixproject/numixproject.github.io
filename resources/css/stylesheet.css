@@ -194,7 +194,7 @@ footer a:focus, footer a:hover {
 
 .content { padding: 5% 1%; }
 
-.thumbgrid::after {
+.thumbgrid:after {
     content: "";
     display: block;
     clear: both;
@@ -276,7 +276,7 @@ footer a:focus, footer a:hover {
 
 .profile { padding: 3% 0; }
 
-.profile::after {
+.profile:after {
     content: "";
     display: block;
     clear: both;
@@ -311,35 +311,35 @@ footer a:focus, footer a:hover {
 
 .subtitle { color: #dcdcdc; }
 
-::selection, ::-moz-selection {
+:selection, :-moz-selection {
     background: #d64937;
     color: #f9f9f9;
 }
 
-::-webkit-scrollbar {
+:-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
 
-::-webkit-scrollbar-button { display: none; }
+:-webkit-scrollbar-button { display: none; }
 
-::-webkit-scrollbar-track { background: #f9f9f9; }
+:-webkit-scrollbar-track { background: #f9f9f9; }
 
-::-webkit-scrollbar-thumb {
+:-webkit-scrollbar-thumb {
     border: 1px solid #b2b2b2;
     background: #c8c8c8;
 }
 
-::-webkit-scrollbar-thumb:vertical { min-height: 100px; }
+:-webkit-scrollbar-thumb:vertical { min-height: 100px; }
 
-::-webkit-scrollbar-thumb:horizontal { min-width: 100px; }
+:-webkit-scrollbar-thumb:horizontal { min-width: 100px; }
 
-::-webkit-scrollbar-thumb:hover {
+:-webkit-scrollbar-thumb:hover {
     border: 1px solid #9c9c9c;
     background: #b2b2b2;
 }
 
-::-webkit-scrollbar-thumb:active {
+:-webkit-scrollbar-thumb:active {
     border: 1px solid #c14131;
     background: #d64937;
 }
