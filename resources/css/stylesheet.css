@@ -24,34 +24,35 @@ a {
 a:focus, a:hover { border-bottom: 1px dashed #d64937; }
 
 a.button {
-    position: absolute;
-    display: block;
+    position: relative;
+    display: inline-block;
     padding: 15px;
+    width: auto;
     border: none;
     border-radius: 2px;
     background: #d64937;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     color: #f9f9f9;
     font-weight: 600;
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 a.button:hover, a.button:focus {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     color: #f9f9f9;
     text-decoration: none;
+    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 a.button:active {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
     box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3), inset 0 0 3px rgba(0,0,0,0.6);
 }
 
 img { border: 0; }
@@ -85,10 +86,10 @@ nav {
     background: #2d2d2d;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     color: #dcdcdc;
     text-align: right;
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 nav ul {
@@ -100,7 +101,6 @@ nav ul {
 nav ul > li { display: inline; }
 
 nav a {
-    padding: 1% 2% 1% 0;
     color: #dcdcdc;
     text-decoration: none;
     -webkit-transition: .3s ease;
@@ -115,7 +115,8 @@ nav a:focus, nav a:hover {
     text-decoration: none;
 }
 
-nav #navigation { padding: 1% 20% 1% 0; }
+nav .navigation { padding: 1% 20% 1% 0; }
+nav .navigation a { padding: 1% 0 1% 2%; }
 
 nav .title {
     float: left;
@@ -156,7 +157,8 @@ footer a:focus, footer a:hover {
 }
 
 #home {
-    height: 100%;
+    display: table;
+    min-height: 100%;
     background: #2d2d2d url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -166,24 +168,27 @@ footer a:focus, footer a:hover {
     text-shadow: 0 1px 1px rgba(0,0,0,0.6);
 }
 
-#home .content { padding: 10% 20%; }
+#home .content {
+   display: table-cell;
+   vertical-align: middle;
+}
 
 #projects {
     background: #f9f9f9;
-    color: #333;
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    color: #333;
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 #branding {
     background: #dedede;
-    color: #2d2d2d;
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    color: #2d2d2d;
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 #about {
@@ -193,17 +198,16 @@ footer a:focus, footer a:hover {
     -moz-background-size: 5px 5px;
     -o-background-size: 5px 5px;
     background-size: 5px 5px;
-    color: #f9f9f9;
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    color: #f9f9f9;
+    -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .red { color: #d64937; }
 
 .content {
-    overflow: hidden;
     padding: 5% 20%;
 }
 
@@ -224,19 +228,19 @@ footer a:focus, footer a:hover {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 .thumb img:hover {
     -webkit-filter: brightness(95%);
+    filter: brightness(95%);
     -moz-filter: brightness(95%);
     -o-filter: brightness(95%);
-    filter: brightness(95%);
 }
 
 .desc {
@@ -251,14 +255,14 @@ footer a:focus, footer a:hover {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 .palette div {
     display: table-cell;
-    padding: 30px;
-    width: 20%;
+    padding: 3%;
+    width: auto;
     text-align: center;
 }
 
@@ -299,19 +303,19 @@ footer a:focus, footer a:hover {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 .profile img:hover {
     -webkit-filter: brightness(95%);
+    filter: brightness(95%);
     -moz-filter: brightness(95%);
     -o-filter: brightness(95%);
-    filter: brightness(95%);
 }
 
 .subtitle { color: #dcdcdc; }
@@ -325,8 +329,8 @@ footer a:focus, footer a:hover {
 
 ::-webkit-scrollbar {
     overflow: visible;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-button { display: none; }
@@ -353,14 +357,16 @@ footer a:focus, footer a:hover {
 }
 
 @media screen and (max-width: 640px) {
-body { font-size: 85%; }
-nav a { padding: 10px 10px 10px 0; }
-nav #navigation { padding: 10px 10px 10px 0; }
-nav .title { padding: 10px 0 10px 10px; }
-footer { padding: 10px 10px; }
-#home .content { padding: 10px 10px; }
-.palette div { padding: 10px; }
-.content { padding: 10px 10px; }
-.clearfix { padding-bottom: 10px; }
-.thumb { margin: 10px 20px 10px 0; }
+    body { font-size: 85%; }
+    nav .navigation { padding: 15px 15px 15px 0; }
+    nav .navigation a { padding: 15px 0 15px 15px; }
+    nav .title { padding: 15px 0 15px 15px; }
+    footer { padding: 15px 15px; }
+    .content { padding: 30px 15px; }
+    .thumb { margin: 0 15px 10px 0; }
+    .palette div {
+        display: block;
+        padding: 15px;
+    }
+    .profile img { float: none; }
 }
