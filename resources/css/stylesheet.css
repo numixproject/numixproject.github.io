@@ -87,7 +87,6 @@ nav {
     -o-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     color: #dcdcdc;
-    text-align: right;
 }
 
 nav ul {
@@ -126,7 +125,7 @@ nav a:focus, nav a:hover, nav a.title:focus, nav a.title:hover {
 
 section {
     margin: 0;
-    padding: 5% 20%;
+    padding: 0 20%;
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
@@ -134,7 +133,7 @@ section {
 }
 
 footer {
-    padding: 1% 20%;
+    padding: 0 20%;
     border-top: 1px solid #222;
     background: #2d2d2d;
     color: #dedede;
@@ -154,7 +153,7 @@ footer a:focus, footer a:hover {
 
 #home {
     display: table;
-    min-height: 100%;
+    height: 100%;
     background: #2d2d2d url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -165,8 +164,8 @@ footer a:focus, footer a:hover {
 }
 
 #home .content {
-   display: table-cell;
-   vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #projects {
@@ -191,7 +190,7 @@ footer a:focus, footer a:hover {
 
 .red { color: #d64937; }
 
-.content { padding: 1%; }
+.content { padding: 5% 1%; }
 
 .thumbgrid { overflow: hidden; }
 
@@ -340,11 +339,10 @@ footer a:focus, footer a:hover {
     body { font-size: 85%; }
     nav ul { padding: 0 5px; }
     nav a { padding: 10px; }
-    section { padding: 5px; }
-    footer { padding: 5px; }
+    section { padding: 0 5px; }
+    footer { padding: 10px 5px; }
     .content { padding: 10px; }
     .thumb { margin: 0 10px 10px 0; }
-    .palette { display: block; }
     .palette div {
         display: block;
         padding: 10px;
