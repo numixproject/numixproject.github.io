@@ -196,7 +196,7 @@ footer a:focus, footer a:hover {
 
 .thumb {
     float: left;
-    margin: 0 7% 5% 0;
+    padding: 1% 7% 5% 1%;
     max-width: 200px;
 }
 
