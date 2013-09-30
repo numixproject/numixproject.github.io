@@ -346,6 +346,7 @@ footer a:focus, footer a:hover {
 
 @media screen and (max-width: 640px) {
     body { font-size: 85%; }
+    a.button { padding: 10px; }
     nav ul { padding: 0 5px; }
     nav a { padding: 10px; }
     section { padding: 0 5px; }
