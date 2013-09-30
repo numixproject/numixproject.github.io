@@ -21,8 +21,8 @@
         <section id="home">
             <div class="content">
                 <h1>Not just yet another theme suite</h1>
-                <p>Numix is all about making a difference in theming. We aim to prove that "difference" and "usability" are two words combined that can make sense. What you will get with Numix is a modern looking, flat and stylish desktop, spiced up with a pinch of warmth just enough to make you feel like lying in your favourite comfy armchair with a beverage of your choice in hand.</p>
-                <p>So, if you wanna have a taste of a cuppa something different or just long for theming your desktop in a jazzy way Numix might just be the thing you need :)</p>
+                <p>Numix is all about making a difference in theming. We aim to prove that "difference" and "usability" are two words combined, that can make sense. What you will get with Numix, is a modern looking, flat and stylish desktop, spiced up with a pinch of warmth just enough to make you feel like lying in your favourite comfy armchair, with a beverage of your choice in hand.</p>
+                <p>So, if you wanna have a taste of a cuppa something different or just long for theming your desktop in a jazzy way, Numix might just be the thing you need. :)</p>
                 <a class="button" href="#projects">Get Numix!</a>
             </div>
         </section>
@@ -32,7 +32,8 @@
                 <div class="thumbgrid">
                 </div>
                 <h1>We have a PPA!</h1>
-                <p>We <span class="icon-heart red"></span> you, and for your convenience, we have setup a PPA to easily install various Numix artworks in Ubuntu. To add the Numix PPA in your Ubuntu, just open a Terminal and run the following,</p>
+                <p>We <span class="icon-heart red"></span> you, and for your convenience, we have made a PPA to easily install various Numix artworks in Ubuntu.
+To add it to your Ubuntu, fire up a Terminal and run the following:</p>
                 <code>sudo add-apt-repository <a href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a></code>
             </div>
         </section>
@@ -58,7 +59,7 @@
                 <h1>About Numix</h1>
                 <p>Numix is a collection of modern and beautiful artworks. It follows a flat design approach, while still retaining some depth.</p>
                 <h1>Our team</h1>
-                <p>We are a small team of four people from different countries across the world, collaborating to create the whole Numix experience.</p>
+                <p>We are a devoted team of four, from different countries across the world, collaborating to create the whole Numix experience.</p>
                 <script src="//apis.google.com/js/plusone.js"></script>
                 <div class="profile">
                     <a class="img" href="https://plus.google.com/u/0/114564489020097923600"><img src="./resources/img/profile1.jpg" alt="thumbnail" /></a>
@@ -89,7 +90,7 @@
                             <h2>Joern Konopka</h2>
                             <p class="subtitle">Responsible for most of our branding, maintains the base icons.</p>
                         </header>
-                        <p>Joern is a digital artist with knowledge in Javascript, PHP etc. He is into everything surrounding Graphic Design, Illustrations, Comics, Web Design and everything Open Source. He has a website at <a href="http://upinthesky.net/">upinthesky.net</a>.</p>
+                        <p>Joern is a digital artist with knowledge in Javascript, PHP, etc. He is into everything surrounding Graphic Design, Illustrations, Comics, Web Design and everything Open Source. He has a website, <a href="http://upinthesky.net/">upinthesky.net</a>.</p>
                         <div class="g-follow" data-href="//plus.google.com/111311916570668380146" data-height="24" data-rel="author"></div>
                     </article>
                 </div>
@@ -100,7 +101,7 @@
                             <h2>Paolo Rotolo</h2>
                             <p class="subtitle">Maintains the PPA and USC packages.</p>
                         </header>
-                        <p>Paolo has a passion for IT and technology in general. He is a supporter of Open Source Software and an <a href="http://wiki.ubuntu.com/PaoloRotolo">Ubuntu member</a>. He has contributed to many projects including Ubuntu. You can visit his blog at <a href="http://paolorotolo.blogspot.com/">paolorotolo.blogspot.com</a>.</p>
+                        <p>Paolo is passionate about IT, and technology in general. He is a supporter of Open Source Software and an <a href="http://wiki.ubuntu.com/PaoloRotolo">Ubuntu member</a>. He has contributed to many projects including Ubuntu. You can visit his blog at <a href="http://paolorotolo.blogspot.com/">paolorotolo.blogspot.com</a>.</p>
                         <div class="g-follow" data-href="//plus.google.com/106560691065858212266" data-height="24" data-rel="author"></div>
                     </article>
                 </div>
@@ -149,6 +150,9 @@
                     var thumbdiv = '<div class="thumb"><a class="img" href="' + f.url + '"><img src="' + f.thumbnail + '" alt="' + f.projectname + '" /></a><div class="desc">' + f.projectname + '</div></div>'
                     $(thumbdiv).appendTo(".thumbgrid");
                 });
+            }).error(function() {
+                var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
+                $(error).appendTo(".thumbgrid");
             });
         });
         </script>

@@ -196,9 +196,28 @@ footer a:focus, footer a:hover {
 
 .thumb {
     display: inline-block;
-    padding: 0 7% 7% 0;
+    padding: 0 7% 5% 0;
     width: 200px;
     vertical-align: top;
+}
+
+.thumb a.img {
+    display: inline-block;
+    background: black;
+    padding: 0;
+}
+
+.thumb a.img img {
+    display: block;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.thumb a.img:hover img {
+    opacity: 0.9;
+            
 }
 
 .thumb img {
@@ -206,12 +225,12 @@ footer a:focus, footer a:hover {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
-    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .thumb img:hover {
@@ -306,35 +325,35 @@ footer a:focus, footer a:hover {
 
 .subtitle { color: #dcdcdc; }
 
-:selection, :-moz-selection {
+::selection, ::-moz-selection {
     background: #d64937;
     color: #f9f9f9;
 }
 
-:-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
 
-:-webkit-scrollbar-button { display: none; }
+::-webkit-scrollbar-button { display: none; }
 
-:-webkit-scrollbar-track { background: #f9f9f9; }
+::-webkit-scrollbar-track { background: #f9f9f9; }
 
-:-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     border: 1px solid #b2b2b2;
     background: #c8c8c8;
 }
 
-:-webkit-scrollbar-thumb:vertical { min-height: 100px; }
+::-webkit-scrollbar-thumb:vertical { min-height: 100px; }
 
-:-webkit-scrollbar-thumb:horizontal { min-width: 100px; }
+::-webkit-scrollbar-thumb:horizontal { min-width: 100px; }
 
-:-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     border: 1px solid #9c9c9c;
     background: #b2b2b2;
 }
 
-:-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active {
     border: 1px solid #c14131;
     background: #d64937;
 }
