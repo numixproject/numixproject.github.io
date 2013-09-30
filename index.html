@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-        <title>Numix - Make your desktop beautiful</title>
-        <link rel="shortcut icon" href="./resources/img/favicon.ico" type="image/x-icon" />
+        <title>Numix - Not just yet another theme suite</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
         <link rel="stylesheet" type="text/css" media="all" href="./resources/css/fontello.css">
         <link rel="stylesheet" type="text/css" media="screen" href="./resources/css/stylesheet.css">
@@ -20,9 +20,9 @@
         </nav>
         <section id="home">
             <div class="content">
-                <h1>Make your desktop beautiful</h1>
-                <p>Numix is all about giving your desktop a fresh look and feeling, while keeping it simple and usable. You get a modern looking and stylish desktop, with a pinch of warmity, just enough to make you feel like lying in your favourite comfy armchair with a beverage of your choice in hand.</p>
-                <p>So what are you waiting for? Give your desktop a complete visual overhaul now!</p>
+                <h1>Not just yet another theme suite</h1>
+                <p>Numix is all about making a difference in theming. We aim to prove that "difference" and "usability" are two words combined that can make sense. What you will get with Numix is a modern looking, flat and stylish desktop, spiced up with a pinch of warmth just enough to make you feel like lying in your favourite comfy armchair with a beverage of your choice in hand.</p>
+                <p>So, if you wanna have a taste of a cuppa something different or just long for theming your desktop in a jazzy way Numix might just be the thing you need :)</p>
                 <a class="button" href="#projects">Get Numix!</a>
             </div>
         </section>
@@ -30,62 +30,6 @@
             <div class="content">
                 <h1>Projects</h1>
                 <div class="thumbgrid">
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d5ygul6"><img src="./resources/img/thumb1.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Numix GTK3 theme</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6hds18"><img src="./resources/img/thumb2.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Numix Light GTK3 theme</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d68rer3"><img src="./resources/img/thumb3.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Numix uTouch icons</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6fo94s"><img src="./resources/img/thumb4.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Numix uTouch icons for Desktop</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6ijvlg"><img src="./resources/img/thumb5.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Numix for Plank</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6hvzh7"><img src="./resources/img/thumb6.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Name of the Doctor (Wallpaper)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6eqf86"><img src="./resources/img/thumb7.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Glimpse of the Future (Wallpaper)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6i2vae"><img src="./resources/img/thumb8.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Glimpse of the Future (Slideshow)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6escoi"><img src="./resources/img/thumb9.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Glimpse of the Future (Print)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6ixhgk"><img src="./resources/img/thumb10.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Summer Holiday (Wallpaper)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6ixibs"><img src="./resources/img/thumb11.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Summer Holiday (Print)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6g4jem"><img src="./resources/img/thumb12.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Blooming Spring (Wallpaper)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6g4juj"><img src="./resources/img/thumb13.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Blooming Spring (Print)</div>
-                    </div>
-                    <div class="thumb">
-                        <a class="img" href="http://fav.me/d6l8ihd"><img src="./resources/img/thumb14.jpg" alt="thumbnail" /></a>
-                        <div class="desc">Fragmented Space (Wallpaper)</div>
-                    </div>
                 </div>
                 <h1>We have a PPA!</h1>
                 <p>We <span class="icon-heart red"></span> you, and for your convenience, we have setup a PPA to easily install various Numix artworks in Ubuntu. To add the Numix PPA in your Ubuntu, just open a Terminal and run the following,</p>
@@ -196,6 +140,16 @@
                    window.open(this.href, '_blank');
                });
            }
+        });
+        </script>
+        <script>
+        $(function() {
+            $.getJSON('./resources/data/projects.json', function(data) {
+                $.each(data.projects, function(i, f) {
+                    var thumbdiv = '<div class="thumb"><a class="img" href="' + f.url + '"><img src="' + f.thumbnail + '" alt="' + f.projectname + '" /></a><div class="desc">' + f.projectname + '</div></div>'
+                    $(thumbdiv).appendTo(".thumbgrid");
+                });
+            });
         });
         </script>
     </body>

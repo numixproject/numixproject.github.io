@@ -194,16 +194,11 @@ footer a:focus, footer a:hover {
 
 .content { padding: 5% 1%; }
 
-.thumbgrid:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .thumb {
-    float: left;
-    padding: 0 7% 5% 0;
-    max-width: 200px;
+    display: inline-block;
+    padding: 0 7% 7% 0;
+    width: 200px;
+    vertical-align: top;
 }
 
 .thumb img {
@@ -211,12 +206,12 @@ footer a:focus, footer a:hover {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
+    -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .thumb img:hover {
@@ -277,9 +272,9 @@ footer a:focus, footer a:hover {
 .profile { padding: 3% 0; }
 
 .profile:after {
-    content: "";
     display: block;
     clear: both;
+    content: "";
 }
 
 .profile img {
