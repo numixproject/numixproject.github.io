@@ -26,6 +26,7 @@ a:focus, a:hover { border-bottom: 1px dashed #d64937; }
 a.button {
     position: relative;
     display: inline-block;
+    margin: 10px 0;
     padding: 15px;
     width: auto;
     border: none;
@@ -201,25 +202,6 @@ footer a:focus, footer a:hover {
     vertical-align: top;
 }
 
-.thumb a.img {
-    display: inline-block;
-    background: black;
-    padding: 0;
-}
-
-.thumb a.img img {
-    display: block;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -o-transition: .3s ease;
-    transition: .3s ease;
-}
-
-.thumb a.img:hover img {
-    opacity: 0.9;
-            
-}
-
 .thumb img {
     border: 3px solid #fff;
     border-radius: 2px;
@@ -227,6 +209,7 @@ footer a:focus, footer a:hover {
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    -webkit-filter: brightness(1.0);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
@@ -238,6 +221,7 @@ footer a:focus, footer a:hover {
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.6);
     -o-box-shadow: 0 0 5px rgba(0,0,0,0.6);
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    -webkit-filter: brightness(0.9);
 }
 
 .desc {
@@ -310,7 +294,7 @@ footer a:focus, footer a:hover {
     -moz-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
-    -webkit-filter: grayscale(30%);
+    -webkit-filter: grayscale(0.3);
 }
 
 .profile img:hover {
@@ -318,7 +302,7 @@ footer a:focus, footer a:hover {
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.9);
     -o-box-shadow: 0 0 5px rgba(0,0,0,0.9);
     box-shadow: 0 0 5px rgba(0,0,0,0.9);
-    -webkit-filter: grayscale(0%);
+    -webkit-filter: grayscale(0.0);
 }
 
 .bio { padding: 0; }
