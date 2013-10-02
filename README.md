@@ -1,4 +1,4 @@
-numix
-=====
+Numix Project
+=============
 
-Web page for Numix
+The official webpage for the [Numix Project](http://numixproject.org/).
