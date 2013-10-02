@@ -121,7 +121,7 @@ To add it to your Ubuntu, fire up a Terminal and run the following:</p>
             $(function() {
                 $.getJSON('./resources/data/projects.json', function(data) {
                     $.each(data.projects, function(i, f) {
-                        var thumbdiv = '<div class="thumb"><a class="img" href="' + f.url + '"><img src="' + f.thumbnail + '" alt="' + f.projectname + '" /></a><div class="desc">' + f.projectname + '</div></div>'
+                        var thumbdiv = '<div class="thumb"><a class="img" href="' + f.url + '"><img src="' + f.thumbnail + '" alt="' + f.projectname + '" /></a><div class="desc"><div class="name">' + f.projectname + '</div><div class="tag">' + f.type + '</div></div>'
                         $(thumbdiv).appendTo(".thumbgrid");
                     });
                 }).error(function() {
