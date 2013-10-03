@@ -160,5 +160,26 @@ To add it to your Ubuntu, fire up a Terminal and run the following:</p>
                }
             });
         </script>
+        <script>
+            function isElementInViewport(elem) {
+                var $elem = $(elem);
+                var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+                var viewportTop = $(scrollElem).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                var elemTop = Math.round( $elem.offset().top );
+                var elemBottom = elemTop + $elem.height();
+                return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+            }
+            function checkAnimation() {
+                var $elem = $('.thumb img');
+                if ($elem.hasClass('animate')) return;
+                if (isElementInViewport($elem)) {
+                    $elem.addClass('animate');
+                }
+            }
+            $(window).scroll(function(){
+                checkAnimation();
+            });
+        </script>
     </body>
 </html>
