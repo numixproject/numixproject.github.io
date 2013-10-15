@@ -6,6 +6,16 @@
 
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
 
+@font-face {
+    font-family: 'Numix Project';
+    src: url('../font/numixproject/numixproject.eot?2013#iefix') format('embedded-opentype'),
+         url('../font/numixproject/numixproject.woff?2013') format('woff'),
+         url('../font/numixproject/numixproject.ttf?2013') format('truetype'),
+         url('../font/numixproject/numixproject.svg?2013#numixproject') format('svg');
+    font-style: normal;
+    font-weight: 300;
+}
+
 html { height: 100%; }
 
 body {
