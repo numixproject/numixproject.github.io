@@ -32,8 +32,8 @@
             "plusurl": "//plus.google.com/116597364982833470829",
             "avatar": "./resources/img/avatars/profile5.jpg",
             "fullname": "Sam Hewitt",
-            "role": "Works on the Numix Desktop Experience.",
-            "bio": "Sam is SAM :)"
+            "role": "Works on the Numix Desktop Experience; Generalist.",
+            "bio": "Sam is a generalist designer, most recognizably as an icon designer. He is an <a href='http://wiki.ubuntu.com/snwh/'>Ubuntu member</a> and one of the team behind Unity Tweak Tool. One can find his design contributions among many projects in the greater Linux community, such as GNOME and Ubuntu. He maintains several of his own projects; most prominently the open source Moka <a href='http://www.snwh.org/moka-icon-theme/'>Icon</a> & <a href='https://github.com/snwh/moka-gtk-theme'>GTK</a> themes. He also has a <a href='http://www.snwh.org/'>website</a>."
         }
     ]
 }
