@@ -111,16 +111,17 @@ nav {
 }
 
 nav ul {
-    margin: 0;
-    padding: 0 20%;
+    margin: 0 20%;
+    padding: 0;
+    line-height: 120%;
     list-style-type: none;
 }
 
 nav ul > li { display: inline; }
 
 nav a {
-    float: right;
     padding: 1%;
+    float: right;
     color: #dcdcdc;
     text-decoration: none;
     -webkit-transition: .3s ease;
@@ -130,17 +131,16 @@ nav a {
 }
 
 nav a.title {
-    float: left;
-    color: #dcdcdc;
-    text-transform: uppercase;
+    font-family: "Numix Logotype";
+    text-transform: lowercase;
     letter-spacing: 5px;
     font-weight: 400;
+    float: left;
 }
 
 nav a:focus, nav a:hover, nav a.title:focus, nav a.title:hover {
     border: none;
-    background-color: #333;
-    color: #fff;
+    color: #d64937;
     text-decoration: none;
 }
 
