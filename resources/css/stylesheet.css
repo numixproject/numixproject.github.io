@@ -195,7 +195,11 @@ footer a:focus, footer a:hover {
 }
 
 #branding {
-    background: #dedede;
+    background-color: #dedede;
+    background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 10px 10px, 10px 10px;
+    background-position: -1px -1px, -1px -1px;
     color: #555;
 }
 
