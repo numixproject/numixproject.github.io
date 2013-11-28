@@ -2,9 +2,8 @@
     "projects": [
         { "projectname":"Numix GTK3 theme", "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"./resources/img/thumbs/thumb1.jpg", "type":"GTK theme" },
         { "projectname":"Numix Light GTK3 theme", "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"./resources/img/thumbs/thumb2.jpg", "type":"GTK theme" },
-        { "projectname":"Numix icons", "url":"http://github.com/numixproject/numix-icon-theme", "code":"http://github.com/numixproject/numix-icon-theme", "thumbnail":"./resources/img/thumbs/thumb16.jpg", "type":"Icon theme" },
-        { "projectname":"Numix uTouch icons", "url":"http://fav.me/d68rer3", "code":"", "thumbnail":"./resources/img/thumbs/thumb3.jpg", "type":"Icon theme" },
-        { "projectname":"Numix uTouch icons for Desktop", "url":"http://fav.me/d6fo94s", "code":"https://code.launchpad.net/numix-icon-theme", "thumbnail":"./resources/img/thumbs/thumb4.jpg", "type":"Icon theme" },
+        { "projectname":"Numix Shine icons", "url":"http://github.com/numixproject/numix-icon-theme-shine", "code":"http://github.com/numixproject/numix-icon-theme-shine", "thumbnail":"./resources/img/thumbs/thumb16.jpg", "type":"Icon theme" },
+        { "projectname":"Numix uTouch icons", "url":"http://fav.me/d6fo94s", "code":"http://github.com/numixproject/numix-icon-theme-utouch", "thumbnail":"./resources/img/thumbs/thumb4.jpg", "type":"Icon theme" },
         { "projectname":"Numix for Plank", "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"./resources/img/thumbs/thumb5.jpg", "type":"Plank theme" },
         { "projectname":"Conky Google Now", "url":"http://fav.me/d628cih", "code":"", "thumbnail":"./resources/img/thumbs/thumb15.jpg", "type":"Conky config" },
         { "projectname":"Name of the Doctor", "url":"http://fav.me/d6hvzh7", "code":"", "thumbnail":"./resources/img/thumbs/thumb6.jpg", "type":"Wallpaper" },
