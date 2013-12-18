@@ -2,6 +2,7 @@
     "projects": [
         { "projectname":"Numix GTK3 theme", "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"./resources/img/thumbs/thumb1.jpg", "type":"GTK theme" },
         { "projectname":"Numix Light GTK3 theme", "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"./resources/img/thumbs/thumb2.jpg", "type":"GTK theme" },
+        { "projectname":"Numix Circle icons", "url":"http://fav.me/d6uxcka", "code":"http://github.com/numixproject/numix-icon-theme-circle", "thumbnail":"./resources/img/thumbs/thumb18.jpg", "type":"Icon theme" },
         { "projectname":"Numix Shine icons", "url":"http://github.com/numixproject/numix-icon-theme-shine", "code":"http://github.com/numixproject/numix-icon-theme-shine", "thumbnail":"./resources/img/thumbs/thumb16.jpg", "type":"Icon theme" },
         { "projectname":"Numix uTouch icons", "url":"http://fav.me/d6fo94s", "code":"http://github.com/numixproject/numix-icon-theme-utouch", "thumbnail":"./resources/img/thumbs/thumb4.jpg", "type":"Icon theme" },
         { "projectname":"Numix for Plank", "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"./resources/img/thumbs/thumb5.jpg", "type":"Plank theme" },
