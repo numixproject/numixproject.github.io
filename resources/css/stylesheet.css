@@ -253,7 +253,7 @@ footer a:focus, footer a:hover {
     -webkit-border-radius: 0 2px 2px 0;
     -moz-border-radius: 0 2px 2px 0;
     border-radius: 0 2px 2px 0;
-	background-color: #2d2d2d;
+	background-color: #f9f9f9;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -277,7 +277,7 @@ footer a:focus, footer a:hover {
 
 #social a:focus, #social a:hover { 
     border-style: none;
-    color: #f9f9f9;
+    color: #d64937;
 }
 
 .currency {
