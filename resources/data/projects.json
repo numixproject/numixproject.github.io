@@ -1,21 +1,30 @@
 {
-    "projects": [
-        { "projectname":"Numix GTK3 theme", "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"./resources/img/thumbs/thumb1.jpg", "type":"GTK theme" },
-        { "projectname":"Numix Light GTK3 theme", "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"./resources/img/thumbs/thumb2.jpg", "type":"GTK theme" },
-        { "projectname":"Numix Circle icons", "url":"http://fav.me/d6uxcka", "code":"http://github.com/numixproject/numix-icon-theme-circle", "thumbnail":"./resources/img/thumbs/thumb18.jpg", "type":"Icon theme" },
-        { "projectname":"Numix Shine icons", "url":"http://github.com/numixproject/numix-icon-theme-shine", "code":"http://github.com/numixproject/numix-icon-theme-shine", "thumbnail":"./resources/img/thumbs/thumb16.jpg", "type":"Icon theme" },
-        { "projectname":"Numix uTouch icons", "url":"http://fav.me/d6fo94s", "code":"http://github.com/numixproject/numix-icon-theme-utouch", "thumbnail":"./resources/img/thumbs/thumb4.jpg", "type":"Icon theme" },
-        { "projectname":"Numix for Plank", "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"./resources/img/thumbs/thumb5.jpg", "type":"Plank theme" },
-        { "projectname":"Conky Google Now", "url":"http://fav.me/d628cih", "code":"", "thumbnail":"./resources/img/thumbs/thumb15.jpg", "type":"Conky config" },
-        { "projectname":"Name of the Doctor", "url":"http://fav.me/d6hvzh7", "code":"", "thumbnail":"./resources/img/thumbs/thumb6.jpg", "type":"Wallpaper" },
-        { "projectname":"Halloween", "url":"http://fav.me/d6skv0g", "code":"", "thumbnail":"./resources/img/thumbs/thumb17.jpg", "type":"Wallpaper" },
-        { "projectname":"Glimpse of the Future", "url":"http://fav.me/d6eqf86", "code":"", "thumbnail":"./resources/img/thumbs/thumb7.jpg", "type":"Wallpaper" },
-        { "projectname":"Glimpse of the Future", "url":"http://fav.me/d6i2vae", "code":"", "thumbnail":"./resources/img/thumbs/thumb8.jpg", "type":"Slideshow" },
-        { "projectname":"Glimpse of the Future", "url":"http://fav.me/d6escoi", "code":"", "thumbnail":"./resources/img/thumbs/thumb9.jpg", "type":"Print" },
-        { "projectname":"Summer Holiday", "url":"http://fav.me/d6ixhgk", "code":"", "thumbnail":"./resources/img/thumbs/thumb10.jpg", "type":"Wallpaper" },
-        { "projectname":"Summer Holiday", "url":"http://fav.me/d6ixibs", "code":"", "thumbnail":"./resources/img/thumbs/thumb11.jpg", "type":"Print" },
-        { "projectname":"Blooming Spring", "url":"http://fav.me/d6g4jem", "code":"", "thumbnail":"./resources/img/thumbs/thumb12.jpg", "type":"Wallpaper" },
-        { "projectname":"Blooming Spring", "url":"http://fav.me/d6g4juj", "code":"", "thumbnail":"./resources/img/thumbs/thumb13.jpg", "type":"Print" },
-        { "projectname":"Fragmented Space", "url":"http://fav.me/d6l8ihd", "code":"", "thumbnail":"./resources/img/thumbs/thumb14.jpg", "type":"Wallpaper" }
-    ]
+	"GTK themes": {
+	   "Numix + Numix Dark":{"url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"thumb1.jpg" },
+	   "Numix Light":{"url":"http://fav.me/d6hds18", "code":"", "thumbnail":"thumb2.jpg" }
+	},
+
+	"Icon themes": {
+	   "Numix Circle": { "url":"http://fav.me/d6uxcka", "code":"http://github.com/numixproject/numix-icon-theme-circle", "thumbnail":"thumb18.jpg" },
+	   "Numix Shine": {"url":"http://github.com/numixproject/numix-icon-theme-shine", "code":"http://github.com/numixproject/numix-icon-theme-shine", "thumbnail":"thumb16.jpg"},
+       "Numix uTouch": {"url":"http://fav.me/d6fo94s", "code":"http://github.com/numixproject/numix-icon-theme-utouch", "thumbnail":"thumb4.jpg" }
+	},
+
+	"Wallpapers": {
+        "Name of the Doctor": { "url":"http://fav.me/d6hvzh7", "code":"", "thumbnail":"thumb6.jpg" },
+        "Glimpse of the Future": { "url":"http://fav.me/d6eqf86", "code":"", "thumbnail":"thumb7.jpg" },
+        "Glimpse of the Future (Slideshow)": { "url":"http://fav.me/d6i2vae", "code":"", "thumbnail":"thumb8.jpg" },
+        "Glimpse of the Future (Print)": { "url":"http://fav.me/d6escoi", "code":"", "thumbnail":"thumb9.jpg" },
+        "Halloween": { "url":"http://fav.me/d6skv0g", "code":"", "thumbnail":"thumb17.jpg" },
+        "Summer Holiday": { "url":"http://fav.me/d6ixhgk", "code":"", "thumbnail":"thumb10.jpg" },
+        "Summer Holiday (Print)": { "url":"http://fav.me/d6ixibs", "code":"", "thumbnail":"thumb11.jpg" },
+        "Blooming Spring": { "url":"http://fav.me/d6g4jem", "code":"", "thumbnail":"thumb12.jpg" },
+        "Blooming Spring (Print)": { "url":"http://fav.me/d6g4juj", "code":"", "thumbnail":"thumb13.jpg" },
+        "Fragmented Space": { "url":"http://fav.me/d6l8ihd", "code":"", "thumbnail":"thumb14.jpg" }
+    },
+
+    "Additional": {
+        "Numix for Plank": { "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"thumb5.jpg" },
+        "Conky Google Now": { "url":"http://fav.me/d628cih", "code":"", "thumbnail":"thumb15.jpg" }
+    }
 }

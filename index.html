@@ -48,7 +48,6 @@
         </section>
         <section id="projects">
             <div class="content">
-                <h1>Projects</h1>
                 <div class="thumbgrid">
                 </div>
                 <h1>Live on the edge</h1>
@@ -64,7 +63,7 @@
                     <input type="hidden" name="cmd" value="_xclick">
                     <input type="hidden" name="business" value="motorslav@gmail.com">
                     <input type="hidden" name="item_name" value="Donation to Numix">
-                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="hidden" name="currency_code" value="USD">
                     <input type="hidden" name="return" value="http://numixproject.org">
                     <span class="currency">$</span><input name="amount" type="entry" value="5.00" onkeyup="this.value=this.value.replace(/[^\d^\.]/,'')">
                     <input type="submit" value="Donate">
@@ -114,8 +113,12 @@
         <script>
             $(function() {
                 $.getJSON('./resources/data/projects.json', function(data) {
-                    $.each(data.projects, function(i, f) {
-                        var thumbdiv = '<div class="thumb"><a class="img" href="' + f.url + '"><img src="' + f.thumbnail + '" alt="' + f.projectname + '" /></a><div class="desc"><div class="name"><a href="' + f.url + '">' + f.projectname + '</a></div><div class="tag">' + f.type + '</div></div>'
+                    $.each(data, function(j, k) {
+                        var category = j;
+                        var thumbdiv = '<h1>' + category + '</h1>';
+                        $.each(k, function(i, f) {
+                            thumbdiv += '<div class="thumb"><a class="img" href="' + f.url + '"><img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" /></a><div class="desc"><div class="name"><a href="' + f.url + '">' + i + '</a></div></div></div>';
+                        });
                         $(thumbdiv).appendTo(".thumbgrid");
                     });
                 }).error(function() {
