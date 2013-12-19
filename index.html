@@ -117,7 +117,7 @@
                         var category = j;
                         var thumbdiv = '<h1>' + category + '</h1>';
                         $.each(k, function(i, f) {
-                            thumbdiv += '<div class="thumb"><a class="img" href="' + f.url + '"><img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" /></a><div class="desc"><div class="name"><a href="' + f.url + '">' + i + '</a></div></div></div>';
+                            thumbdiv += '<div class="thumb"><a class="img" href="' + f.url + '"><img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" /></a><div class="desc"><div class="name"><a href="' + f.url + '">' + i + '</a></div><div class="more">' + f.price + '</div></div></div>';
                         });
                         $(thumbdiv).appendTo(".thumbgrid");
                     });
