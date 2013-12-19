@@ -76,6 +76,9 @@ input[type=submit] {
     font-weight: 600;
     font-size: 100%;
     cursor: pointer;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    transition: .3s ease;
 }
 
 input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
@@ -96,6 +99,9 @@ input[type=entry] {
     color: #333;
     font-weight: 600;
     font-size: 100%;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    transition: .3s ease;
 }
 
 input[type=entry]:hover, input[type=entry]:focus, input[type=entry]:active {
@@ -199,14 +205,14 @@ footer a:focus, footer a:hover {
     display: table;
     height: 100%;
     background-color: #32aad8;
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/bg.png);
     background-image: url(../img/bg.svg), none;
-    background-repeat: no-repeat;
-    background-position: center center;
     background-attachment: scroll;
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
     text-shadow: 0 1px 1px rgba(0,0,0,0.6);
 }
