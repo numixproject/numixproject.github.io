@@ -111,7 +111,7 @@ $(document).ready(function() {
       $(this).css({top: tOp});
   });
   var loop = function(cloud) {
-    var time = Math.floor(Math.random() * (25000 - 15000) + 10000 );
+    var time = Math.floor(Math.random() * (50000 - 15000) + 10000 );
     var rIght = -(Math.floor(Math.random()* (1000 - 250 ) + 250));
     $('.objects span:nth-child('+cloud+')').css({right: rIght});
     var wDth = $(document).width() - rIght;
