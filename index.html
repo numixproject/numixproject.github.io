@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
         <meta name="title" content="Numix - Not just yet another theme suite" />
         <meta name="description" content="Numix is a collection of modern and beautiful artworks." />
         <title>Numix - Not just yet another theme suite</title>
@@ -107,88 +107,9 @@
                 <li><a href="https://www.facebook.com/numixproject"><span class="icon-facebook"></li>
                 <li><a href="https://github.com/numixproject"><span class="icon-github"></span></a></li>
             </ul>
-		</div>
+		    </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="./resources/js/jquery.min.js"><\/script>')</script>
-        <script>
-            $(function() {
-                $.getJSON('./resources/data/projects.json', function(data) {
-                    $.each(data, function(j, k) {
-                        var category = j;
-                        var thumbdiv = '<h1>' + category + '</h1>';
-                        $.each(k, function(i, f) {
-                            thumbdiv += '<div class="thumb"><a class="img" href="' + f.url + '"><img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" /></a><div class="desc"><div class="name"><a href="' + f.url + '">' + i + '</a></div><div class="more">' + f.price + '</div></div></div>';
-                        });
-                        $(thumbdiv).appendTo(".thumbgrid");
-                    });
-                }).error(function() {
-                    var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
-                    $(error).appendTo(".thumbgrid");
-                });
-            });
-        </script>
-        <script>
-            $(function() {
-                $.getJSON('./resources/data/team.json', function(data) {
-                    $.each(data.team, function(j, g) {
-                        var teamdiv = '<div class="profile"><a class="img" href="' + g.plusurl + '"><img src="' + g.avatar + '" alt="' + g.fullname + '" /></a><article class="bio"><header><h2>' + g.fullname + '</h2><p class="subtitle">' + g.role + '</p></header><p>' + g.bio + '</p></article></div>'
-                        $(teamdiv).appendTo(".team");
-                    });
-                }).error(function() {
-                    var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
-                    $(error).appendTo(".team");
-                });
-            });
-        </script>
-        <script>
-            $(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-                        || location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 500);
-                            return false;
-                        }
-                    }
-                });
-            });
-        </script>
-        <script>
-            $('a').each(function() {
-               var a = new RegExp('/' + window.location.host + '/');
-               if(!a.test(this.href)) {
-                   $(this).click(function(event) {
-                       event.preventDefault();
-                       event.stopPropagation();
-                       window.open(this.href, '_blank');
-                   });
-               }
-            });
-        </script>
-        <script>
-            function isElementInViewport(elem) {
-                var $elem = $(elem);
-                var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-                var viewportTop = $(scrollElem).scrollTop();
-                var viewportBottom = viewportTop + $(window).height();
-                var elemTop = Math.round( $elem.offset().top );
-                var elemBottom = elemTop + $elem.height();
-                return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-            }
-            function checkAnimation() {
-                var $elem = $('.thumb img');
-                if ($elem.hasClass('animate')) return;
-                if (isElementInViewport($elem)) {
-                    $elem.addClass('animate');
-                }
-            }
-            $(window).scroll(function(){
-                checkAnimation();
-            });
-        </script>
+        <script src="./resources/js/numix-doc.js"></script>
     </body>
 </html>
