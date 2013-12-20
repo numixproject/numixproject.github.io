@@ -1,11 +1,11 @@
 /**
- * @description : Strictly only used for Numix Whitelabel
+ * @description: Javascript for numixproject.org
  * @author: Satyajit Sahoo
  */
 'use strict';
 $(document).ready(function() {
   /**
-   * thumbnails for numix features
+   * numix project items
    */
   $.getJSON('./resources/data/projects.json', function(data) {
     var thumbdiv = '';
@@ -32,7 +32,7 @@ $(document).ready(function() {
   });
 
   /**
-   * thumbnails for contributors description
+   * team members
    */
   $.getJSON('./resources/data/team.json', function(data) {
     var teamdiv = '';
@@ -55,7 +55,7 @@ $(document).ready(function() {
   });
   
   /**
-   * manipulating anchor tags to give lazy scrolling feature
+   * lazy scroll animations
    */
   $('a[href*=#]:not([href=#])').bind("click", function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -78,7 +78,6 @@ $(document).ready(function() {
       });
     }
   });
-  
   var isElementInViewport = function($elem) {
     var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
     var viewportTop = $(scrollElem).scrollTop();
@@ -87,7 +86,6 @@ $(document).ready(function() {
     var elemBottom = elemTop + $elem.height();
     return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
   };
-
   var checkAnimation = function() {
     var elem = $('.thumb img');
     elem.each(function(){
@@ -101,11 +99,13 @@ $(document).ready(function() {
       }
     });
   };
-
   $(window).scroll(function(){
     checkAnimation();
   });
-
+  
+  /**
+   * clouds in the sky
+   */
   $('.objects span').each(function(){
       var tOp = Math.floor(Math.random() * (200 - 50));
       $(this).css({top: tOp});
@@ -120,7 +120,6 @@ $(document).ready(function() {
             loop(cloud);
     });
   };
-  
   var cloud = 1;
   $('.objects span').each(function(){
       loop(cloud);
