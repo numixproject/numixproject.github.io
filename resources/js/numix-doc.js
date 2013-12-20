@@ -101,7 +101,29 @@ $(document).ready(function() {
       }
     });
   };
+
   $(window).scroll(function(){
     checkAnimation();
+  });
+
+  $('.objects span').each(function(){
+      var tOp = Math.floor(Math.random() * (200 - 50));
+      $(this).css({top: tOp});
+  });
+  var loop = function(cloud) {
+    var time = Math.floor(Math.random() * (25000 - 15000) + 10000 );
+    var rIght = -(Math.floor(Math.random()* (1000 - 250 ) + 250));
+    $('.objects span:nth-child('+cloud+')').css({right: rIght});
+    var wDth = $(document).width() - rIght;
+    $('.objects span:nth-child('+ cloud +')').animate ({ right: '+='+wDth },
+        time, 'linear', function() {
+            loop(cloud);
+    });
+  };
+  
+  var cloud = 1;
+  $('.objects span').each(function(){
+      loop(cloud);
+      cloud++;
   });
 });
