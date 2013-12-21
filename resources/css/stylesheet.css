@@ -132,7 +132,7 @@ code {
 
 nav {
     position: fixed;
-    z-index: 2;
+    z-index: 9;
     width: 100%;
     background: #2d2d2d;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -250,7 +250,7 @@ footer a:focus, footer a:hover {
     position: fixed;
     top: 30%;
     left: 0;
-    z-index: 999;
+    z-index: 9;
     margin: 0;
     padding: 1%;
     -webkit-border-radius: 0 2px 2px 0;
@@ -302,6 +302,7 @@ footer a:focus, footer a:hover {
 }
 
 .thumb .img {
+    position:relative;
     display: block;
     width: 200px;
     height: 200px;
@@ -312,29 +313,39 @@ footer a:focus, footer a:hover {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    -webkit-filter: grayscale(0.5);
-    filter: grayscale(0.5);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     transition: .3s ease;
-    -moz-filter: grayscale(0.5);
 }
 
 .thumb:hover .img {
-    border: 3px solid #fff;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    -webkit-filter: none;
-    filter: none;
-    -moz-filter: none;
 }
 
-.thumb:hover .name a {
-    border-bottom: 1px solid #333333;
+.thumb .overlay {
+    background-image: url(../img/hover.png);
+    background-image: url(../img/hover.svg), none;
+    border: none;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-filter: opacity(0);
+    filter: opacity(0);
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.thumb:hover .overlay {
+    opacity: 1;
+    -webkit-filter: opacity(1);
+    filter: opacity(1);
 }
 
 .desc {

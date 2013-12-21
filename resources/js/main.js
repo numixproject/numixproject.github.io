@@ -13,9 +13,10 @@ $(document).ready(function() {
       thumbdiv += '<h1 class="thumb-title">'+ j +'</h1>';
       $.each(g, function(i, f) {
         thumbdiv += '<div class="thumb">'+
-                      '<a class="img" href="' + f.url + '">'+
+                      '<div class="img">'+
                         '<img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" />'+
-                      '</a>'+
+                        '<a class="overlay" href="' + f.url + '"></a>'+
+                      '</div>'+
                       '<div class="desc">'+
                         '<div class="name">'+
                           '<a href="' + f.url + '">' + i + '</a>'+
