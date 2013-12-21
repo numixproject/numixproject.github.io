@@ -14,7 +14,6 @@ body {
     color: #333;
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 a {
@@ -139,8 +138,8 @@ nav {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    font-size: 120%;
     color: #dcdcdc;
+    font-size: 120%;
 }
 
 nav ul {
@@ -204,7 +203,9 @@ footer a:focus, footer a:hover {
 }
 
 #home {
+    position: relative;
     display: table;
+    overflow: hidden;
     height: 100%;
     background-color: #32aad8;
     background-image: url(../img/bg.png);
@@ -246,7 +247,7 @@ footer a:focus, footer a:hover {
 }
 
 #social {
-    position:fixed;
+    position: fixed;
     top: 30%;
     left: 0;
     z-index: 999;
@@ -300,7 +301,6 @@ footer a:focus, footer a:hover {
     vertical-align: top;
 }
 
-
 .thumb .img {
     display: block;
     width: 200px;
@@ -313,11 +313,11 @@ footer a:focus, footer a:hover {
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     -webkit-filter: grayscale(0.5);
-    -moz-filter: grayscale(0.5);
     filter: grayscale(0.5);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     transition: .3s ease;
+    -moz-filter: grayscale(0.5);
 }
 
 .thumb:hover .img {
@@ -329,8 +329,8 @@ footer a:focus, footer a:hover {
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     -webkit-filter: none;
-    -moz-filter: none;
     filter: none;
+    -moz-filter: none;
 }
 
 .thumb:hover .name a {
@@ -427,9 +427,9 @@ footer a:focus, footer a:hover {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    -webkit-filter: grayscale(0.0);
-    filter: grayscale(0.0);
-    -moz-filter: grayscale(0.0);
+    -webkit-filter: none;
+    filter: none;
+    -moz-filter: none;
 }
 
 .bio { padding: 0; }
@@ -446,9 +446,9 @@ footer a:focus, footer a:hover {
 }
 
 .objects img {
+    display: block;
     width: 200px;
     height: auto;
-    display: block;
 }
 
 ::selection, ::-moz-selection {
