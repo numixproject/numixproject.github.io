@@ -7,6 +7,7 @@
 html { height: 100%; }
 
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -203,9 +204,7 @@ footer a:focus, footer a:hover {
 }
 
 #home {
-    position: relative;
     display: table;
-    overflow: hidden;
     height: 100%;
     background-color: #32aad8;
     background-image: url(../img/bg.png);
@@ -325,18 +324,18 @@ footer a:focus, footer a:hover {
 }
 
 .thumb .overlay {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: none;
     background-image: url(../img/hover.png);
     background-image: url(../img/hover.svg), none;
-    border: none;
-    left: 0;
-    bottom: 0;
     opacity: 0;
     -webkit-filter: opacity(0);
     filter: opacity(0);
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     transition: .3s ease;
