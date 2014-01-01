@@ -18,7 +18,6 @@ body {
 }
 
 a {
-    outline: 0;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     color: #333;
     text-decoration: none;
@@ -27,7 +26,10 @@ a {
     transition: .3s ease;
 }
 
-a:focus, a:hover { border-bottom: 1px solid #333; }
+a:focus, a:hover {
+    outline: none;
+    border-bottom: 1px solid #333;
+}
 
 a.button {
     position: relative;
@@ -67,7 +69,6 @@ a.img, a.img:focus, a.img:hover { border: none; }
 
 input[type=submit] {
     padding: 2%;
-    outline: none;
     border: 1px solid #ccc;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -83,12 +84,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+    outline: none;
     border: 1px solid #aaa;
 }
 
 input[type=entry] {
     padding: 2%;
-    outline: none;
     border: 1px solid #ccc;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -106,6 +107,7 @@ input[type=entry] {
 }
 
 input[type=entry]:hover, input[type=entry]:focus, input[type=entry]:active {
+    outline: none;
     border: 1px solid #aaa;
 }
 
@@ -163,17 +165,9 @@ nav a {
     transition: .3s ease;
 }
 
-nav a:focus, nav a:hover { 
+nav a:focus, nav a:hover {
     border-style: none;
     color: #f9f9f9;
-}
-
-a.title {
-    float: left;
-    text-transform: lowercase;
-    letter-spacing: 5px;
-    font-weight: 400;
-    font-family: "Numix Logotype";
 }
 
 section {
@@ -245,7 +239,15 @@ footer a:focus, footer a:hover {
     color: #4c3c1e;
 }
 
-#social {
+.title {
+    float: left;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-family: "Numix Logotype";
+}
+
+.social {
     position: fixed;
     top: 30%;
     left: 0;
@@ -262,14 +264,14 @@ footer a:focus, footer a:hover {
     font-size: 120%;
 }
 
-#social ul {
+.social ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     line-height: 200%;
 }
 
-#social a {
+.social a {
     border-style: none;
     color: #888;
     -webkit-transition: .3s ease;
@@ -277,7 +279,7 @@ footer a:focus, footer a:hover {
     transition: .3s ease;
 }
 
-#social a:focus, #social a:hover { 
+.social a:focus, .social a:hover {
     border-style: none;
     color: #d64937;
 }
@@ -415,7 +417,6 @@ footer a:focus, footer a:hover {
 }
 
 .profile img {
-    display: inline;
     float: left;
     margin: 3% 3% 0 0;
     border: 3px solid rgba(255,255,255,0.5);
@@ -501,7 +502,7 @@ footer a:focus, footer a:hover {
     nav a { padding: 10px; }
     section { padding: 0 5px; }
     footer { padding: 10px 5px; }
-    #social { display: none; }
+    .social { display: none; }
     .content { padding: 10px; }
     .thumb { margin: 0 10px 10px 0; }
     .palette div { display: block; }

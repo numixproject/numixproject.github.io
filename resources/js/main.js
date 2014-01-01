@@ -54,13 +54,12 @@ $(document).ready(function() {
     var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
     $(error).appendTo(".team");
   });
-  
+
   /**
    * lazy scroll animations
    */
   $('a[href*=#]:not([href=#])').bind("click", function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
@@ -103,7 +102,7 @@ $(document).ready(function() {
   $(window).scroll(function(){
     checkAnimation();
   });
-  
+
   /**
    * clouds in the sky
    */
