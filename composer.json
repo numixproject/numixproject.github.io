@@ -4,7 +4,9 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+		"rozklad/laravel-phpexcel": "dev-master",
+		"way/generators": "1.0.*@dev"
 	
 	},
 	"autoload": {
