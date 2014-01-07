@@ -1,7 +1,7 @@
 
-A Basic Laravel Boilerplate which contains 
+A Basic Laravel Boilerplate H1
 
-
+Contains H3
 JQuery
 JQueryUI
 Bootstrap 3
