@@ -1,8 +1,8 @@
 
 #A Basic Laravel Boilerplate
 
-*Contains H3
-*JQuery
+### Contains 
+* JQuery
 *JQueryUI
 *Bootstrap 3
 *Font-awesome 4
