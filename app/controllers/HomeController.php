@@ -31,7 +31,7 @@ class HomeController extends BaseController {
 										   break;
 			case 'icon-request'			:  $this->icon_request();
 										   break;
-			case 'request-icon-form'	:  $this->request_icon_form();
+			case 'request-icon-form'	:  return $this->request_icon_form();
 										   break;
 		}
 
@@ -80,8 +80,7 @@ class HomeController extends BaseController {
 		));
 		 
 		$output = curl_exec($ch);
-		echo $output;
-		curl_error($ch);
+		return Redirect::to('/')->with("success","Message posted successfully");
 	}
 	public $token="26685a935a7202ff41d0f8a262f0f89a6a698ed6";
 	function icon_request()

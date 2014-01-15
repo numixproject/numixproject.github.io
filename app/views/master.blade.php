@@ -60,4 +60,18 @@
         </nav>
 	@yield("content")
 </body>
+<footer>
+   <!-- notification -->
+        <script type="text/javascript">
+        $(function(){
+        
+        @if((Session::get("error")))
+            alertify.error("{{Session::get('error')}}");
+        @elseif(Session::get("success"))
+            alertify.success("{{Session::get('success')}}");
+        @endif
+
+        })
+        </script>
+</footer>
 </html>
