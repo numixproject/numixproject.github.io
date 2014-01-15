@@ -12,3 +12,4 @@
 */
 
 Route::get("/","HomeController@index");
+Route::post("saveForm","HomeController@save_form");

@@ -41,7 +41,7 @@ background-color: blue;
 	margin-top: 5px!important;
 }
 .pointer{
-	cursor:pointer;
+	cursor:pointer!important;
 }
 .strong{
 	font-weight:bold;
@@ -199,7 +199,7 @@ background-color: blue;
 }
 
 .ui-text-white{
-	color:#fff;
+	color:#fff!important;
 }
 .ui-text-black{
 	color:#000;
@@ -280,8 +280,37 @@ textarea{
 	border-radius: 5px;
 	opacity:1;
 }
-
+.transition{
+	transition: all .5s ease-in-out;
+	 -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+}
 /*light box ends*/
 .nav,table th,h2{
 	text-transform: capitalize!important;
+}
+.custom-form input{
+	background-color: #fff;
+	width:100%;
+	padding:5px;
+	height:10px;
+}
+.custom-input,.custom-textarea{
+	border-radius: 0px;
+	background-color: #fff;
+	padding:5px;
+}
+custom-input{
+	height:40px;
+}
+.custom-textarea{
+	height:120px!important;
+}
+/*numix color*/
+.numix-grey{
+	background-color: #dedede;
+}
+.numix-red{
+	background-color: #d64937!important;
 }

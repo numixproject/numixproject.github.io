@@ -13,7 +13,7 @@ body {
     height: 100%;
     background: #fff;
     color: #333;
-    font-size: 100%;
+    font-size: 120%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -507,3 +507,6 @@ footer a:focus, footer a:hover {
     .palette div { display: block; }
     .profile img { float: none; }
 }
+input[type="radio"]:checked + .checkedLabel{
+    background-color: #d64937!important;
+};

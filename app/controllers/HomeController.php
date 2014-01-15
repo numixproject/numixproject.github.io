@@ -17,7 +17,128 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+		
 		return View::make('home.index');
+	}
+	public function save_form()
+	{
+		$action=Input::get("action");
+		switch($action)
+		{
+			case 'contact-form'			:  $this->contact_form();
+										   break;
+			case 'problem-form'			:  $this->problem_form();
+										   break;
+			case 'icon-request'			:  $this->icon_request();
+										   break;
+			case 'request-icon-form'	:  $this->request_icon_form();
+										   break;
+		}
+
+	}
+	function request_icon_form()
+	{
+		$file=Input::file('icon-image');
+		$sender=Input::get('email');
+		$projName=Input::get('projName');
+		$iconName=Input::get('iconName');
+		$info=Input::get('info');
+		$suggestion=Input::get('suggestion');
+		$base=($_SERVER['HTTP_HOST']);
+		$msg='';
+		$title="Icon Request from $sender";
+		$msg="Icon name : $iconName \n ";
+		$msg.=($info)?"Info : $info \n ":'';
+		$msg.=($suggestion)?"suggestion : $suggestion \n ":'';
+		if($file)
+		{
+			($upload=$file->move('docs/'));
+			$path=$base.'/public/'.($upload);
+
+			$msg.="![logo]($path)";
+
+		}
+		$arr=array(
+			'title'	=> $title,
+			'body'	=> $msg,
+			'labels'=> array("request-icon")
+			);
+		$data=json_encode($arr);
+		$api="https://api.github.com/repos/ahhmarr/laravel-boilerplate/issues?access_token=$this->token";
+		// $curll="$api -d '$data'";
+		// $a=system('curl '.$curll);
+		$ch = curl_init();
+		curl_setopt_array(
+		    $ch, array( 
+		    CURLOPT_URL => $api,
+		    CURLOPT_RETURNTRANSFER => true,
+		    CURLOPT_CUSTOMREQUEST=>"POST",
+		    CURLOPT_POSTFIELDS=>$data,
+		    CURLOPT_HTTPHEADER=>array('Content-Type: application/json'),
+		    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+
+		));
+		 
+		$output = curl_exec($ch);
+		echo $output;
+		curl_error($ch);
+	}
+	public $token="26685a935a7202ff41d0f8a262f0f89a6a698ed6";
+	function icon_request()
+	{
+		
+		$file=Input::file('icon-image');
+		if($file)
+		{
+			($upload=$file->move('docs/'));
+			$path='http://localhost/numix-proj/public/'.($upload);
+		}
+		$title='icon request from '.Input::get("senderEmail");
+		$message=Input::get("message");
+		if(isset($path))
+		{
+			$message.="![icon]($path)";
+		}
+		$body="![logo]($path)";
+		system('curl https://api.github.com/repos/ahhmarr/laravel-boilerplate/issues?access_token=26685a935a7202ff41d0f8a262f0f89a6a698ed6 -d \'{ "title":"'.$title.'","body":"'.$message.'","labels":["request-icon-form"]}\'');
+		/*Mail::queue('emails.request',$data,function($message){
+			$message->to('ahmar.siddiqui@gmail.com','john doe')->subject('awesome');
+		});*/
+	}
+	public function contact_form()
+	{
+		
+		$email=Input::get("email");
+		$message=Input::get("message");
+		$from=$email;
+		$to='team@numixproject.org';
+		$subject="query";
+		$msg=<<<HTML
+		<table>
+			<tr>
+				<td>email</td>
+				<td>$email</td>
+			</tr>
+			<tr>
+				<td>message</td>
+				<td>$message</td>
+			</tr>
+		</table>
+HTML;
+	$this->mail($from,$to,$subject,$msg);
+	}
+	protected function mail($from,$to,$subj,$msg,$image=array())
+	{
+        $headers = "From: $from \r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+		$ip=Request::getClientIp();
+		$dateTime=new DateTime();
+		$dateTime=$dateTime->format("m-d-Y h:i:s A");
+		$msg.="<em>message received at $dateTime from $ip</em>";
+		$r=mail($to,$subj,$msg,$headers);
+		echo $msg;
+
 	}
 
 }

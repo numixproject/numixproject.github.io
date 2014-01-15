@@ -55,6 +55,7 @@
                 <li><a href="#about"><span class="icon-info"></span></a></li>
                 <li><a href="#design"><span class="icon-feather"></span></a></li>
                 <li><a href="#projects"><span class="icon-shop"></span></a></li>
+                <li><a href="#form"><span class="fa fa-comment"></span></a></li>
             </ul>
         </nav>
 	@yield("content")
