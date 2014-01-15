@@ -25,7 +25,7 @@ class HomeController extends BaseController {
 		$action=Input::get("action");
 		switch($action)
 		{
-			case 'contact-form'			:  $this->contact_form();
+			case 'contact-form'			:  return $this->contact_form();
 										   break;
 			case 'problem-form'			:  $this->problem_form();
 										   break;
@@ -106,37 +106,26 @@ class HomeController extends BaseController {
 	}
 	public function contact_form()
 	{
-		
 		$email=Input::get("email");
 		$message=Input::get("message");
 		$from=$email;
-		$to='team@numixproject.org';
-		$subject="query";
-		$msg=<<<HTML
-		<table>
-			<tr>
-				<td>email</td>
-				<td>$email</td>
-			</tr>
-			<tr>
-				<td>message</td>
-				<td>$message</td>
-			</tr>
-		</table>
-HTML;
-	$this->mail($from,$to,$subject,$msg);
+		$to='ahmar.siddiqui@gmail.com';
+		$subject="query mail";
+		$data=array(
+			'from'	=> $from,
+			'email' => $email,
+			'msg'  => $message
+			);
+	Mail::queue('emails.contact',$data,function($message)use($subject,$to){
+			$message->to($to,'numix')->subject($subject);
+		});
+	 return Redirect::to('/')->with('success','thank you');
 	}
 	protected function mail($from,$to,$subj,$msg,$image=array())
 	{
-        $headers = "From: $from \r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-		$ip=Request::getClientIp();
-		$dateTime=new DateTime();
-		$dateTime=$dateTime->format("m-d-Y h:i:s A");
-		$msg.="<em>message received at $dateTime from $ip</em>";
-		$r=mail($to,$subj,$msg,$headers);
-		echo $msg;
+        
+		
+		
 
 	}
 

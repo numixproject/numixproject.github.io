@@ -81,7 +81,7 @@
                 </ul>
                 <div id="form-content" class="transition top-buffer-large">
                 <!-- contact form starts -->
-                	{{Form::open(array('url'=>'','class'=>'form-horizontal','id'=>"contact-form"))}}
+                	{{Form::open(array('url'=>'saveForm','class'=>'form-horizontal','id'=>"contact-form"))}}
                 		<input type="hidden" name="action" value="contact-form">
                 		<div class="form-group">
                 			<label for="email" class="form-label col-xs-2">email</label>
