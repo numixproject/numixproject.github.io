@@ -52,8 +52,9 @@ class HomeController extends BaseController {
 		$msg.=($suggestion)?"suggestion : $suggestion \n ":'';
 		if($file)
 		{
-			($upload=$file->move('docs/'));
-			$path=$base.'/public/'.($upload);
+			$newName=rand(101010,99999).'.'.$file->getClientOriginalExtension();
+			($upload=$file->move('docs/',$newName));
+			$path='http://'.$base.'/public/'.($upload);
 
 			$msg.="![logo]($path)";
 
@@ -64,7 +65,7 @@ class HomeController extends BaseController {
 			'labels'=> array("request-icon")
 			);
 		$data=json_encode($arr);
-		$api="https://api.github.com/repos/ahhmarr/laravel-boilerplate/issues?access_token=$this->token";
+		$api="https://api.github.com/repos/numixproject/$projName/issues?access_token=$this->token";
 		// $curll="$api -d '$data'";
 		// $a=system('curl '.$curll);
 		$ch = curl_init();
@@ -78,7 +79,6 @@ class HomeController extends BaseController {
 		    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 
 		));
-		 
 		$output = curl_exec($ch);
 		return Redirect::to('/')->with("success","Message posted successfully");
 	}
@@ -89,8 +89,10 @@ class HomeController extends BaseController {
 		$file=Input::file('icon-image');
 		if($file)
 		{
-			($upload=$file->move('docs/'));
-			$path='http://localhost/numix-proj/public/'.($upload);
+			$ext=$file->getClientOriginalExtension();
+			dd($ext);
+			($upload=$file->move('docs/',rand(11111,99999).$ext));
+			$path='http://weird.numixproject.org/public/'.($upload);
 		}
 		$title='icon request from '.Input::get("senderEmail");
 		$message=Input::get("message");
@@ -109,7 +111,7 @@ class HomeController extends BaseController {
 		$email=Input::get("email");
 		$message=Input::get("message");
 		$from=$email;
-		$to='ahmar.siddiqui@gmail.com';
+		$to='team@numixproject.org';
 		$subject="query mail";
 		$data=array(
 			'from'	=> $from,
