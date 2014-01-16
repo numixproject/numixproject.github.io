@@ -4,4 +4,7 @@ composer.phar
 composer.lock
 .DS_Store
 Thumbs.db
-
+*.zip
+*.tmp
+*.tar.gz
+/public/docs
