@@ -6,7 +6,7 @@
     <meta name="title" content="Numix - Not just yet another theme suite" />
     <meta name="description" content="Numix is a collection of modern and beautiful artworks." />
     <title>Numix - Not just yet another theme suite</title>
-	{{HTML::style("css/bootstrap.min.css")}}
+	{{HTML::style("css/bootstrap.css")}}
 	{{HTML::style("css/font-awesome.min.css")}}
 	{{HTML::style("css/ahmarBase.css")}}
 	{{HTML::style("css/dataTable/jquery.dataTables.css")}}
