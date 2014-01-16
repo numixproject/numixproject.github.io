@@ -14,24 +14,6 @@
 			
 		})
 	});
-	$(function(){
-		$("#form form").submit(function(e)
-		{
-			/*e.preventDefault();
-			th=$(this);
-			if(th.attr("data-allow")!=1)
-				return;
-			data=(th.serialize());
-			url='saveForm';
-			console.log(url);
-			console.log(data);
-			$.ajax({method:'post',data:data,url:url,success:function(resp){
-				console.log(resp);
-				
-			}});*/
-			
-		})
-	});
     $(function(){
         $("#urlToggle").click(function()
         {

@@ -1,20 +1,7 @@
 <?php
 
 class HomeController extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
+	public $token="3a521b96ce44bfbaaea8408d93c0b6114f8e83c6"; //bug report
 	public function index()
 	{
 		
@@ -66,8 +53,6 @@ class HomeController extends BaseController {
 			);
 		$data=json_encode($arr);
 		$api="https://api.github.com/repos/numixproject/$projName/issues?access_token=$this->token";
-		// $curll="$api -d '$data'";
-		// $a=system('curl '.$curll);
 		$ch = curl_init();
 		curl_setopt_array(
 		    $ch, array( 
@@ -83,7 +68,6 @@ class HomeController extends BaseController {
 		return Redirect::to('/')->with("success","Message posted successfully");
 	}
 	// public $token="26685a935a7202ff41d0f8a262f0f89a6a698ed6"; @ahhmarr
-	public $token="3a521b96ce44bfbaaea8408d93c0b6114f8e83c6"; //bug report
 	function icon_request()
 	{
 		
@@ -103,9 +87,7 @@ class HomeController extends BaseController {
 		}
 		$body="![logo]($path)";
 		system('curl https://api.github.com/repos/ahhmarr/laravel-boilerplate/issues?access_token=26685a935a7202ff41d0f8a262f0f89a6a698ed6 -d \'{ "title":"'.$title.'","body":"'.$message.'","labels":["request-icon-form"]}\'');
-		/*Mail::queue('emails.request',$data,function($message){
-			$message->to('ahmar.siddiqui@gmail.com','john doe')->subject('awesome');
-		});*/
+		
 	}
 	public function contact_form()
 	{
@@ -119,17 +101,10 @@ class HomeController extends BaseController {
 			'email' => $email,
 			'msg'  => $message
 			);
-	Mail::queue('emails.contact',$data,function($message)use($subject,$to){
-			$message->to($to,'numix')->subject($subject);
-		});
-	 return Redirect::to('/')->with('success','thank you');
-	}
-	protected function mail($from,$to,$subj,$msg,$image=array())
-	{
-        
-		
-		
-
+		Mail::queue('emails.contact',$data,function($message)use($subject,$to){
+				$message->to($to,'numix')->subject($subject);
+			});
+	 	return Redirect::to('/')->with('success','thank you');
 	}
 
 }
