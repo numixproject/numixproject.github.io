@@ -75,6 +75,7 @@
                 <li><a href="https://plus.google.com/115833527622591803679"><span class="icon-gplus"></span></a></li>
                 <li><a href="https://www.facebook.com/numixproject"><span class="icon-facebook"></li>
                 <li><a href="https://github.com/numixproject"><span class="icon-github"></span></a></li>
+                <li><a href="https://twitter.com/numixproject"><span class="icon-twitter"></span></a></li>
             </ul>
 		    </div>
 @stop
