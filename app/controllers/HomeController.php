@@ -82,7 +82,8 @@ class HomeController extends BaseController {
 		$output = curl_exec($ch);
 		return Redirect::to('/')->with("success","Message posted successfully");
 	}
-	public $token="26685a935a7202ff41d0f8a262f0f89a6a698ed6";
+	// public $token="26685a935a7202ff41d0f8a262f0f89a6a698ed6"; @ahhmarr
+	public $token="3a521b96ce44bfbaaea8408d93c0b6114f8e83c6"; //bug report
 	function icon_request()
 	{
 		
