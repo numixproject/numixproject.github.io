@@ -21,7 +21,7 @@
                 <h1>Live on the edge</h1>
                 <p>We have made you repositories to easily install up-to-date releases of various Numix artworks.</p>
                 <p>If you use Ubuntu, add our Ubuntu PPA to get Numix packages. Fire up a Terminal and run the following:</p>
-                <code>sudo add-apt-repository <a href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a></code>
+                <code>sudo add-apt-repository <a class="ui-text-white" href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a></code>
                 <p>For Fedora, Red Hat and OpenSUSE, we have setup repos on <a href="https://build.opensuse.org/project/show/home:paolorotolo:numix">OpenSUSE build service</a>.</p>
                 <p>Alternatively, if you are on Fedora, install <a href="http://satya164.github.io/fedorautils/">Fedora Utils</a> and run the following command in the Terminal:</p>
                 <code>sudo fedorautils -e install_numix</code>

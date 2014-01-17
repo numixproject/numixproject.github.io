@@ -129,6 +129,10 @@ code {
     font-size: 110%;
     font-family: monospace;
     line-height: 120%;
+    background-color: #2d2d2d;
+    padding:12px;
+    display:block;
+    color:#fff;
 }
 
 nav {
