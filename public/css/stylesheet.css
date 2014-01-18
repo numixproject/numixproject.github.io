@@ -29,8 +29,8 @@ a {
 
 a:focus, a:hover { border-bottom: 1px solid #333; }
 
-a.button {
-    position: relative;
+a.button,input[type=submit]{
+    /*position: relative;*/
     display: inline-block;
     margin: 1% 0;
     padding: 2%;
@@ -40,13 +40,14 @@ a.button {
     -moz-border-radius: 2px;
     border-radius: 2px;
     background: #d64937;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    /* -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3); */
     color: #f9f9f9;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    /*text-shadow: 0 1px 1px rgba(0,0,0,0.6);*/
     font-weight: 600;
     cursor:pointer;
+    border: 1px solid transparent;
 }
 
 a.button:hover, a.button:focus {
@@ -65,7 +66,7 @@ a.button:active {
 
 a.img, a.img:focus, a.img:hover { border: none; }
 
-input[type=submit] {
+a.bitcoin-button ,.bitcoin-button{
     padding: 2%;
     outline: none;
     border: 1px solid #ccc;
@@ -86,26 +87,28 @@ input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
     border: 1px solid #aaa;
 }
 
-input[type=entry] {
-    padding: 2%;
-    outline: none;
-    border: 1px solid #ccc;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background: #f9f9f9;
+input[type="entry"],input[type="text"] ,input[type="email"],select,textarea{
+    padding: 2%!important;
+    outline: none!important;
+    border: 1px solid #ccc!important;
+    -webkit-border-radius: 2px!important;
+    -moz-border-radius: 2px!important;
+    border-radius: 2px!important;
+    /*background: #f9f9f9!important;*/
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    color: #333;
-    font-weight: 600;
-    font-size: 100%;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    transition: .3s ease;
+    color: #333!important;
+    font-weight: 600!important;
+    font-size: 100%!important;
+    -webkit-transition: .3s ease!important;
+    -moz-transition: .3s ease!important;
+    transition: .3s ease!important;
 }
 
-input[type=entry]:hover, input[type=entry]:focus, input[type=entry]:active {
+input[type="entry"]:hover, input[type="entry"]:focus, input[type="entry"]:active,
+input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active,
+input[type="email"]:hover, input[type="email"]:focus, input[type="email"]:active {
     border: 1px solid #aaa;
 }
 
@@ -133,6 +136,8 @@ code {
     padding:12px;
     display:block;
     color:#fff;
+    border-radius: 2px!important;
+    margin: 10px 0px 10px 0px;
 }
 
 nav {
@@ -514,3 +519,16 @@ footer a:focus, footer a:hover {
 input[type="radio"]:checked + .checkedLabel{
     background-color: #d64937!important;
 };
+a.bitcoin-button{
+    display: inline;
+}
+textarea{
+    /*width:420px!important;*/
+}
+select{
+    width:431px!important;
+    height:53px!important;
+}
+select option{
+    text-transform: capitalize!important;
+}

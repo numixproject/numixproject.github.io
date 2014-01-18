@@ -264,7 +264,7 @@ table {
     page-break-after: avoid;
   }
   select {
-    background: #fff !important;
+    /*background: #fff !important;*/
   }
   .navbar {
     display: none;
@@ -1934,7 +1934,7 @@ output {
   padding: 6px 12px;
   /*font-size: 14px;*/
   line-height: 1.428571429;
-  color: #555555;
+  /*color: #555555;*/
   vertical-align: middle;
   background-color: #ffffff;
   background-image: none;
@@ -1947,27 +1947,35 @@ output {
 }
 
 .form-control:focus {
-  border-color: #66afe9;
+  /*border-color: rgba(0,0,0, 0.6);*/
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,0, 0.1);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,0, 0.1);
 }
 
 .form-control:-moz-placeholder {
   color: #999999;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 .form-control::-moz-placeholder {
   color: #999999;
+  font-weight: normal;
+  text-transform: capitalize;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
   color: #999999;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 .form-control::-webkit-input-placeholder {
   color: #999999;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 .form-control[disabled],

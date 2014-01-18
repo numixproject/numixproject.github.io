@@ -10,7 +10,7 @@
 	text-transform: lowercase !important;
 }
 .capitalCase{
-	text-transform: capitalize; !important;
+	text-transform: capitalize!important; ;
 }
 .noneCase{
 	text-transform:none;!important;

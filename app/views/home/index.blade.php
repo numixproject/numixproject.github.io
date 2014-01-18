@@ -26,16 +26,25 @@
                 <p>Alternatively, if you are on Fedora, install <a href="http://satya164.github.io/fedorautils/">Fedora Utils</a> and run the following command in the Terminal:</p>
                 <code>sudo fedorautils -e install_numix</code>
                 <h1>Show your <span class="icon-heart red"></span></h1>
-                <p>Designing and maintaining a visual brand ain't easy. We all have real lives and we work on Numix in our free time. If you wish to support our work, throw a few bucks at us. Donations do encourage us to spend more time on Numix. :)</p>
+                <p>Designing and maintaining a visual brand ain't easy, folks. In fact it takes plenty of time and effort to maintain and constantly improve as big, popular and polished brand as Numix. Regrettably we don't make enough revenue from the project to be able to work full time on it as our job, which lowers the quality and the cadence of our products. </p>
+                <p>Fancy changing that and as a result getting better products released on tighter schedule? Well, than by all means don't hesitate to chip in a few bucks at our screens. We would very much appreciate such a gesture. ;)</p>
                 <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_xclick">
                     <input type="hidden" name="business" value="motorslav@gmail.com">
                     <input type="hidden" name="item_name" value="Donation to Numix">
                     <input type="hidden" name="currency_code" value="USD">
                     <input type="hidden" name="return" value="http://numixproject.org">
-                    <span class="currency">$</span><input name="amount" type="entry" value="5.00" onkeyup="this.value=this.value.replace(/[^\d^\.]/,'')">
+                    <span class="currency">$</span>
+                    <input name="amount" type="entry" value="5.00" onkeyup="this.value=this.value.replace(/[^\d^\.]/,'')">
                     <input type="submit" value="Donate">
+                    <span class="padding-small">OR</span>
+                    <!-- bitcoin starts -->
+                    
+
+                    <a class="bitcoin-button" data-code="5f9456e0b510db7617dfe9e48c3f4847"  href="https://coinbase.com/checkouts/5f9456e0b510db7617dfe9e48c3f4847"><i class="fa fa-btc"></i>   Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+                <!-- bitcoin ends -->
                 </form>
+                
             </div>
         </section>
         <section id="design">
@@ -74,8 +83,8 @@
             <ul>
                 <li><a href="https://plus.google.com/115833527622591803679"><span class="icon-gplus"></span></a></li>
                 <li><a href="https://www.facebook.com/numixproject"><span class="icon-facebook"></li>
-                <li><a href="https://github.com/numixproject"><span class="icon-github"></span></a></li>
                 <li><a href="https://twitter.com/numixproject"><span class="icon-twitter"></span></a></li>
+                <li><a href="https://github.com/numixproject"><span class="icon-github"></span></a></li>
             </ul>
 		    </div>
 @stop
