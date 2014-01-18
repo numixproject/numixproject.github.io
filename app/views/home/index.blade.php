@@ -65,6 +65,7 @@
                 <p>Our icon themes use vivid colours and a unique design. We have established some guidelines for the icon themes to ensure beautiful and crisp looking icons. The icons are created purely with Open Source tools such as Inkscape.</p>
             </div>
         </section>
+            @include('home.form')
         <section id="about">
             <div class="content">
                 <h1>Our team</h1>
@@ -73,7 +74,6 @@
                 </div>
             </div>
         </section>
-            @include('home.form')
         <footer>
             <div class="content">
                 &#169; 2013 <a href="https://plus.google.com/115833527622591803679" rel="publisher">Numix Project</a>. The website and all the associated are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.

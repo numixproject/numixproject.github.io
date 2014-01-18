@@ -1954,27 +1954,27 @@ output {
 }
 
 .form-control:-moz-placeholder {
-  color: #999999;
-  font-weight: normal;
+  color: #2d2d2d;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
 .form-control::-moz-placeholder {
-  color: #999999;
-  font-weight: normal;
+  color: #2d2d2d;
+  font-weight: 600;
   text-transform: capitalize;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #999999;
-  font-weight: normal;
+  color: #2d2d2d;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #999999;
-  font-weight: normal;
+  color: #2d2d2d;
+  font-weight: 600;
   text-transform: capitalize;
 }
 

@@ -22,16 +22,15 @@
         })
     })
 </script>
-<section id="form" class="pointer capitalCase">
+<section id="form" class="pointer">
             <div class="content">
-                <h1>how can we help</h1>
-                <p>let us know how can we be of assistance.</p>
-                <ul class="list-unstyled">
+                <h1>How can we help?</h1>
+                <ul class="list-inline top-buffer-largest">
                 	<li>
 	                	<input type="radio" class="hide-submit" data-target="contact-form" name="form" value="1" id="li-1" checked="checked"/>
 	                	<div class=" transition checkedLabel pointer">
 	                		<label for="li-1" class="transition padding-small cursor">
-	                			 ask something
+	                			 Ask something
 	                		</label>
 	                	</div>
                 	</li>
@@ -39,7 +38,7 @@
                         <input type="radio" class="hide-submit" data-target="request-icon-form" name="form" value="3" id="li-3" />
                         <div class=" transition checkedLabel pointer">
                             <label for="li-3" class="transition padding-small cursor">
-                                 submit an icon request
+                                 Submit an icon request
                             </label>
                         </div>
                     </li>
@@ -66,13 +65,13 @@
                 	{{Form::open(array('url'=>'saveForm','class'=>'form-horizontal','id'=>"contact-form"))}}
                 		<input type="hidden" name="action" value="contact-form">
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">email</label>
+                			<label for="email" class="form-label hidden-x col-xs-2">email</label>
                 			<div class="col-xs-6">
                 				<input type="email" name="email" id="email" class="axBlank axEmail form-control custom-input" placeholder="Email" autofocus>
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">message</label>
+                			<label for="email" class="form-label hidden-x col-xs-2">message</label>
                 			<div class="col-xs-6">
                 				<textarea  name="message" id="message" class="axBlank form-control custom-textarea" placeholder="message"></textarea>
                 			</div>
@@ -88,13 +87,13 @@
                         <input type="hidden" name="action" value="problem-form">
                 		<input type="file" id="icon-image" name="icon-image" class="axImg hide-submit">
                         <div class="form-group" >
-                            <label for="senderEmail" class="form-label col-xs-2">your email</label>
+                            <label for="senderEmail" class="form-label col-xs-2">Your email</label>
                             <div class="col-xs-6">
                                 <input type="email" name="senderEmail" placeholder="your email" class="axBlank axEmail form-control custom-input">
                             </div>
                         </div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">project name</label>
+                			<label for="email" class="form-label col-xs-2">Project name</label>
                 			<div class="col-xs-6 capitalCase">
                 				<select name="projName" id="" class="axBlank form-control custom-input capitalCase">
                                     <option value="">select</option>
@@ -106,7 +105,7 @@
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">type of problem</label>
+                			<label for="email" class="form-label col-xs-2">Type of problem</label>
                 			<div class="col-xs-6">
                 				<textarea  name="message" id="message" class="axBlank form-control custom-textarea" placeholder="message"></textarea>
                 				<div class="col-xs-12 numix-grey padding-small border-all pointer">
@@ -132,47 +131,59 @@
                 	{{Form::open(array('url'=>'saveForm','class'=>'form-horizontal hidden-x','id'=>"request-icon-form",'files'=>true))}}
                 		<input type="hidden" name="action" value="request-icon-form">
                 		<div class="form-group">
-                            <label for="riEmail" class="form-label col-xs-2">your email</label>
+                            <label for="riEmail" class="form-label col-xs-2">Your email</label>
                             <div class="col-xs-6">
                                 <input type="email" name="email" id="riEmail" class="axBlank form-control custom-input" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="riProjectName" class="form-label col-xs-2">project name</label>
+                            <label for="riProjectName" class="form-label col-xs-2">Project name</label>
                             <div class="col-xs-6">
                                 <select name="projName" id="riProjectName" class="axBlank form-control custom-input">
-                                    <option value="">Select</option>
+                                    <option value="">Select and icon theme</option>
                                     <option value="numix-icon-theme-circle">Numix Icon Theme Circle</option>
-                                    <option value="numix-kde-theme">Numix Kde Theme</option>
                                     <option value="numix-icon-theme">Numix Icon Theme</option>                     
+                                    <!-- <option value="numix-kde-theme">Numix Kde Theme</option>
                                     <option value="numix-icon-theme-utouch">Numix Icon Theme Utouch</option>
-                                    <option value="numix-icon-theme-shine">Numix Icon Theme Shine</option>
+                                    <option value="numix-icon-theme-shine">Numix Icon Theme Shine</option> -->
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                			<label for="riIconName" class="form-label col-xs-2">icon name</label>
+                			<label for="riIconName" class="form-label col-xs-2">Icon name</label>
                 			<div class="col-xs-6">
                 				<input type="text" name="iconName" id="riIconName" class="axBlank form-control custom-input" placeholder="icon name">
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="riInfo" class="form-label col-xs-2">more info</label>
+                			<label for="riInfo" class="form-label col-xs-2">information
+                             </label>
                 			<div class="col-xs-6">
                 				<textarea  name="info" id="riInfo" class="form-control custom-textarea" placeholder="info"></textarea>
                 			</div>
                 		</div>
-                		<div class="form-group">
-                			<label for="riSuggestion" class="form-label col-xs-2">suggestion</label>
+                		<div class="form-group hidden-x">
+                			<label for="riSuggestion" class="form-label col-xs-2">Suggestion</label>
                 			<div class="col-xs-6">
                 				<textarea  name="suggestion" id="riSuggestion" class="form-control custom-textarea" placeholder="suggestion"></textarea>
                 			</div>
                 		</div>
                         <input type="file" name="icon-image" id="icon-request-image" class="axBlank axImg hide-submit">
+                        <input type="file" name="icon-image" id="icon-suggestion-image" class="axImg hide-submit">
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">original icon image</label>
+                            <label for="email" class="form-label  col-xs-2">original icon
+                            </label>
+                            <div class="col-xs-6">
+                                <label for="icon-request-image"  class="font-bigger padding-small pointer">
+                                <i class="fa fa-camera"></i>            
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                			<label for="email" class="form-label  col-xs-2">suggestion icon
+                            </label>
                 			<div class="col-xs-6">
-                				<label for="icon-request-image" class="padding-small font-bigger pointer">
+                				<label for="icon-suggestion-image"  class="font-bigger padding-small pointer">
                                 <i class="fa fa-camera"></i>            
                                 </label>
                 			</div>
@@ -187,25 +198,25 @@
                 	{{Form::open(array('url'=>'','class'=>'form-horizontal hidden-x','id'=>"submit-icon-form"))}}
                 		<input type="hidden" name="action" value="submit-icon-form">
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">icon name</label>
+                			<label for="email" class="form-label col-xs-2">Icon name</label>
                 			<div class="col-xs-6">
                 				<input type="email" name="email" id="email" class="form-control custom-input" placeholder="Email">
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">more info</label>
+                			<label for="email" class="form-label col-xs-2">More info</label>
                 			<div class="col-xs-6">
                 				<textarea  name="message" id="message" class="form-control custom-textarea" placeholder="message"></textarea>
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">suggestion</label>
+                			<label for="email" class="form-label col-xs-2">Suggestion</label>
                 			<div class="col-xs-6">
                 				<textarea  name="message" id="message" class="form-control custom-textarea" placeholder="message"></textarea>
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="email" class="form-label col-xs-2">original icon image</label>
+                			<label for="email" class="form-label col-xs-2">Original icon image</label>
                 			<div class="col-xs-6">
                 				<input type="email" name="email" id="email" class="form-control custom-input" placeholder="Email">
                 			</div>

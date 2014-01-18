@@ -240,6 +240,10 @@ footer a:focus, footer a:hover {
     background: #f9f9f9;
     color: #333;
 }
+#form {
+    background: #BDFDCF;
+    color: #333;
+}
 
 #design {
     background: #9cc;
@@ -518,7 +522,12 @@ footer a:focus, footer a:hover {
 }
 input[type="radio"]:checked + .checkedLabel{
     background-color: #d64937!important;
-};
+    color:#fff;
+    border-radius: 2px;
+}
+label{
+    cursor: pointer;
+}
 a.bitcoin-button{
     display: inline;
 }

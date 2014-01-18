@@ -250,6 +250,9 @@ textarea{
 .font-bigger{
 	font-size:14px;
 }
+.font-biggest{
+	font-size:30px;
+}
 /*light box*/
 .black_overlay{
 	display: none;
