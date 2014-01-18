@@ -185,7 +185,7 @@ a.title {
     font-family: "Numix Logotype";
 }
 
-section {
+section:not(.alertify-logs) {
     margin: 0;
     padding: 0 20%;
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
