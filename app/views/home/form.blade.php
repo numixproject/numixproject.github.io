@@ -154,10 +154,25 @@
                 			</div>
                 		</div>
                 		<div class="form-group">
-                			<label for="riInfo" class="form-label col-xs-2">information
+                			<label for="riInfo" class="form-label col-xs-2">Information
                              </label>
                 			<div class="col-xs-6">
                 				<textarea  name="info" id="riInfo" class="form-control custom-textarea" placeholder="info"></textarea>
+                                <!-- sug and original icon box begin -->
+                                    <div class="col-xs-12 numix-grey  border-all pointer" style="width:431px;">
+                                    <div class="col-xs-6 border-right text-center">
+                                        <label for="icon-request-image" class="padding-small pointer">
+                                            Original icon
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-5 text-center" id="urlToggle">
+                                        <label for="icon-suggestion-image" class="padding-small pointer">
+                                            Suggestion  icon
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                                <!-- end -->
                 			</div>
                 		</div>
                 		<div class="form-group hidden-x">
@@ -168,24 +183,24 @@
                 		</div>
                         <input type="file" name="icon-image" id="icon-request-image" class="axBlank axImg hide-submit">
                         <input type="file" name="icon-suggestion-image" id="icon-suggestion-image" class="axImg hide-submit">
-                		<div class="form-group">
-                            <label for="email" class="form-label  col-xs-2">original icon
-                            </label>
+                		<!-- <div class="form-group">
+                                                    <label for="email" class="form-label  col-xs-2">Original icon
+                                                    </label>
+                                                    <div class="col-xs-6">
+                                                        <label for="icon-request-image"  class="font-bigger padding-small pointer">
+                                                        <i class="fa fa-camera"></i>            
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                            <label for="email" class="form-label  col-xs-2">Suggestion icon
+                                                    </label>
                             <div class="col-xs-6">
-                                <label for="icon-request-image"  class="font-bigger padding-small pointer">
-                                <i class="fa fa-camera"></i>            
-                                </label>
+                                <label for="icon-suggestion-image"  class="font-bigger padding-small pointer">
+                                                        <i class="fa fa-camera"></i>            
+                                                        </label>
                             </div>
-                        </div>
-                        <div class="form-group">
-                			<label for="email" class="form-label  col-xs-2">suggestion icon
-                            </label>
-                			<div class="col-xs-6">
-                				<label for="icon-suggestion-image"  class="font-bigger padding-small pointer">
-                                <i class="fa fa-camera"></i>            
-                                </label>
-                			</div>
-                		</div>
+                        </div> -->
                 			<div class="col-xs-offset-3">
                 				<input type="submit" class="numix-red padding-large ui-text-white">
                 			</div>
