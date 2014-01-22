@@ -18,28 +18,6 @@ $(function(){
 	})
 });
 
-/*$(function(){
-				$("#addedFrom").datepicker({
-					dateFormat:'yy-mm-dd',
-					changeYear:true,
-					changeMonth:true,
-					onClose:function(s)
-					{
-						$("#addedTo").datepicker("option","minDate",s);
-					}
-				});
-				$("#addedTo").datepicker({
-					dateFormat:'yy-mm-dd',
-					changeYear:true,
-					changeMonth:true,
-					onClose:function(s)
-					{
-						$("#addedFrom").datepicker("option","maxDate",s);
-					}
-				});
-			});
-
-		*/
 // for file validaion
 $(function(){
 	if (window.File && window.FileReader && window.FileList && window.Blob) 

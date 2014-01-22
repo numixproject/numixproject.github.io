@@ -24,20 +24,61 @@ class HomeController extends BaseController {
 		}
 
 	}
+	//this will be responsible for reporting bug in numix-kde-theme | numix-gtk-theme
+	function problem_form()
+	{
+		$file=Input::file('icon-image');
+		$sender=Input::get('senderEmail');
+		$projName=Input::get('projName');
+		$message=Input::get('message');
+		$url=Input::get('url');
+		$base=($_SERVER['HTTP_HOST']);
+		$msg=$message."\n";
+		$title="bug report from $sender";
+		if($file)
+		{
+			$newName=rand(101010,99999).'bug.'.$file->getClientOriginalExtension();
+			($upload=$file->move('docs/',$newName));
+			$path='http://'.$base.'/public/'.($upload);
+			$msg.="![logo]($path)";
+
+		}
+		$msg.=($url)?"\n url: $url":'';
+		$arr=array(
+			'title'	=> $title,
+			'body'	=> $msg,
+			'labels'=> array("request-icon")
+			);
+		$data=json_encode($arr);
+		$api="https://api.github.com/repos/numixproject/$projName/issues?access_token=$this->token";
+		$ch = curl_init();
+		curl_setopt_array(
+		    $ch, array( 
+		    CURLOPT_URL => $api,
+		    CURLOPT_RETURNTRANSFER => true,
+		    CURLOPT_CUSTOMREQUEST=>"POST",
+		    CURLOPT_POSTFIELDS=>$data,
+		    CURLOPT_HTTPHEADER=>array('Content-Type: application/json'),
+		    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+
+		));
+		$output = curl_exec($ch);
+		return Redirect::to('/')->with("success","Message posted successfully");
+
+	}
 	function request_icon_form()
 	{
 		$file=Input::file('icon-image');
+		$iconSuggest=Input::file('icon-suggestion-image');
 		$sender=Input::get('email');
 		$projName=Input::get('projName');
 		$iconName=Input::get('iconName');
 		$info=Input::get('info');
-		$suggestion=Input::get('suggestion');
 		$base=($_SERVER['HTTP_HOST']);
 		$msg='';
 		$title="Icon Request from $sender";
 		$msg="Icon name : $iconName \n ";
 		$msg.=($info)?"Info : $info \n ":'';
-		$msg.=($suggestion)?"suggestion : $suggestion \n ":'';
 		if($file)
 		{
 			$newName=rand(101010,99999).'.'.$file->getClientOriginalExtension();
@@ -46,6 +87,14 @@ class HomeController extends BaseController {
 
 			$msg.="![logo]($path)";
 
+		}
+		if($iconSuggest)
+		{
+			$newName=rand(101010,99999).'sg.'.$iconSuggest->getClientOriginalExtension();
+			($upload=$iconSuggest->move('docs/',$newName));
+			$path='http://'.$base.'/public/'.($upload);
+            $msg.="suggestion : ";
+			$msg.="![logo]($path)";
 		}
 		$arr=array(
 			'title'	=> $title,
@@ -67,6 +116,20 @@ class HomeController extends BaseController {
 		));
 		$output = curl_exec($ch);
 		return Redirect::to('/')->with("success","Message posted successfully");
+	}
+	function post_api($api,$data)
+	{
+		$ch = curl_init();
+		curl_setopt_array(
+		    $ch, array( 
+		    CURLOPT_URL => $api,
+		    CURLOPT_RETURNTRANSFER => true,
+		    CURLOPT_CUSTOMREQUEST=>"POST",
+		    CURLOPT_POSTFIELDS=>$data,
+		    CURLOPT_HTTPHEADER=>array('Content-Type: application/json'),
+		    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+
+		));
 	}
 	function icon_request()
 	{

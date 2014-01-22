@@ -43,22 +43,22 @@
                         </div>
                     </li>
                 	<li>
-                	<!--     <input type="radio" class="hide-submit" data-target="problem-form" name="form" value="2" id="li-2" />
-                    <div class=" transition checkedLabel pointer">
-                                                <label for="li-2" class="transition padding-small cursor">
-                                                    i'm facing problem with the artwork
-                                                </label>
-                                            </div>
-                                        </li>
-                                        
-                                        <li>
-                    <input type="radio" class="hide-submit" name="form" data-target="submit-icon-form" value="4" id="li-4" />
-                    <div class=" transition checkedLabel pointer">
-                                                <label for="li-4" class="transition padding-small cursor">
-                                                     submit an Icon made by me
-                                                </label>
-                                            </div>
-                                        </li> -->
+                	     <input type="radio" class="hide-submit" data-target="problem-form" name="form" value="2" id="li-2" />
+                        <div class=" transition checkedLabel pointer">
+                                <label for="li-2" class="transition padding-small cursor">
+                                    Report a bug
+                                </label>
+                        </div>
+                        </li>
+                       <!--                 
+                        <li>
+                            <input type="radio" class="hide-submit" name="form" data-target="submit-icon-form" value="4" id="li-4" />
+                            <div class=" transition checkedLabel pointer">
+                                <label for="li-4" class="transition padding-small cursor">
+                                     submit an Icon made by me
+                                </label>
+                            </div>
+                        </li> -->
                 </ul>
                 <div id="form-content" class="transition top-buffer-large">
                 <!-- contact form starts -->
@@ -87,7 +87,7 @@
                         <input type="hidden" name="action" value="problem-form">
                 		<input type="file" id="icon-image" name="icon-image" class="axImg hide-submit">
                         <div class="form-group" >
-                            <label for="senderEmail" class="form-label col-xs-2">Your email</label>
+                            <label for="senderEmail" class="form-label col-xs-2">Email</label>
                             <div class="col-xs-6">
                                 <input type="email" name="senderEmail" placeholder="your email" class="axBlank axEmail form-control custom-input">
                             </div>
@@ -95,12 +95,10 @@
                 		<div class="form-group">
                 			<label for="email" class="form-label col-xs-2">Project name</label>
                 			<div class="col-xs-6 capitalCase">
-                				<select name="projName" id="" class="axBlank form-control custom-input capitalCase">
-                                    <option value="">select</option>
-                					<option value="numix-icon-theme-circle">numix icon theme circle</option>
-                					<option value="numix-kde-theme">numix kde theme</option>
-                                    <option value="numix-icon-theme">numix icon theme</option>              					<option value="numix-icon-theme-utouch">numix icon theme utouch</option>
-                                    <option value="numix-icon-theme-shine">numix icon theme shine</option>
+                				<select name="projName" id="" class="axBlank form-control custom-input">
+                                    <option value="">Select</option>
+                                    <option value="numix-kde-theme">Numix kde theme</option>
+                					<option value="numix-gtk-theme">Numix gtk theme</option>
                 				</select>
                 			</div>
                 		</div>
@@ -108,10 +106,10 @@
                 			<label for="email" class="form-label col-xs-2">Type of problem</label>
                 			<div class="col-xs-6">
                 				<textarea  name="message" id="message" class="axBlank form-control custom-textarea" placeholder="message"></textarea>
-                				<div class="col-xs-12 numix-grey padding-small border-all pointer">
+                				<div class="col-xs-12 numix-grey padding-small border-all pointer" style="width:431px;">
                 					<div class="col-xs-1"><label for="icon-image" class="pointer"><i class="fa fa-camera"></i></label></div>
                 					<div class="col-xs-1" id="urlToggle"><i class="fa fa-link"></i></div>
-                					<div class="col-xs-1"><i class="fa fa-code"></i></div>
+                					<!-- <div class="col-xs-1"><i class="fa fa-code"></i></div> -->
                 				</div>
                 			</div>
                 		</div>
@@ -169,7 +167,7 @@
                 			</div>
                 		</div>
                         <input type="file" name="icon-image" id="icon-request-image" class="axBlank axImg hide-submit">
-                        <input type="file" name="icon-image" id="icon-suggestion-image" class="axImg hide-submit">
+                        <input type="file" name="icon-suggestion-image" id="icon-suggestion-image" class="axImg hide-submit">
                 		<div class="form-group">
                             <label for="email" class="form-label  col-xs-2">original icon
                             </label>
