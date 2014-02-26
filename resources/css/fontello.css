@@ -34,3 +34,6 @@
 .icon-gplus:before { content: '\ff47'; } /* 'ｇ' */
 .icon-github:before { content: '\ff5b'; } /* '｛' */
 .icon-search:before { content: '\2315'; } /* '⌕' */
+.icon-gplus:hover { color: #D64937; }
+.icon-facebook:hover { color: #4C66A4; }
+.icon-github:hover { color: #000000; }

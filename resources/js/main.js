@@ -15,7 +15,7 @@ $(document).ready(function() {
         thumbdiv += '<div class="thumb">'+
                       '<div class="img">'+
                         '<img src="./resources/img/thumbs/' + f.thumbnail + '" alt="' + i + '" />'+
-                        '<a class="overlay" href="' + f.url + '"></a>'+
+                        '<a class="overlay" target="_new" href="' + f.url + '"></a>'+
                       '</div>'+
                       '<div class="desc">'+
                         '<div class="name">'+
