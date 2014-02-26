@@ -67,6 +67,8 @@ a.button:active {
 
 a.img, a.img:focus, a.img:hover { border: none; }
 
+p { text-align: justify }
+
 input[type=submit] {
     padding: 2%;
     border: 1px solid #ccc;
@@ -319,6 +321,10 @@ footer a:focus, footer a:hover {
 }
 
 .thumb:hover .img {
+    border: 3px solid #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -494,7 +500,7 @@ footer a:focus, footer a:hover {
     background: #d64937;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 320px) {
     body { font-size: 85%; }
     nav { font-size: 100%; }
     nav ul { padding: 0 5px; }
@@ -506,4 +512,31 @@ footer a:focus, footer a:hover {
     .thumb { margin: 0 10px 10px 0; }
     .palette div { display: block; }
     .profile img { float: none; }
+    .thumb { margin: 0 10px 10px 16%; }
+    .profile img { display: inline-block; margin-left: 16%; }
+    .profile article header h2{ text-align: center; }
+    .profile article p{ text-align: justify; }
+}
+/** mobile landscape */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .thumb { margin: 0 10px 10px 25%; }
+    .profile img { display: inline-block; margin-left: 25%; }
+    .profile article header h2{ text-align: center; }
+    .profile article p{ text-align: justify; }
+}
+/** tablet portrait */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .thumb { margin: 0 10px 10px 25%; }
+    .profile img { float: left; margin-left: 0%; }
+}
+/** ipad prtrait, tablet landscape */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    .thumb { margin: 0 10px 10px 7%; }
+    .profile img { float: left; margin-left: 0%; }
+    .profile article p{ text-align: justify; }
+}
+/** ipad landscape */
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    .thumb { margin: 0 10px 10px 2%; }
+    .profile article p{ text-align: justify; }
 }
