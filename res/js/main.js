@@ -83,7 +83,7 @@
         }
 
         $("body").addClass("modal-open").append("<div class='dim'></div>");
-        $(".modal").find("input[type=text]").eq(0).focus();
+        $(".modal input[name=amount]").focus();
 
         $(".dim").on('click', function() {
             hideDialog();
