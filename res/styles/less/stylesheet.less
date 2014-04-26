@@ -57,7 +57,7 @@ input[type=submit], input[type=button] { .buttons; }
 input[type=entry], input[type=text],  input[type=number], textarea { &:extend(.entry); }
 
 pre {
-    width: 30em;
+    max-width: 30em;
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: .5em;
@@ -90,7 +90,13 @@ footer {
 
     @media only screen and (min-width: 700px) { padding: 2em; }
 
-    a { color: darken(@light-color, 20%); }
+    a {
+        color: darken(@light-color, 20%);
+
+        &:focus, &:hover { color: darken(@light-color, 10%); }
+
+        &:active { color: darken(@light-color, 40%); }
+    }
 }
 
 /* widget styles */
@@ -169,35 +175,28 @@ footer {
 
 .cover {
     display: table;
+    table-layout: fixed;
     height: 100%;
     width: 100%;
     background-color: @accent-color;
     background-image: url(../../img/bg.png);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
     color: @light-color;
 
     .cover-content {
+        &:extend(.section);
+
         position: relative;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
 
         .logo { padding: 2em; }
-
-        .links {
-            max-width: 30em;
-            margin: auto;
-
-            div {
-                text-align: center;
-            }
-
-            .home-icon {
-                font-size: 50px;
-            }
-        }
 
         .button {
             border: 2px solid @light-color;
@@ -213,8 +212,9 @@ footer {
             padding: 1em;
             font-size: 1.2em;
             color: @light-color;
-            text-decoration: underline;
             cursor: pointer;
+
+            &:focus, &:hover, &:active { text-decoration: underline; }
         }
     }
 }

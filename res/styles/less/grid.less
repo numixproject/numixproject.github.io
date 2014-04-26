@@ -30,8 +30,12 @@
 
 @media screen and (min-width: 768px) {
     .row {
-        @supports (display: flex) {
+        @supports (display: -webkit-flex) or
+                  (display: -moz-flex) or
+                  (display: -ms-flexbox) or
+                  (display: flex) {
             display: -webkit-flex;
+            display: -moz-flex;
             display: -ms-flexbox;
             display: flex;
         }
@@ -57,7 +61,7 @@
         .thumb-@{i} {
             display: inline-block;
             vertical-align: top;
-            width: (@i * @thumbsize);
+            max-width: (@i * @thumbsize);
             padding-right: @gutter;
             padding-left: @gutter;
         }
