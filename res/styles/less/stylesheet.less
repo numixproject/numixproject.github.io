@@ -289,39 +289,43 @@ footer {
     .products {
         &:extend(.section);
 
-        .thumb(1, 206px, 2em);
+        .category {
+            .thumbgrid(246px, 20px);
 
-        .thumb {
-            color: @dark-color;
-            cursor: pointer;
-
-            img {
-                .ease;
-
-                border: 3px solid @light-color;
-                border-radius: 2px;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            }
-
-            &:focus, &:hover, &:active {
+            .product {
+                padding-top: .25em;
+                padding-bottom: .25em;
                 color: @dark-color;
+                cursor: pointer;
 
                 img {
-                    border-color: darken(@light-color, 5%);
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+                    .ease;
+
+                    border: 3px solid @light-color;
+                    border-radius: 2px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
                 }
-            }
 
-            .desc {
-                display: block;
-                padding: .5em 0;
-                text-align: center;
+                &:focus, &:hover, &:active {
+                    color: @dark-color;
 
-                .name, .more { display: block; }
+                    img {
+                        border-color: darken(@light-color, 5%);
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+                    }
+                }
 
-                .name { font-weight: 600; }
+                .desc {
+                    display: block;
+                    padding: .5em 0;
+                    text-align: center;
 
-                .more { color: lighten(@dark-color, 20%); }
+                    .name, .more { display: block; }
+
+                    .name { font-weight: 600; }
+
+                    .more { color: lighten(@dark-color, 20%); }
+                }
             }
         }
     }
@@ -331,16 +335,21 @@ footer {
     .zigzag(darken(@light-color, 5%); @light-color; top);
 
     background-color: darken(@light-color, 5%);
+    text-align: center;
 
     .team {
-        text-align: center;
-
         &:extend(.section);
 
-        .thumb(1, 150px, 3em);
+        .thumbgrid(200px, 25px);
 
-        .thumb {
-            img { border-radius: 100px; }
+        padding: .25em 0;
+
+        .member {
+            img {
+                height: 150px;
+                width: 150px;
+                border-radius: 75px;
+            }
 
             .img {
                 &:focus, &:hover, &:active { background: none; }

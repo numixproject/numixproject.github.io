@@ -4,13 +4,17 @@
 (function () {
     'use strict';
 
+    var errormsg = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
+
     // Display products
     $.getJSON('./res/data/projects.json', function(data) {
         var thumbdiv = '';
+
         $.each(data, function(j, g) {
-            thumbdiv += '<h2 class="thumb-title">'+ j +'</h2>';
+            var thumbcontent = '';
+
             $.each(g, function(i, f) {
-                thumbdiv += '<a class="thumb" href="' + f.url + '">' +
+                thumbcontent += '<a class="product thumb-1" href="' + f.url + '">' +
                             '<img src="./res/img/thumbs/' + f.thumbnail + '" width="200" height="200" alt="' + i + '" />' +
                             '<span class="desc">' +
                             '<span class="name">' + i + '</span>' +
@@ -18,11 +22,13 @@
                             '</span>' +
                             '</a>';
             });
+
+            thumbdiv += '<h2 class="thumb-title">'+ j +'</h2><div class="category">' + thumbcontent + '</div>';
         });
+
         $(thumbdiv).appendTo(".artwork > .products");
     }).error(function() {
-        var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
-        $(error).appendTo(".artwork > .products");
+        $(errormsg).appendTo(".artwork > .products");
     });
 
     // Make entire div clickable
@@ -34,16 +40,17 @@
     // Display team members
     $.getJSON('./res/data/team.json', function (data) {
         var teamdiv = '';
+
         $.each(data, function (j, g) {
-            teamdiv += '<a class="thumb" href="' + g.plusurl + '">' +
+            teamdiv += '<a class="member thumb-1" href="' + g.plusurl + '">' +
                        '<img src="./res/img/avatars/' + g.avatar + '" alt="' + g.fullname + '" />' +
                        '<span class="name">' + g.fullname + '</div>' +
                        '</a>';
         });
+
         $(teamdiv).appendTo(".about > .team");
     }).error(function () {
-        var error = '<p>Something in the website broke, but don\'t worry, a team of hamsters is dispatched to fix it.</p>';
-        $(error).appendTo(".about > .team");
+        $(errormsg).appendTo(".about > .team");
     });
 
 }());
