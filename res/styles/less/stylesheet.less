@@ -30,7 +30,7 @@ body {
 }
 
 a {
-    .ease;
+    .transition;
 
     color: @accent-color;
     text-decoration: none;
@@ -108,7 +108,7 @@ footer {
 }
 
 .entry {
-    .ease;
+    .transition;
 
     display: inline-block;
     margin: 1em 0;
@@ -130,7 +130,7 @@ footer {
 }
 
 .buttons(@bg: @accent-color; @fg: @light-color) {
-    .ease;
+    .transition;
 
     display: inline-block;
     margin: 1em 0;
@@ -219,6 +219,16 @@ footer {
     }
 }
 
+.chat-link {
+    .transition;
+
+    position: fixed;
+    right: 2em;
+    top: 1em;
+
+    &:hover { .transform(rotate(30deg)); }
+}
+
 .modal { display: none; }
 
 .modal-open {
@@ -299,7 +309,7 @@ footer {
                 cursor: pointer;
 
                 img {
-                    .ease;
+                    .transition;
 
                     border: 3px solid @light-color;
                     border-radius: 2px;
