@@ -4,37 +4,37 @@
 (function () {
     'use strict';
 
-    // Detect scroll position
-    function detectScroll() {
-        if ($(window).scrollTop() >= 1) {
-            $(document.body).addClass("scrolled");
-        } else {
-            $(document.body).removeClass("scrolled");
-        }
-    }
-
-    detectScroll();
-    $(window).scroll(detectScroll);
-
     // Smooth scroll for in page links
-    $("a[href*=#]:not([href=#])").click(function () {
-        if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+    $("a[href*=#]:not([href=#])").click(function(e) {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+            target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
             if (target.length) {
-                $("html,body").animate({
-                    scrollTop: target.offset().top
-                }, 500);
-                return false;
+                if (typeof document.body.style.transitionProperty === 'string') {
+                    e.preventDefault();
+                    $("html").css({
+                        "margin-top" : "-" + ( target.offset().top - $(window).scrollTop() ) + "px",
+                        "transition" : ".5s ease-in-out"
+                    }).data("transitioning", true);
+                    $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+                        if (e.target == e.currentTarget) {
+                            if ($(this).data("transitioning") === true) {
+                                $(this).removeAttr("style").data("transitioning", false);
+                                $("html, body").scrollTop(target.offset().top);
+                            }
+                        }
+                    });
+                } else {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return;
+                }
             }
         }
     });
 
     // Show and hide the modal dialog
-    function hideDialog() {
-        $("body").removeClass("modal-open");
-    }
-
     function showDialog() {
         if (history.pushState) {
             history.pushState(null, '');
@@ -42,12 +42,11 @@
 
         $("body").addClass("modal-open").append("<div class='dim'></div>");
         $(".modal input[name=amount]").focus();
+    }
 
-        $(".dim").on('click', function() {
-            hideDialog();
-
-            $(this).remove();
-        });
+    function hideDialog() {
+        $("body").removeClass("modal-open");
+        $(".dim").remove();
     }
 
     function handleKey(e) {
@@ -56,12 +55,9 @@
         }
     }
 
-    $(window).keyup(handleKey);
-    $(".modal").find("input").keyup(handleKey);
-
-    $(window).on('popstate', hideDialog);
-
     $(".donate-button").click(showDialog);
+    $(document).on("click", ".dim", hideDialog);
+    $(window).on('popstate', hideDialog);
 
     // Style active states in mobile
     document.addEventListener("touchstart", function () {}, true);
