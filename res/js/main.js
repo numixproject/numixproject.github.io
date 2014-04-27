@@ -4,6 +4,21 @@
 (function () {
     'use strict';
 
+    // Simple parallax scroll
+    $('section[data-speed]').each(function(){
+        var $bgimg = $(this);
+
+        $(window).scroll(function() {
+            var pos = ($(window).scrollTop() / $bgimg.data('speed')) * -1;
+
+            // Put together our final background position
+            var coords = '50% '+ pos + 'px';
+
+            // Move the background
+            $bgimg.css({ "background-position" : coords });
+        });
+    });
+
     // Smooth scroll for in page links
     $("a[href*=#]:not([href=#])").click(function(e) {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -14,18 +29,16 @@
                     e.preventDefault();
                     $("html").css({
                         "margin-top" : ( ( target.offset().top - $(window).scrollTop() ) * -1 ) + "px",
-                        "transition" : ".5s ease-in-out"
+                        "transition" : "margin-top .5s ease-in-out"
                     }).data("transitioning", true);
                     $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-                        if (e.target == e.currentTarget) {
-                            if ($(this).data("transitioning") === true) {
-                                $(this).removeAttr("style").data("transitioning", false);
-                                $("html, body").scrollTop(target.offset().top);
-                            }
+                        if (e.target === e.currentTarget && $(this).data("transitioning") === true) {
+                            $(this).removeAttr("style").data("transitioning", false);
+                            $("html, body").scrollTop(target.offset().top);
                         }
                     });
                 } else {
-                    $('html,body').animate({
+                    $("html, body").animate({
                         scrollTop: target.offset().top
                     }, 500);
                     return;
