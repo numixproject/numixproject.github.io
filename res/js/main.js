@@ -13,7 +13,7 @@
                 if (typeof document.body.style.transitionProperty === 'string') {
                     e.preventDefault();
                     $("html").css({
-                        "margin-top" : "-" + ( target.offset().top - $(window).scrollTop() ) + "px",
+                        "margin-top" : ( ( target.offset().top - $(window).scrollTop() ) * -1 ) + "px",
                         "transition" : ".5s ease-in-out"
                     }).data("transitioning", true);
                     $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
