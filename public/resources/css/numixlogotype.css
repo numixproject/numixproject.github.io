@@ -1,9 +1,0 @@
-@font-face {
-	font-family: 'Numix Logotype';
-	src: url('../font/numixlogotype/numixlogotype.eot?') format('eot'), 
-	     url('../font/numixlogotype/numixlogotype.woff') format('woff'), 
-	     url('../font/numixlogotype/numixlogotype.ttf')  format('truetype'),
-	     url('../font/numixlogotype/numixlogotype.svg#numixlogotype') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
