@@ -30,7 +30,7 @@ body {
 }
 
 a {
-    .ease;
+    .transition;
 
     color: @accent-color;
     text-decoration: none;
@@ -40,7 +40,10 @@ a {
     &:active { color: darken(@accent-color, 30%); }
 }
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+	height: auto;
+}
 
 h1, h2, h3 { &:extend(.heading); }
 
@@ -57,7 +60,7 @@ input[type=submit], input[type=button] { .buttons; }
 input[type=entry], input[type=text],  input[type=number], textarea { &:extend(.entry); }
 
 pre {
-    width: 30em;
+    max-width: 30em;
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: .5em;
@@ -90,7 +93,13 @@ footer {
 
     @media only screen and (min-width: 700px) { padding: 2em; }
 
-    a { color: darken(@light-color, 20%); }
+    a {
+        color: darken(@light-color, 20%);
+
+        &:focus, &:hover { color: darken(@light-color, 10%); }
+
+        &:active { color: darken(@light-color, 40%); }
+    }
 }
 
 /* widget styles */
@@ -102,7 +111,7 @@ footer {
 }
 
 .entry {
-    .ease;
+    .transition;
 
     display: inline-block;
     margin: 1em 0;
@@ -124,7 +133,7 @@ footer {
 }
 
 .buttons(@bg: @accent-color; @fg: @light-color) {
-    .ease;
+    .transition;
 
     display: inline-block;
     margin: 1em 0;
@@ -169,35 +178,29 @@ footer {
 
 .cover {
     display: table;
+    table-layout: fixed;
     height: 100%;
     width: 100%;
     background-color: @accent-color;
     background-image: url(../../img/bg.png);
-    background-position: center center;
+    background-position: 50% 0;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
     color: @light-color;
 
     .cover-content {
+        &:extend(.section);
+
         position: relative;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
 
         .logo { padding: 2em; }
-
-        .links {
-            max-width: 30em;
-            margin: auto;
-
-            div {
-                text-align: center;
-            }
-
-            .home-icon {
-                font-size: 50px;
-            }
-        }
 
         .button {
             border: 2px solid @light-color;
@@ -213,10 +216,21 @@ footer {
             padding: 1em;
             font-size: 1.2em;
             color: @light-color;
-            text-decoration: underline;
             cursor: pointer;
+
+            &:focus, &:hover, &:active { text-decoration: underline; }
         }
     }
+}
+
+.chat-link {
+    .transition;
+
+    position: fixed;
+    right: 2em;
+    top: 1em;
+
+    &:hover { .transform(rotate(30deg)); }
 }
 
 .modal { display: none; }
@@ -289,39 +303,43 @@ footer {
     .products {
         &:extend(.section);
 
-        .thumb(1, 206px, 2em);
+        .category {
+            .thumbgrid(246px, 20px);
 
-        .thumb {
-            color: @dark-color;
-            cursor: pointer;
-
-            img {
-                .ease;
-
-                border: 3px solid @light-color;
-                border-radius: 2px;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            }
-
-            &:focus, &:hover, &:active {
+            .product {
+                padding-top: .25em;
+                padding-bottom: .25em;
                 color: @dark-color;
+                cursor: pointer;
 
                 img {
-                    border-color: darken(@light-color, 5%);
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+                    .transition;
+
+                    border: 3px solid @light-color;
+                    border-radius: 2px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
                 }
-            }
 
-            .desc {
-                display: block;
-                padding: .5em 0;
-                text-align: center;
+                &:focus, &:hover, &:active {
+                    color: @dark-color;
 
-                .name, .more { display: block; }
+                    img {
+                        border-color: darken(@light-color, 5%);
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+                    }
+                }
 
-                .name { font-weight: 600; }
+                .desc {
+                    display: block;
+                    padding: .5em 0;
+                    text-align: center;
 
-                .more { color: lighten(@dark-color, 20%); }
+                    .name, .more { display: block; }
+
+                    .name { font-weight: 600; }
+
+                    .more { color: lighten(@dark-color, 20%); }
+                }
             }
         }
     }
@@ -331,16 +349,21 @@ footer {
     .zigzag(darken(@light-color, 5%); @light-color; top);
 
     background-color: darken(@light-color, 5%);
+    text-align: center;
 
     .team {
-        text-align: center;
-
         &:extend(.section);
 
-        .thumb(1, 150px, 3em);
+        .thumbgrid(200px, 25px);
 
-        .thumb {
-            img { border-radius: 100px; }
+        padding: .25em 0;
+
+        .member {
+            img {
+                height: 150px;
+                width: 150px;
+                border-radius: 75px;
+            }
 
             .img {
                 &:focus, &:hover, &:active { background: none; }
@@ -362,7 +385,7 @@ footer {
 .section {
     max-width: 60em;
     margin: auto;
-    padding: 2em 0;
+    padding: 2em 1em;
 }
 
 ::selection {
