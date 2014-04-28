@@ -29,11 +29,11 @@
 }
 
 @media screen and (min-width: 768px) {
-    .row {
-        @supports (display: -webkit-flex) or
-                  (display: -moz-flex) or
-                  (display: -ms-flexbox) or
-                  (display: flex) {
+    @supports (display: -webkit-flex) or
+              (display: -moz-flex) or
+              (display: -ms-flexbox) or
+              (display: flex) {
+        .row {
             display: -webkit-flex;
             display: -moz-flex;
             display: -ms-flexbox;
@@ -43,6 +43,9 @@
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
         }
+    }
+
+    .row {
 
         .-(@i: 1) when (@i =< @columns) {
             .col-@{i} { width: (@i * 100% / @columns); }

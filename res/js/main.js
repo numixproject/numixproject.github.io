@@ -41,7 +41,7 @@
                     $("html, body").animate({
                         scrollTop: target.offset().top
                     }, 500);
-                    return;
+                    return false;
                 }
             }
         }
