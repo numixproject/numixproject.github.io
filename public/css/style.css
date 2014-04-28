@@ -1,0 +1,90 @@
+
+.body
+{
+  margin:0px;
+  padding:0px;
+  
+}
+
+
+
+
+/* start all css*/
+body
+{
+  background-color: #ccc;
+  text-align: left;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: Arial;
+  color:#575757;
+
+}
+
+.mainBody
+{
+  width:100%;
+  min-height: 300px;
+  background-color:;
+  
+  overflow: hidden;
+
+}
+
+.startForm
+{
+  width: 100% !important;
+}
+.startForm input[type=text],.startForm select
+{
+  width: 100%;
+  border-radius: 4px;
+  height: 18px;
+
+}
+.startForm select
+{
+  width: 103%;
+  border-radius: 4px;
+  height: 26px;
+  
+}
+.fullrow
+{
+  float: left;
+  width: 100% !important;
+  height: 25px;
+  overflow: hidden;
+  border-bottom: 1px solid #808080;
+  padding: 4px;
+  
+}
+.td1
+{
+  float: left;
+  min-width: 20%;
+  text-align: left;
+  padding: 3px;
+  
+}
+.td2
+{
+  float: left;
+  width: 20%;
+  
+}
+.logout
+{
+  background-color: #222;
+  float: right;
+  color:#fff;
+  height: 20px;
+  z-index: 1;
+  
+  
+}
+.logout a
+{
+  color:#fff;
+
+}
