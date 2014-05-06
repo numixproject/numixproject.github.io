@@ -20,31 +20,47 @@
     });
 
     // Smooth scroll for in page links
-    $("a[href*=#]:not([href=#])").click(function(e) {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                if (typeof document.body.style.transitionProperty === 'string') {
-                    e.preventDefault();
-                    $("html").css({
-                        "margin-top" : ( ( target.offset().top - $(window).scrollTop() ) * -1 ) + "px",
-                        "transition" : "margin-top .5s ease-in-out"
-                    }).data("transitioning", true);
-                    $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-                        if (e.target === e.currentTarget && $(this).data("transitioning") === true) {
-                            $(this).removeAttr("style").data("transitioning", false);
-                            $("html, body").scrollTop(target.offset().top);
+    $(function(){
+        var target, scroll;
+
+        $("a[href*=#]:not([href=#])").on("click", function(e) {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                target = $(this.hash);
+                target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+                if (target.length) {
+                    if (typeof document.body.style.transitionProperty === 'string') {
+                        e.preventDefault();
+
+                        var avail = $(document).height() - $(window).height();
+
+                        scroll = target.offset().top;
+
+                        if (scroll > avail) {
+                            scroll = avail;
                         }
-                    });
-                } else {
-                    $("html, body").animate({
-                        scrollTop: target.offset().top
-                    }, 500);
-                    return false;
+
+                        $("html").css({
+                            "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
+                            "transition" : ".5s ease-in-out"
+                        }).data("transitioning", true);
+                    } else {
+                        $("html, body").animate({
+                            scrollTop: scroll
+                        }, 500);
+                        return false;
+                    }
                 }
             }
-        }
+        });
+
+        $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
+                $(this).removeAttr("style").data("transitioning", false);
+                $("html, body").scrollTop(scroll);
+                return;
+            }
+        });
     });
 
     // Show and hide the modal dialog
