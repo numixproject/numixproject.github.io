@@ -48,7 +48,7 @@
                         $("html, body").animate({
                             scrollTop: scroll
                         }, 500);
-                        return false;
+                        return;
                     }
                 }
             }
