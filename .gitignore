@@ -1,3 +1,4 @@
 *~
 .DS_Store
-res/styles/less/*.css
+.sass-cache
+res/styles/gen

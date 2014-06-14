@@ -1,18 +1,14 @@
-/*jslint browser: true, indent: 4, regexp: true*/
-/*global $*/
+/* jslint browser: true, indent: 4, regexp: true */
+/* global $, lace */
 
-(function () {
-    'use strict';
-
+$(function() {
     // Simple parallax scroll
-    $('section[data-speed]').each(function(){
+    $("section[data-speed]").each(function(){
         var $bgimg = $(this);
 
-        $(window).scroll(function() {
-            var pos = ($(window).scrollTop() / $bgimg.data('speed')) * -1;
-
-            // Put together our final background position
-            var coords = '50% '+ pos + 'px';
+        $(window).on("scroll", function() {
+            var pos = ($(this).scrollTop() / $bgimg.data("speed")) * -1,
+                coords = "50% " + pos + "px";
 
             // Move the background
             $bgimg.css({ "background-position" : coords });
@@ -21,15 +17,16 @@
 
     // Smooth scroll for in page links
     $(function(){
-        var target, scroll;
+        var target,
+            scroll;
 
         $("a[href*=#]:not([href=#])").on("click", function(e) {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//,"") === this.pathname.replace(/^\//,"") && location.hostname === this.hostname) {
                 target = $(this.hash);
                 target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
 
                 if (target.length) {
-                    if (typeof document.body.style.transitionProperty === 'string') {
+                    if (typeof document.body.style.transitionProperty === "string") {
                         e.preventDefault();
 
                         var avail = $(document).height() - $(window).height();
@@ -55,7 +52,7 @@
         });
 
         $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
+            if (e.target === e.currentTarget && $(this).data("transitioning")) {
                 $(this).removeAttr("style").data("transitioning", false);
                 $("html, body").scrollTop(scroll);
                 return;
@@ -63,32 +60,60 @@
         });
     });
 
-    // Show and hide the modal dialog
-    function showDialog() {
-        if (history.pushState) {
-            history.pushState(null, '');
-        }
+    // Show donate dialog
+    $(".donate-button").on("click", function() {
+       lace.modal.show({ body: $("#donate-dialog").html() });
+    });
 
-        $("body").addClass("modal-open").append("<div class='dim'></div>");
-        $(".modal input[name=amount]").focus();
-    }
+    // Display products
+    var $errormsg = $("<p>").text("Something in the website broke, but don't worry, a team of hamsters is dispatched to fix it.");
 
-    function hideDialog() {
-        $("body").removeClass("modal-open");
-        $(".dim").remove();
-    }
+    $.getJSON("./res/data/projects.json", function(data) {
+        var thumbdiv = "";
 
-    function handleKey(e) {
-        if (e.keyCode === 27) {
-            hideDialog();
-        }
-    }
+        $.each(data, function(j, g) {
+            var thumbcontent = "";
 
-    $(".donate-button").click(showDialog);
-    $(document).on("click", ".dim", hideDialog);
-    $(window).on('popstate', hideDialog);
+            $.each(g, function(i, f) {
+                thumbcontent += '<a class="product block-1" href="' + f.url + '">' +
+                    '<img src="./res/img/thumbs/' + f.thumbnail + '" width="200" height="200" alt="' + i + '" />' +
+                    '<span class="desc">' +
+                    '<span class="name">' + i + '</span>' +
+                    '<span class="more">' + f.price + '</span>' +
+                    '</span>' +
+                    '</a>';
+            });
+
+            thumbdiv += '<h2 class="thumb-title">'+ j +'</h2><div class="category row">' + thumbcontent + '</div>';
+        });
+
+        $(thumbdiv).appendTo(".artwork .products");
+    }).error(function() {
+        $errormsg.appendTo(".artwork .products");
+    });
+
+    // Make entire div clickable
+    $(".thumb").click(function() {
+        window.location=$(this).find("a").attr("href");
+        return false;
+    });
+
+    // Display team members
+    $.getJSON('./res/data/team.json', function (data) {
+        var teamdiv = '';
+
+        $.each(data, function (j, g) {
+            teamdiv += '<a class="member block-1" href="' + g.plusurl + '">' +
+                '<img src="./res/img/avatars/' + g.avatar + '" alt="' + g.fullname + '" />' +
+                '<span class="name">' + g.fullname + '</div>' +
+                '</a>';
+        });
+
+        $(teamdiv).appendTo(".about .team");
+    }).error(function () {
+        $errormsg.appendTo(".about .team");
+    });
 
     // Style active states in mobile
     document.addEventListener("touchstart", function () {}, true);
-
-}());
+});
