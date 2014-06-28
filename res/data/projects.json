@@ -1,38 +1,154 @@
 {
-  "Android stuff": {
-    "Numix Icon Theme - Circle": { "url":"http://goo.gl/9XSSf2", "code":"", "thumbnail":"thumb23.jpg", "price": "Free" },
-    "Numix Icon Theme - Fold": { "url":"http://goo.gl/yDGBTI", "code":"", "thumbnail":"thumb22.jpg", "price": "$1.97" },
-    "Numix Wallpapers": { "url":"http://goo.gl/xea34B", "code":"", "thumbnail":"thumb21.jpg", "price": "Free" },
-    "Nature Wallpapers": { "url":"http://goo.gl/ypRcEa", "code":"", "thumbnail":"thumb20.jpg", "price": "$1.00" }
-  },
+    "Android stuff": {
+        "Numix Icon Theme - Square": {
+            "url": "http://goo.gl/YvNA0b",
+            "code": "",
+            "thumbnail": "thumb24.jpg",
+            "price": "$1.97"
+        },
+        "Numix Icon Theme - Circle": {
+            "url": "http://goo.gl/9XSSf2",
+            "code": "",
+            "thumbnail": "thumb23.jpg",
+            "price": "Free"
+        },
+        "Numix Icon Theme - Fold": {
+            "url": "http://goo.gl/yDGBTI",
+            "code": "",
+            "thumbnail": "thumb22.jpg",
+            "price": "$1.97"
+        },
+        "Numix Wallpapers": {
+            "url": "http://goo.gl/xea34B",
+            "code": "",
+            "thumbnail": "thumb21.jpg",
+            "price": "Free"
+        },
+        "Nature Wallpapers": {
+            "url": "http://goo.gl/ypRcEa",
+            "code": "",
+            "thumbnail": "thumb20.jpg",
+            "price": "$1.00"
+        }
+    },
 
-  "GTK themes": {
-    "Numix + Numix Dark": { "url":"http://fav.me/d5ygul6", "code":"http://github.com/shimmerproject/Numix", "thumbnail":"thumb1.jpg", "price": "Free/$3.00" },
-    "Numix Light": { "url":"http://fav.me/d6hds18", "code":"", "thumbnail":"thumb2.jpg", "price": "$3.00" }
-  },
+    "GTK themes": {
+        "Numix + Numix Dark": {
+            "url": "http://fav.me/d5ygul6",
+            "code": "http://github.com/shimmerproject/Numix",
+            "thumbnail": "thumb1.jpg",
+            "price": "Free/$3.00"
+        },
+        "Numix Light": {
+            "url": "http://fav.me/d6hds18",
+            "code": "",
+            "thumbnail": "thumb2.jpg",
+            "price": "$3.00"
+        }
+    },
 
-  "Icon themes": {
-    "Numix Square": { "url":"http://fav.me/d7drqru", "code":"http://fav.me/d7drqru", "thumbnail":"thumb19.jpg", "price": "$1.50" },
-    "Numix Circle": { "url":"http://fav.me/d6uxcka", "code":"http://github.com/numixproject/numix-icon-theme-circle", "thumbnail":"thumb18.jpg", "price": "Free" },
-    "Numix Shine": {"url":"http://github.com/numixproject/numix-icon-theme-shine", "code":"http://github.com/numixproject/numix-icon-theme-shine", "thumbnail":"thumb16.jpg", "price": "Free" },
-    "Numix uTouch": {"url":"http://fav.me/d6fo94s", "code":"http://github.com/numixproject/numix-icon-theme-utouch", "thumbnail":"thumb4.jpg", "price": "Free" }
-  },
+    "Icon themes": {
+        "Numix Square": {
+            "url": "http://fav.me/d7drqru",
+            "code": "http://fav.me/d7drqru",
+            "thumbnail": "thumb19.jpg",
+            "price": "$1.50"
+        },
+        "Numix Circle": {
+            "url": "http://fav.me/d6uxcka",
+            "code": "http://github.com/numixproject/numix-icon-theme-circle",
+            "thumbnail": "thumb18.jpg",
+            "price": "Free"
+        },
+        "Numix Shine": {
+            "url": "http://github.com/numixproject/numix-icon-theme-shine",
+            "code": "http://github.com/numixproject/numix-icon-theme-shine",
+            "thumbnail": "thumb16.jpg",
+            "price": "Free"
+        },
+        "Numix uTouch": {
+            "url": "http://fav.me/d6fo94s",
+            "code": "http://github.com/numixproject/numix-icon-theme-utouch",
+            "thumbnail": "thumb4.jpg",
+            "price": "Free"
+        }
+    },
 
-  "Wallpapers": {
-    "Name of the Doctor": { "url":"http://fav.me/d6hvzh7", "code":"", "thumbnail":"thumb6.jpg", "price": "Free" },
-    "Glimpse of the Future": { "url":"http://fav.me/d6eqf86", "code":"", "thumbnail":"thumb7.jpg", "price": "$3.00" },
-    "Glimpse of the Future (Slideshow)": { "url":"http://fav.me/d6i2vae", "code":"", "thumbnail":"thumb8.jpg", "price": "$5.00" },
-    "Glimpse of the Future (Print)": { "url":"http://fav.me/d6escoi", "code":"", "thumbnail":"thumb9.jpg", "price": "Varies with size" },
-    "Halloween": { "url":"http://fav.me/d6skv0g", "code":"", "thumbnail":"thumb17.jpg", "price": "Free" },
-    "Summer Holiday": { "url":"http://fav.me/d6ixhgk", "code":"", "thumbnail":"thumb10.jpg", "price": "$3.00" },
-    "Summer Holiday (Print)": { "url":"http://fav.me/d6ixibs", "code":"", "thumbnail":"thumb11.jpg", "price": "Varies with size" },
-    "Blooming Spring": { "url":"http://fav.me/d6g4jem", "code":"", "thumbnail":"thumb12.jpg", "price": "$3.00" },
-    "Blooming Spring (Print)": { "url":"http://fav.me/d6g4juj", "code":"", "thumbnail":"thumb13.jpg", "price": "Varies with size" },
-    "Fragmented Space": { "url":"http://fav.me/d6l8ihd", "code":"", "thumbnail":"thumb14.jpg", "price": "Free" }
-  },
+    "Wallpapers": {
+        "Name of the Doctor": {
+            "url": "http://fav.me/d6hvzh7",
+            "code": "",
+            "thumbnail": "thumb6.jpg",
+            "price": "Free"
+        },
+        "Glimpse of the Future": {
+            "url": "http://fav.me/d6eqf86",
+            "code": "",
+            "thumbnail": "thumb7.jpg",
+            "price": "$3.00"
+        },
+        "Glimpse of the Future (Slideshow)": {
+            "url": "http://fav.me/d6i2vae",
+            "code": "",
+            "thumbnail": "thumb8.jpg",
+            "price": "$5.00"
+        },
+        "Glimpse of the Future (Print)": {
+            "url": "http://fav.me/d6escoi",
+            "code": "",
+            "thumbnail": "thumb9.jpg",
+            "price": "Varies with size"
+        },
+        "Halloween": {
+            "url": "http://fav.me/d6skv0g",
+            "code": "",
+            "thumbnail": "thumb17.jpg",
+            "price": "Free"
+        },
+        "Summer Holiday": {
+            "url": "http://fav.me/d6ixhgk",
+            "code": "",
+            "thumbnail": "thumb10.jpg",
+            "price": "$3.00"
+        },
+        "Summer Holiday (Print)": {
+            "url": "http://fav.me/d6ixibs",
+            "code": "",
+            "thumbnail": "thumb11.jpg",
+            "price": "Varies with size"
+        },
+        "Blooming Spring": {
+            "url": "http://fav.me/d6g4jem",
+            "code": "",
+            "thumbnail": "thumb12.jpg",
+            "price": "$3.00"
+        },
+        "Blooming Spring (Print)": {
+            "url": "http://fav.me/d6g4juj",
+            "code": "",
+            "thumbnail": "thumb13.jpg",
+            "price": "Varies with size"
+        },
+        "Fragmented Space": {
+            "url": "http://fav.me/d6l8ihd",
+            "code": "",
+            "thumbnail": "thumb14.jpg",
+            "price": "Free"
+        }
+    },
 
-  "Additional": {
-    "Numix for Plank": { "url":"http://fav.me/d6ijvlg", "code":"", "thumbnail":"thumb5.jpg", "price": "Free" },
-    "Conky Google Now": { "url":"http://fav.me/d628cih", "code":"", "thumbnail":"thumb15.jpg", "price": "Free" }
-  }
+    "Additional": {
+        "Numix for Plank": {
+            "url": "http://fav.me/d6ijvlg",
+            "code": "",
+            "thumbnail": "thumb5.jpg",
+            "price": "Free"
+        },
+        "Conky Google Now": {
+            "url": "http://fav.me/d628cih",
+            "code": "",
+            "thumbnail": "thumb15.jpg",
+            "price": "Free"
+        }
+    }
 }
