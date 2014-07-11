@@ -4,6 +4,15 @@
  * Normalize.css (http://necolas.github.io/normalize.css/)
  */
 
+/* set the viewport properties (limited browser support) */
+@viewport {
+    width: device-width;
+    user-zoom: fixed;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 1;
+}
+
 /* set box sizing to a more natural layout */
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -62,7 +71,10 @@ audio, canvas, progress, video {
 body { line-height: 1; }
 
 /* remove the gray background color from active links in IE */
-a { background: transparent; }
+a {
+    background: transparent;
+    cursor: pointer;
+}
 
 /* remove outlines on links */
 a:focus, a:hover, a:active { outline: 0; }
@@ -77,6 +89,9 @@ img { border: 0; }
 
 /* correct overflow not hidden in IE */
 svg:not(:root) { overflow: hidden; }
+
+/* cascade SVG fill color */
+svg:not[class] { fill: currentColor; }
 
 /* contain overflow in all browsers. */
 pre { overflow: auto; }

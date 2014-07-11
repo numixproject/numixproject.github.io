@@ -1,0 +1,279 @@
+@import "functions";
+@import "global";
+@import "animations";
+@import "filters";
+@import "button";
+@import "entry";
+@import "grid";
+@import "modal";
+@import "base";
+
+/* mixins */
+@mixin background-image($img) {
+    background-image: url(../../img/covers/#{$img}-320.jpg);
+    background-size: 100%;
+
+    @media only screen and (min-device-width: 320px) { background-image: url(../../img/covers/#{$img}-700.jpg); }
+
+    @media only screen and (min-device-width: 700px),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 320px),
+        only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 320px),
+        only screen and (-o-min-device-pixel-ratio: 2/1) and (min-device-width: 320px),
+        only screen and (min-device-pixel-ratio: 2) and (min-device-width: 320px),
+        only screen and (min-resolution: 192dpi) and (min-device-width: 320px),
+        only screen and (min-resolution: 2dppx) and (min-device-width: 320px) { background-image: url(../../img/covers/#{$img}-1300.jpg); }
+
+    @media only screen and (min-width: 1300px),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 700px),
+        only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 700px),
+        only screen and (-o-min-device-pixel-ratio: 2/1) and (min-device-width: 700px),
+        only screen and (min-device-pixel-ratio: 2) and (min-device-width: 700px),
+        only screen and (min-resolution: 192dpi) and (min-device-width: 700px),
+        only screen and (min-resolution: 2dppx) and (min-device-width: 700px) { background-image: url(../../img/covers/#{$img}-1600.jpg); }
+}
+
+/* style rules */
+html { height: 100%; }
+
+body { height: 100%; }
+
+section {
+    padding: .5em;
+
+    @media only screen and (min-width: 700px) { padding: 1em; }
+}
+
+footer {
+    border-top: 1px solid darken($dark-color, 10%);
+    background-color: $dark-color;
+    color: darken($light-color, 20%);
+    font-size: .9em;
+    text-align: center;
+    padding: 1em;
+
+    @media only screen and (min-width: 700px) { padding: 2em; }
+
+    a {
+        color: darken($light-color, 20%);
+
+        &:focus, &:hover { color: darken($light-color, 10%); }
+
+        &:active { color: darken($light-color, 40%); }
+    }
+}
+
+a {
+    &:focus, &:hover, &:active { text-decoration: underline; }
+}
+
+.button {
+    &:focus, &:hover, &:active { text-decoration: none; }
+}
+
+.section {
+    max-width: 60em;
+    margin: auto;
+    padding: 2em 1em;
+}
+
+.cover {
+    @include background-image(bg);
+    @include prefix(background-size, cover);
+
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: $accent-color;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $light-color;
+}
+
+.cover-content {
+    @extend .section;
+
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .logo { padding: 2em; }
+
+    .button {
+        padding: .75em 1.5em;
+        border: 3px solid $light-color;
+        background-color: transparent;
+
+        &:focus, &:hover, &:active {
+            background-color: $light-color;
+            color: $accent-color;
+        }
+    }
+}
+
+.donate-button {
+    padding: 1em;
+    font-size: 1.2em;
+    color: $light-color;
+    cursor: pointer;
+
+    &:focus, &:hover, &:active {
+        color: $light-color;
+        text-decoration: underline;
+    }
+}
+
+.chat-link {
+    @extend %transition;
+
+    position: fixed;
+    right: 2em;
+    top: 1em;
+
+    &:hover { @include transform(rotate(30deg)); }
+}
+
+.products {
+    @extend .section;
+}
+
+.product {
+    @include fadein;
+
+    padding-top: .25em;
+    padding-bottom: .25em;
+    color: $dark-color;
+    cursor: pointer;
+
+    img {
+        @extend %transition;
+
+        border: 3px solid $light-color;
+        border-radius: 2px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    &:focus, &:hover, &:active {
+        color: $dark-color;
+
+        img {
+            border-color: darken($light-color, 5%);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+    }
+
+    .desc {
+        display: block;
+        padding: .5em 0;
+        text-align: center;
+
+        .name, .more { display: block; }
+
+        .name { font-weight: 600; }
+
+        .more { color: lighten($dark-color, 20%); }
+    }
+}
+
+.about {
+    background: linear-gradient(-135deg, $light-color 5px, transparent 0) 0 5px,
+                linear-gradient(135deg, $light-color 5px, darken($light-color, 5%) 0) 0 5px;
+
+    background-color: darken($light-color, 5%);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: 10px 10px;
+    text-align: center;
+}
+
+.team {
+    @extend .section;
+
+    padding: .25em 0;
+}
+
+.member {
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+    }
+
+    .img {
+        &:focus, &:hover, &:active { background: none; }
+    }
+
+    .name {
+        display: block;
+        padding: .5em 0;
+        text-align: center;
+        color: $dark-color;
+
+        &:focus, &:hover, &:active { color: $dark-color; }
+    }
+}
+
+.modal {
+    width: 26em;
+    max-width: 100%;
+
+    form {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "$";
+            top: 1em;
+            left: 1em;
+
+            @media only screen and (max-width: 27em) { top: .5em }
+        }
+
+        input[type=number] {
+            max-width: 100%;
+            padding-left: 2em;
+        }
+    }
+}
+
+/* browser specific styles */
+::selection {
+    background-color: $accent-color;
+    color: $light-color;
+}
+
+::-moz-selection {
+    background-color: $accent-color;
+    color: $light-color;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-button { display: none; }
+
+::-webkit-scrollbar-track { background-color: $light-color; }
+
+::-webkit-scrollbar-thumb {
+    border: 1px solid darken($light-color, 20%);
+    background-color: darken($light-color, 10%);
+
+    &:vertical { min-height: 100px; }
+
+    &:horizontal { min-width: 100px; }
+
+    &:hover, &:focus {
+        border: 1px solid darken($light-color, 30%);
+        background-color: darken($light-color, 20%);
+    }
+
+    &:active {
+        border-color: darken($accent-color, 10%);
+        background-color: $accent-color;
+    }
+}
