@@ -103,7 +103,7 @@ a {
 
     .button {
         padding: .75em 1.5em;
-        border: 2px solid $light-color;
+        border: 3px solid $light-color;
         background-color: transparent;
 
         &:focus, &:hover, &:active {
@@ -126,7 +126,7 @@ a {
 }
 
 .chat-link {
-    @extend %ease;
+    @extend %transition;
 
     position: fixed;
     right: 2em;
@@ -148,7 +148,7 @@ a {
     cursor: pointer;
 
     img {
-        @extend %ease;
+        @extend %transition;
 
         border: 3px solid $light-color;
         border-radius: 2px;

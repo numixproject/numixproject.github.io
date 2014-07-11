@@ -6,16 +6,16 @@
 @import "entry";
 
 /* base styles */
-html { font-size: 62.5%; }
-
 body {
     background: $light-color;
     color: $dark-color;
-    font: #{$font-size}/($font-size * 1.5) $font-family-normal;
+    font: #{$font-size}/($font-line-height) $font-family-normal;
+
+    @media #{$mobile-break-point} { font-size: #{$font-size-mobile}; }
 }
 
 a {
-    @extend %ease;
+    @extend %transition;
 
     color: $link-color;
     text-decoration: none;
@@ -72,16 +72,14 @@ code {
 
 .facebook { @include buttons(#3b5998, #fff); }
 
-.persona { @include buttons(#0096dd, #fff); }
+.persona { @include buttons(#e66000, #fff); }
 
 .openid { @include buttons(#f78c40, #fff); }
 
 .fadeout {
     @include opacity(0);
-    @extend %ease;
+    @extend %transition;
 }
-
-%ease { @include transition; }
 
 /* browser specific styles */
 ::selection {

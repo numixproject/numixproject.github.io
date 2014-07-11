@@ -3,6 +3,8 @@ $font-family-normal: "Open Sans", "Myriad Pro", Helvetica, Tahoma, "Nimbus Sans"
 $font-family-headings: "Raleway", Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
 $font-family-monospace: Consolas, "Andale Mono", "Lucida Console", "Nimbus Mono", "Courier New", monospace !default;
 $font-size: 16px !default;
+$font-size-mobile: 14px !default;
+$font-line-height: 21px !default;
 
 /* colors */
 $accent-color: #d64937 !default;
@@ -16,3 +18,4 @@ $error-color: #d95879 !default;
 
 /* misc */
 $roundness: 2px !default;
+$mobile-break-point: "only screen and (max-width: 27em)" !default;
