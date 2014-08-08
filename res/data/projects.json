@@ -1,5 +1,17 @@
 {
     "Android stuff": {
+        "Numix Calculator - Base": {
+            "url": "http://goo.gl/AfYrYa",
+            "code": "",
+            "thumbnail": "thumb26.jpg",
+            "price": "Free"
+        },
+        "Numix Calculator - PRO": {
+            "url": "http://goo.gl/wZWFjh",
+            "code": "",
+            "thumbnail": "thumb27.jpg",
+            "price": "1.50$"
+        },
         "Numix Icon Theme - Hexagon": {
             "url": "http://goo.gl/7iEGjF",
             "code": "",
@@ -139,6 +151,12 @@
             "url": "http://fav.me/d6l8ihd",
             "code": "",
             "thumbnail": "thumb14.jpg",
+            "price": "Free"
+        },
+        "Aurora": {
+            "url": "http://goo.gl/CJXtkA",
+            "code": "",
+            "thumbnail": "thumb28.jpg",
             "price": "Free"
         }
     },
