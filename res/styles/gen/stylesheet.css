@@ -1551,6 +1551,25 @@ a:focus, a:hover, a:active {
       max-width: 100%;
       padding-left: 2em; }
 
+/* Cover for 404 page */
+.cover404 {
+  background-image: url(../../img/404.gif);
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #d64937;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f9f9f9; }
+
 /* browser specific styles */
 ::selection {
   background-color: #d64937;
