@@ -1,0 +1,12 @@
+# Site settings
+title: Numix Blog
+email: team@numixproject.org
+description: > # this means to ignore newlines until "baseurl:"
+  The official blog of ''Numix Project'' - an open source project that is all about creating quality designed software product and artwork.Here we will post important announcements and blog about anything we feel is worthy writing about.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://blog.numixproject.org/" # the base hostname & protocol for your site
+twitter_username: numixproject
+github_username:  numixproject
+
+# Build settings
+markdown: kramdown
