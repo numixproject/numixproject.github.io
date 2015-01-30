@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Numix Blog</title>
+    <title>The Official Numix Blog</title>
     <description>The official blog of &#39;&#39;Numix Project&#39;&#39; - an open source project that is all about creating quality designed software product and artwork.Here we will post important announcements and blog about anything we feel is worthy writing about.
 </description>
-    <link>https://blog.numixproject.org//</link>
-    <atom:link href="https://blog.numixproject.org//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Jan 2015 20:47:36 +0100</pubDate>
-    <lastBuildDate>Thu, 29 Jan 2015 20:47:36 +0100</lastBuildDate>
+    <link>http://blog.numixproject.org//</link>
+    <atom:link href="http://blog.numixproject.org//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 30 Jan 2015 18:48:48 +0100</pubDate>
+    <lastBuildDate>Fri, 30 Jan 2015 18:48:48 +0100</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Sun, 30 Nov 2014 18:34:56 +0100</pubDate>
-        <link>https://blog.numixproject.org//jekyll/update/2014/11/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">https://blog.numixproject.org//jekyll/update/2014/11/30/welcome-to-jekyll.html</guid>
+        <link>http://blog.numixproject.org//jekyll/update/2014/11/30/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://blog.numixproject.org//jekyll/update/2014/11/30/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
@@ -43,8 +43,8 @@
         <description>&lt;p&gt;This is just a test.&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 18:34:56 +0100</pubDate>
-        <link>https://blog.numixproject.org//test/2014/11/30/test.html</link>
-        <guid isPermaLink="true">https://blog.numixproject.org//test/2014/11/30/test.html</guid>
+        <link>http://blog.numixproject.org//test/2014/11/30/test.html</link>
+        <guid isPermaLink="true">http://blog.numixproject.org//test/2014/11/30/test.html</guid>
         
         
         <category>test</category>
