@@ -4,7 +4,6 @@ title:  "Every story has a beginning"
 date:   2015-01-30 19:00:00
 tags:
 - blog
-- numix
 - web
 ---
 **Greetings!**

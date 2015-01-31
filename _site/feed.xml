@@ -6,8 +6,8 @@
 </description>
     <link>http://blog.numixproject.org//</link>
     <atom:link href="http://blog.numixproject.org//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Jan 2015 17:52:21 +0100</pubDate>
-    <lastBuildDate>Sat, 31 Jan 2015 17:52:21 +0100</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2015 18:25:22 +0100</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2015 18:25:22 +0100</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -29,7 +29,7 @@ Well, the last is kept at super secret repository, but if you know where to look
 
 &lt;p&gt;What you might not know is why we redesigned them.  Well, the reason can be summarised in one reason - &lt;strong&gt;consistency&lt;/strong&gt;. You see with the old folders design you had one design for the folders icon themselves, another for the symbols for circle and square icon themes. The issue become even more prominent with the non-uniformity icons, because the old design was not meant to work as an app icon. We didn’t fancy that consistency at all, so the icons had to be redesigned.&lt;/p&gt;
 
-&lt;p&gt;What we introduced in the new design was &lt;strong&gt;new shapes&lt;/strong&gt; for the folder body, &lt;strong&gt;new colours&lt;/strong&gt; (taken from &lt;a href=&quot;http://www.google.co.uk/design/spec/style/color.html#color-color-palette&quot;&gt;Google’s material palette&lt;/a&gt;), a &lt;strong&gt;sheet&lt;/strong&gt; between the folders tiles and a &lt;strong&gt;slight shadow&lt;/strong&gt; below the folders to folders to add a spice of 3D look. The &lt;strong&gt;inset shadows&lt;/strong&gt; were also redo to play well with this new design.&lt;/p&gt;
+&lt;p&gt;What we introduced in the new design was &lt;strong&gt;new shapes&lt;/strong&gt; for the folder body, &lt;strong&gt;new colours&lt;/strong&gt; (taken from &lt;a href=&quot;http://www.google.co.uk/design/spec/style/color.html#color-color-palette&quot;&gt;Google’s material palette&lt;/a&gt;), a &lt;strong&gt;sheet&lt;/strong&gt; between the folders tiles and a &lt;strong&gt;slight shadow&lt;/strong&gt; below the folders to folders to add a spice of 3D look. The &lt;strong&gt;inset shadows&lt;/strong&gt; were also redone to play well with this new design.&lt;/p&gt;
 
 &lt;p&gt;To achieve crispy looking folder on no matter which zoom level you use your file manager, we have created all the folder icons for &lt;strong&gt;all the sizes&lt;/strong&gt; - &lt;code&gt;16x16, 22x22, 24x24, 32x32, 48x48, 64x64, 96x96, 128x128, 256x1256&lt;/code&gt;. The symbol to tile ration is identical for all the sizes and in 16x16 size we use plain orange symbolics, because these icons are too tiny to have a symbol over a tile design and are used mostly in sidebars and a symbol over a tile design would not work that well in sidebar.&lt;/p&gt;
 
@@ -100,8 +100,6 @@ We hope you will have enjoyable time and our blog and find it useful, informativ
         <guid isPermaLink="true">http://blog.numixproject.org//2015/01/30/introducing-numix-blog.html</guid>
         
         <category>blog</category>
-        
-        <category>numix</category>
         
         <category>web</category>
         
