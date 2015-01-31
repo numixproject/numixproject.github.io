@@ -7,7 +7,6 @@ tags:
 - ubuntu
 - fedora
 - icons
-- folders
 - circle
 - square
 
