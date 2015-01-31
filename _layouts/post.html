@@ -10,6 +10,11 @@ layout: default
 
   <article class="post-content">
     {{ content }}
+<h3>Tags:</h3>
+{% for tag in page.tags %}
+  <h5 id="{{ tag }}-ref"><a href="/tag/{{tag}}/index.html">{{ tag }}</a></h5>
+
+{% endfor %}
       <br>
 <span class='st_googleplus_large' displayText='Google +'></span>
 <span class='st_twitter_large' displayText='Tweet'></span>

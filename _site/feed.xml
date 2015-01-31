@@ -6,9 +6,75 @@
 </description>
     <link>http://blog.numixproject.org//</link>
     <atom:link href="http://blog.numixproject.org//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Jan 2015 20:49:40 +0100</pubDate>
-    <lastBuildDate>Fri, 30 Jan 2015 20:49:40 +0100</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2015 17:52:21 +0100</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2015 17:52:21 +0100</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>Folders, folders, folders, they are ready for your love</title>
+        <description>&lt;p&gt;&lt;span style=&quot;color:#555555;&quot;&gt;
+&lt;em&gt;In case you are wonder from where we came up with that article title - in 1987 an Italian artist called Sabrina recorded a song called “Boys, boys, boys” that become quite the talk in the disco town. The song contained the lyrics “Boys, boys, boys, get ready for my love”.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Now to business -  as you know, very recently we pushed &lt;strong&gt;new folders design&lt;/strong&gt; in our base icon theme and new folders apps icons for our circle, square and non-uniformity icon themes. 
+Well, the last is kept at super secret repository, but if you know where to look, you can find it too.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-m3zmC297hT0/VMu4cPpmJtI/AAAAAAAAL7I/L2T1pUTTIng/w628-h435-no/NFIP.png&quot; alt=&quot;Numix Folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/-w1Oi77gPknw/VMu4cIqCVWI/AAAAAAAAL7A/o_7R4_GG620/w628-h449-no/fl-p.png&quot; alt=&quot;Numix Folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-2nWcguyFYR8/VMu4b9YZZjI/AAAAAAAAL7E/Et3ouz8s54Y/w628-h449-no/fl-c-p.png&quot; alt=&quot;Numix Circle Folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-SAY_183Yxf0/VMu4cVUDxzI/AAAAAAAAL7M/GAqt5_bztFU/w628-h449-no/fl-s-p.png&quot; alt=&quot;Numix Square Folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What you might not know is why we redesigned them.  Well, the reason can be summarised in one reason - &lt;strong&gt;consistency&lt;/strong&gt;. You see with the old folders design you had one design for the folders icon themselves, another for the symbols for circle and square icon themes. The issue become even more prominent with the non-uniformity icons, because the old design was not meant to work as an app icon. We didn’t fancy that consistency at all, so the icons had to be redesigned.&lt;/p&gt;
+
+&lt;p&gt;What we introduced in the new design was &lt;strong&gt;new shapes&lt;/strong&gt; for the folder body, &lt;strong&gt;new colours&lt;/strong&gt; (taken from &lt;a href=&quot;http://www.google.co.uk/design/spec/style/color.html#color-color-palette&quot;&gt;Google’s material palette&lt;/a&gt;), a &lt;strong&gt;sheet&lt;/strong&gt; between the folders tiles and a &lt;strong&gt;slight shadow&lt;/strong&gt; below the folders to folders to add a spice of 3D look. The &lt;strong&gt;inset shadows&lt;/strong&gt; were also redo to play well with this new design.&lt;/p&gt;
+
+&lt;p&gt;To achieve crispy looking folder on no matter which zoom level you use your file manager, we have created all the folder icons for &lt;strong&gt;all the sizes&lt;/strong&gt; - &lt;code&gt;16x16, 22x22, 24x24, 32x32, 48x48, 64x64, 96x96, 128x128, 256x1256&lt;/code&gt;. The symbol to tile ration is identical for all the sizes and in 16x16 size we use plain orange symbolics, because these icons are too tiny to have a symbol over a tile design and are used mostly in sidebars and a symbol over a tile design would not work that well in sidebar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/32.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/48.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/64.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/96.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/128.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/256.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To conclude this article we will not give you and image of a potato, but rather a screenshot of the new folders used in Ozonified Fedora 21 with Ozon GTK theme and our top secret non-uniformity apps icon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://numixproject.github.io/res/blog/20150131/1.png&quot; alt=&quot;Ubuntu Numix&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 31 Jan 2015 18:00:00 +0100</pubDate>
+        <link>http://blog.numixproject.org//2015/01/31/folders-folders-folders-they-are-ready-for-your-love.html</link>
+        <guid isPermaLink="true">http://blog.numixproject.org//2015/01/31/folders-folders-folders-they-are-ready-for-your-love.html</guid>
+        
+        <category>linux</category>
+        
+        <category>ubuntu</category>
+        
+        <category>fedora</category>
+        
+        <category>icons</category>
+        
+        <category>folders</category>
+        
+        <category>circle</category>
+        
+        <category>square</category>
+        
+        
+      </item>
     
       <item>
         <title>Every story has a beginning</title>
@@ -29,14 +95,16 @@ We hope you will have enjoyable time and our blog and find it useful, informativ
 
 &lt;p&gt;This concludes our first post, see you all in the comments here and on various social networks and of course in the next post.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 20:00:00 +0100</pubDate>
-        <link>http://blog.numixproject.org//numix/blog/2014/11/30/introducing-numix-blog.html</link>
-        <guid isPermaLink="true">http://blog.numixproject.org//numix/blog/2014/11/30/introducing-numix-blog.html</guid>
+        <pubDate>Fri, 30 Jan 2015 20:00:00 +0100</pubDate>
+        <link>http://blog.numixproject.org//2015/01/30/introducing-numix-blog.html</link>
+        <guid isPermaLink="true">http://blog.numixproject.org//2015/01/30/introducing-numix-blog.html</guid>
         
+        <category>blog</category>
         
         <category>numix</category>
         
-        <category>blog</category>
+        <category>web</category>
+        
         
       </item>
     
