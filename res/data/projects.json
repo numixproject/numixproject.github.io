@@ -52,13 +52,13 @@
 
     "GTK themes": {
         "Numix + Numix Dark": {
-            "url": "http://fav.me/d5ygul6",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=53",
             "code": "http://github.com/shimmerproject/Numix",
             "thumbnail": "thumb1.jpg",
             "price": "Free/$3.00"
         },
         "Numix Light": {
-            "url": "http://fav.me/d6hds18",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=53",
             "code": "",
             "thumbnail": "thumb2.jpg",
             "price": "$3.00"
@@ -67,8 +67,8 @@
 
     "Icon themes": {
         "Numix Square": {
-            "url": "http://fav.me/d7drqru",
-            "code": "http://fav.me/d7drqru",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=51",
+            "code": "https://numixproject.org/store/index.php?route=product/product&product_id=51",
             "thumbnail": "thumb19.jpg",
             "price": "$1.50"
         },
@@ -100,13 +100,13 @@
             "price": "Free"
         },
         "Glimpse of the Future": {
-            "url": "http://fav.me/d6eqf86",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=57",
             "code": "",
             "thumbnail": "thumb7.jpg",
             "price": "$3.00"
         },
         "Glimpse of the Future (Slideshow)": {
-            "url": "http://fav.me/d6i2vae",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=58",
             "code": "",
             "thumbnail": "thumb8.jpg",
             "price": "$5.00"
