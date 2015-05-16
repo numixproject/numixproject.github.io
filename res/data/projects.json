@@ -52,13 +52,13 @@
 
     "GTK themes": {
         "Numix + Numix Dark": {
-            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=53",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=52",
             "code": "http://github.com/shimmerproject/Numix",
             "thumbnail": "thumb1.jpg",
             "price": "Free/$3.00"
         },
         "Numix Light": {
-            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=52",
+            "url": "https://numixproject.org/store/index.php?route=product/product&product_id=53",
             "code": "",
             "thumbnail": "thumb2.jpg",
             "price": "$3.00"
