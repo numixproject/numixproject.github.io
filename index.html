@@ -67,8 +67,15 @@
                 <p>If you use Ubuntu, add our Ubuntu PPA to get Numix packages. Fire up a Terminal and run the following:</p>
                 <pre><code>sudo add-apt-repository <a href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a></code></pre>
                 <p>For Fedora, Red Hat and OpenSUSE, we have setup repos on <a href="https://build.opensuse.org/project/show/home:paolorotolo:numix">OpenSUSE build service</a>.</p>
-                <p>Alternatively, if you are on Fedora, install <a href="http://satya164.github.io/fedy/">Fedy</a> and run the following command in the Terminal:</p>
-                <pre><code>sudo fedy -e numix_themes</code></pre>
+                <p>
+                    If you use Fedora, enable our copr repo to get the numix packages. 
+                    <pre><code>dnf copr -y enable satya164/numix</code></pre>
+                </p>
+                <p>
+                    Alternatively, you can install numix themes via
+                    <a href="http://satya164.github.io/fedy/">Fedy</a>
+                    <pre><code>sudo fedy -e numix_themes</code></pre>
+                </p>
             </div>
         </section>
 
