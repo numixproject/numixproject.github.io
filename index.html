@@ -102,7 +102,7 @@
                 <input type="hidden" name="item_name" value="Donation to Numix">
                 <input type="hidden" name="currency_code" value="USD">
                 <input type="hidden" name="return" value="https://numixproject.org">
-                <input type="number" name="amount" value="5.00" pattern="\d+(\.\d{2})?" oninvalid="setCustomValidity('Please enter a valid currency')" onchange="try{setCustomValidity('')}catch(e){}" autofocus>
+                <input type="number" name="amount" value="5.00" min="0.00" pattern="\d+(\.\d{2})?" oninvalid="setCustomValidity('Please enter a valid currency')" onchange="try{setCustomValidity('')}catch(e){}" autofocus>
                 <input type="submit" value="Donate">
             </form>
         </script>
