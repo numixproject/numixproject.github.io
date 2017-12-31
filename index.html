@@ -1,110 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-uk">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Numix - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
 
-    <head>
-        <meta charset="utf-8">
+<body>
+    <section class="page-header">
+        <h1 class="project-name">Numix Project</h1>
+        <h2 class="project-tagline">Make your Linux and Android beautiful.</h2>
+        <a href="index.html" class="btn">About</a> 
+        <a href="products.html" class="btn">Products</a>
+        <a href="team.html" class="btn">Team</a>
+    </section>
 
-        <meta name="google-site-verification" content="HKv7wJWsML_I-ABHu4FaEcYZCy8ViTBjoQAuKYr4B2M">
+    <section class="main-content">
+        <h2><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Numix!</h2>
+        <p>We're a small design collective that design themes for your Linux desktop, and icon themes and applications for your Android devices.</p>
 
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <meta name="description" content="Numix is a collection of modern and beautiful artworks.">
+        <h3><a id="our-work" class="anchor" href="#our-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our Work</h3>
+        <p>You can find a full rundown of our main projects <a href="products">here</a> or you can just try it out for yourself! You'll find us in the official repos for <a href="https://packages.debian.org/search?keywords=numix&amp;searchon=names&amp;suite=all&amp;section=all">Debian</a>, <a href="https://packages.ubuntu.com/search?keywords=numix&amp;searchon=names&amp;suite=all&amp;section=all">Ubuntu</a>, <a href="https://src.fedoraproject.org/cgit/?q=numix">Fedora</a>, and <a href="https://play.google.com/store/apps/dev?id=5600498874720965803">Android</a> as well as the <a href="https://aur.archlinux.org/packages/?O=0&amp;SeB=nd&amp;K=numix&amp;outdated=&amp;SB=p&amp;SO=d&amp;PP=50&amp;do_Search=Go">Arch user repository</a>. If you're on an Ubuntu based distro such as Mint or elementary, you can also use <a href="https://launchpad.net/~numix/+archive/ubuntu/ppa">our PPA</a> to get the latest versions of our stuff. Fire up a terminal and run:
+        </p><pre><code>sudo add-apt-repository <a href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a>
+sudo apt update
+sudo apt install numix-*</code></pre>
+        Alternatively, if you feel like getting your hands dirty <a href="https://github.com/numixproject">check out our GitHub</a>. There we host the source for all our projects with instructions for how to get them up and running.<p></p>
 
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Numix - Not just yet another theme suite">
-        <meta name="twitter:description" content="Numix is a collection of modern and beautiful artworks.">
-        <meta name="twitter:image" content="http://numixproject.org/res/img/preview.png">
 
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="http://numixproject.org">
-        <meta property="og:title" content="Numix - Not just yet another theme suite">
-        <meta property="og:description" content="Numix is a collection of modern and beautiful artworks.">
-        <meta property="og:image" content="http://numixproject.org/res/img/preview.png">
-
-        <title>Numix - Not just yet another theme suite</title>
-
-        <link rel="image_src" href="http://numixproject.org/res/img/preview.png">
-        <link rel="publisher" href="https://plus.google.com/115833527622591803679">
-
-        <link rel="shortcut icon" href="./res/img/favicon.png" type="image/x-icon">
-
-        <link rel="stylesheet" type="text/css" media="screen" href="//fonts.googleapis.com/css?family=Raleway:400|Open+Sans:400,600">
-        <link rel="stylesheet" type="text/css" media="screen" href="./res/styles/gen/stylesheet.css">
-
-        <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-        <script>window.html5 || document.write('<script src="./res/js/html5shiv.min.js"><\/script>')</script>
-        <![endif]-->
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-44576566-1', 'numixproject.org');
-            ga('send', 'pageview');
-        </script>
-        <script type="text/javascript" src="/res/js/webpjs-0.0.2.min.js"></script>
-    </head>
-
-    <body>
-        <section class="cover" data-speed="3">
-            <div class="cover-content">
-                <h1>Make your Linux desktop and Android beautiful.</h1>
-                <p>We design artworks for your Linux desktop, icon themes and applications for your Android devices.</p>
-                <div class="logo"><img src="res/img/numix-logo.png" alt="Numix Logo"></div>
-                <p><a href="http://blog.numixproject.org" class="button">Visit our official blog</a></p>
-                <p><a class="donate-button">Donate to support us</a></p>
+        <h3><a id="contact us" class="anchor" href="#contact-us" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact Us</h3>
+        <p>Want to keep up with Numix news? Check out our social media for the latest! 
+            </p><div class="icons">
+                <a href="mailto:team@numixproject.org">
+                    <img src="images/icons/gmail.svg" alt="Email" height="48">
+                </a>
+                <a href="https://facebook.com/numixproject">
+                    <img src="images/icons/facebook.svg" alt="Facebook" height="48">
+                </a>
+                <a href="https://plus.google.com/+NumixProjectOrg">
+                    <img src="images/icons/gplus.svg" alt="Google+" height="48">
+                </a>
+                <a href="https://twitter.com/numixproject">
+                    <img src="images/icons/twitter.svg" alt="Twitter" height="48">
+                </a>
+                <a href="https://reddit.com/r/numix">
+                    <img src="images/icons/reddit.svg" alt="Reddit" height="48">
+                </a>
             </div>
-        </section>
+        <p></p>
 
-        <aside class="chat-link"><a href="https://scrollback.io/numix/" target="_blank"><img src="res/img/chat.svg" alt="IRC Channel"></a></aside>
-
-        <section id="artwork" class="artwork">
-            <div class="products"></div>
-            <div class="section">
-                <h1>Live on the edge</h1>
-                <p>We have made you repositories to easily install up-to-date releases of various Numix artworks.</p>
-                <p>If you use Ubuntu, add our Ubuntu PPA to get Numix packages. Fire up a Terminal and run the following:</p>
-                <pre><code>sudo add-apt-repository <a href="https://launchpad.net/~numix/+archive/ppa">ppa:numix/ppa</a></code></pre>
-                <p>For Fedora, Red Hat and OpenSUSE, we have setup repos on <a href="https://build.opensuse.org/project/show/home:paolorotolo:numix">OpenSUSE build service</a>.</p>
-                <p>
-                    If you use Fedora, enable our copr repo to get the numix packages. 
-                    <pre><code>dnf copr -y enable satya164/numix</code></pre>
-                </p>
-                <p>
-                    Alternatively, you can install numix themes via
-                    <a href="http://satya164.github.io/fedy/">Fedy</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="about">
-            <h1>Meet our team</h1>
-            <div class="team row"></div>
-        </section>
-
-        <footer>
-            &#169; 2014 <a href="https://plus.google.com/115833527622591803679" rel="publisher">Numix Project</a>. The website and all the associated resources are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC-BY-SA</a>.
+        <footer class="site-footer" style="font-size: small">
+            <span class="site-footer-credits">
+                This page uses the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+                <br>
+                The website and all the associated resources are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA 2 License</a>.
+            </span>
         </footer>
+    </section>
+</body>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
-            window.jQuery || document.write('<script src="./res/js/jquery.min.js"><\/script>')
-        </script>
-        <script src="./res/js/lace.js"></script>
-        <script src="./res/js/main.js"></script>
-
-        <script type="text/template" id="donate-dialog">
-            <p>If you wish to support our work, throw a few bucks at us. Donations do encourage us to spend more time on Numix. :)</p>
-            <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="team@numixproject.org">
-                <input type="hidden" name="item_name" value="Donation to Numix">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="return" value="https://numixproject.org">
-                <input type="number" name="amount" value="5.00" min="0.00" pattern="\d+(\.\d{2})?" oninvalid="setCustomValidity('Please enter a valid currency')" onchange="try{setCustomValidity('')}catch(e){}" autofocus>
-                <input type="submit" value="Donate">
-            </form>
-        </script>
-    </body>
 </html>
+

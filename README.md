@@ -1,4 +1,2 @@
-Numix Project
-=============
-
-The official webpage for the [Numix Project](http://numixproject.org/).
+# Numix Project
+The official webpage for the [Numix Project](https://numixproject.github.io/).
