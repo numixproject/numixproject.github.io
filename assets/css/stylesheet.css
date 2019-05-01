@@ -332,6 +332,22 @@ body {
     stroke-dashoffset:0;
 }
 
+#footer {
+    background: #24292E;
+    color: #dfdfdf;
+    text-align: center;
+    padding: 5px;
+}
+
+#footer a{
+    color: #dfdfdf;
+    font-weight: bold;
+}
+
+#footer span{
+    color: #119955;
+    font-family: "Dosis";
+}
 
 /*
 a {
