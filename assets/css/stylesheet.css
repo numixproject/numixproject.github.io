@@ -2,63 +2,19 @@
     font-family: 'Dosis';
     font-style: normal;
     font-weight: 500;
-    src: local('Dosis Medium'), local('Dosis-Medium'), url('https://fonts.googleapis.com/css?family=Dosis');
+    src: url('../fonts/Dosis-Medium.otf');
 }
 
-/* cyrillic-ext */
 @font-face {
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro Light';
     font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
+    src: url('../fonts/SourceSansPro-Regular.ttf') ;
 }
 
-/* cyrillic */
 @font-face {
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro Light';
     font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
-}
-
-/* greek-ext */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
-}
-
-/* greek */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
-}
-
-/* vietnamese */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
-}
-
-/* latin-ext */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
-}
-
-/* latin */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.googleapis.com/css?family=Source+Sans+Pro) format('woff2');
+    src: url('../fonts/SourceSansPro-Light.ttf') ;
 }
 
 .hide {
@@ -85,7 +41,25 @@ body {
     padding: 10px 60px;
     position: relative;
     z-index: 100;
-    /*! box-shadow: 0 0 2px rgba(0,0,0,0.15); */
+    background: #FFFFFF;
+}
+
+#header.fix-header{
+    width: 100%;
+    box-shadow: 0 0 2px rgba(0,0,0,0.15);
+    position: fixed;
+    top: -60px;
+    animation: show 250ms ease forwards running;
+}
+
+@keyframes show{
+    0%{
+        top: -60px;
+    }
+    
+    100%{
+        top: 0
+    }
 }
 
 #logo {
@@ -132,55 +106,45 @@ body {
 }
 
 #description,
-#news {
+#products {
     padding: 40px 40px 30px;
     background-color: #fff;
-}
-
-#description .inner,
-#news .inner {
     max-width: 1260px;
     margin: 0 auto;
 }
 
 #description .left,
-#news .left,
-#description .right,
-#news .right {
+#description .right {
     display: inline-block;
     vertical-align: top;
     overflow: hidden;
 }
 
-#description .left,
-#news .left {
-    width: 39%;
+#description .left {
+    width: 36%;
     float: left;
 }
 
-#description .right,
-#news .right {
-    width: 61%;
+#description .right {
+    width: 64%;
 }
 
-#description .description-logo,
-#news .description-logo {
+#description .description-logo{
     width: 215px;
     height: 215px;
     float: right;
     margin-right: 60px;
 }
 
-#description h1,
-#news h1 {
+#description h1 {
+    font-family: "Source Sans Pro Light";
     font-weight: 300;
     margin: 0;
     font-size: 3.2em;
     color: #50322c;
 }
 
-#description h2,
-#news h2 {
+#description h2 {
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
     font-size: 2.4em;
@@ -192,7 +156,7 @@ body {
     position: relative;
 }
 
-#description .right p .button {
+#description .button {
     margin: 1em 0;
     margin-right: 0px;
     font-size: 1.05em;
@@ -212,12 +176,12 @@ body {
     transition: all 250ms ease
 }
 
-#description .right p .button:hover {
+#description .button:hover {
     border: 1px solid #F1544D;
     color: #F1544D;
 }
 
-#description .right p .button.github {
+#description .button.github {
     text-indent: 1.4em;
     color: #fff;
     transition: all 250ms ease; 
@@ -226,17 +190,148 @@ body {
     border-color: #f6f6f6;
 }
 
-#description .right p .button.github:hover{
+#description .button.github:hover{
     border: 1px solid #ececef;
     background: #ececef;
 }
 
-#description .right p .button svg {
+#description .button svg {
     position: absolute;
     left: 0.4em;
     top: 0.4em;
     width: 2em;
 }
+
+#description .bottom,
+#contact-us {
+    margin-top: 40px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+#description .bottom h1,
+#contact-us h1{
+    font-family: "Source Sans Pro";
+    font-size: 30px;
+    font-weight: 500;
+    color: #EA7269;
+}
+
+#description .bottom p,
+#contact-us p{
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+#products{
+    max-width: 900px;
+    padding-top: 0px;
+}
+
+#products .point {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 2em;
+    text-align: center;
+}
+
+#products .point h2 {
+    color: #EA7269;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+#products .point p {
+    color: #7f8c8d;
+}
+
+#contact-us{
+    background: #F6F6F6;
+    padding: 25px 0;
+}
+
+#contact-us .media-links{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 50px;
+}
+
+#contact-us ul{
+    display: block;
+    height: 60px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact-us ul li{
+    display: inline-block;
+    width: 15%;
+    float: left;
+    margin: 0 1%;
+    padding-top: 15px;
+}
+
+#contact-us ul li:first-child{
+    margin-left: 0;
+}
+#contact-us ul li:last-child{
+    margin-right: 0;
+}
+
+#contact-us ul li.google-plus a:hover svg{
+    fill: #DD4B39
+}
+
+#contact-us ul li.facebook a:hover svg{
+    fill: #475993
+}
+
+#contact-us ul li.gmail a:hover svg{
+    fill: #F14336
+}
+
+#contact-us ul li.twitter a:hover svg{
+    fill: #03A9F4
+}
+
+#contact-us ul li.reddit a:hover svg{
+    fill: #FF3F18
+}
+
+#contact-us ul li.github a:hover svg{
+    fill: #24292E
+}
+
+#contact-us ul li a {
+    stroke-dasharray: 3200;
+    stroke-dashoffset: 3205;    
+}
+
+#contact-us ul li a svg {    
+    stroke-dasharray: 3200;
+    stroke-dashoffset: 3205;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    fill: #999999;
+    stroke-width: 2.4%;
+    stroke: #333;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 250ms ease-in,fill 250ms ease-in
+}
+
+#contact-us ul li a svg:hover {
+    stroke-dashoffset:0;
+}
+
 
 /*
 a {
