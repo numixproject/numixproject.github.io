@@ -203,14 +203,16 @@ body {
 }
 
 #description .bottom,
-#contact-us {
+#contact-us,
+#our-work{
     margin-top: 40px;
     text-align: center;
     color: #7f8c8d;
 }
 
 #description .bottom h1,
-#contact-us h1{
+#contact-us h1,
+#our-work h1{
     font-family: "Source Sans Pro";
     font-size: 30px;
     font-weight: 500;
@@ -218,7 +220,8 @@ body {
 }
 
 #description .bottom p,
-#contact-us p{
+#contact-us p,
+#our-work p{
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.5;
@@ -252,9 +255,47 @@ body {
     color: #7f8c8d;
 }
 
-#contact-us{
+#our-work{
     background: #F6F6F6;
-    padding: 25px 0;
+    padding: 25px 0 35px 0;
+}
+
+#our-work p{
+    text-align: left;
+    color: #777777
+}
+
+#our-work a{
+    color: #F47F77;
+    transition: all 250ms ease
+}
+
+#our-work a:hover{
+    color: #F1544D;
+    text-decoration: underline
+}
+
+#our-work pre{
+    display: block;
+    width: 80%;
+    max-width: 690px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #fcfcfc;
+    margin: 15px auto;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+}
+#our-work pre code{
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace, sans-serif;
+}
+
+#contact-us{
+    margin-top: 0px;
+    padding: 25px 0 35px 0;
 }
 
 #contact-us .media-links{
