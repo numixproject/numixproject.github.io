@@ -36,6 +36,21 @@ body {
     font-weight: 100;
 }
 
+h1{
+    font-family: "Source Sans Pro";
+    font-size: 1.9em;
+    font-weight: 500;
+    color: #EA7269;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-top: 1.7em;
+    font-size: 1em;
+}
+
 #header {
     height: 60px;
     padding: 10px 60px;
@@ -147,7 +162,7 @@ body {
     margin-top: 8px;
 }
 
-#description h1 {
+#description h1.headline {
     font-family: "Source Sans Pro Light";
     font-weight: 300;
     margin: 0;
@@ -182,6 +197,7 @@ body {
     box-sizing: border-box;
     border: 1px solid #F47F77;
     position: relative;
+    cursor: pointer;
     transition: all 250ms ease
 }
 
@@ -217,30 +233,6 @@ body {
     margin-top: 2em;
     text-align: center;
     color: #7f8c8d;
-}
-
-#description .bottom h1,
-#contact-us h1,
-#our-work h1,
-#top-section h1,
-#our-products h1,
-#team-section h1{
-    font-family: "Source Sans Pro";
-    font-size: 1.9em;
-    font-weight: 500;
-    color: #EA7269;
-}
-
-#description .bottom p,
-#contact-us p,
-#our-work p,
-#top-section .inner p,
-#our-products p {
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.5;
-    margin-top: 1.7em;
-    font-size: 1em;
 }
 
 #products {
@@ -387,14 +379,28 @@ body {
     padding: 0.2em;
 }
 
+#footer.fixed-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
 #footer a {
     color: #dfdfdf;
     font-weight: bold;
 }
 
-#footer span {
+#footer a.me {
     color: #119955;
     font-family: "Dosis";
+}
+
+#footer p{
+    margin: none;
+    line-height: 1.5;
+    margin-top: 0;
+    font-size: 1em;
+    padding: 1em 0
 }
 
 #top-section {
@@ -587,6 +593,13 @@ body {
     margin-bottom: 1em
 }
 
+#members-section .profile .name a,
+#alumni-section .profile .name a {
+    font-family: "dosis";
+    font-size: 1.5em;
+    color: #F14336
+}
+
 #members-section .profile .job,
 #alumni-section .profile .job {
     font-family: "dosis";
@@ -596,4 +609,61 @@ body {
 
 .clear {
     clear: both;
+}
+
+#section-404{
+    text-align: center;
+    position: relative;
+}
+
+#section-404 h1{
+    font-family: dosis;
+    font-size: 9em;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    color: #333333
+}
+
+#section-404 .wrapper{
+    position: relative;
+    top: -4em
+}
+
+#section-404 .box{
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    background: #FFA200;
+    transform: rotate(45deg);
+    border: 0.25em dashed #333;
+    border-radius: 0.4em;
+    position: relative;
+    overflow: hidden;
+}
+
+#section-404 .box p{
+    font-size: 4em;
+    color: #333333;
+    font-family: "dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    transform: rotate(-45deg) translateX(58px) translateY(-70px);
+}
+
+#section-404 p{
+    width: 60%;
+}
+
+#section-404 .button{
+    padding: 0.55em 1.2em;
+    background: #24292E;
+    border-color: #24292E;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    font-size: 0.9em;
+    opacity: 0.5;
+    color: #dcdcdc;
+}
+
+#section-404 .button:hover{
+    opacity: 1
 }

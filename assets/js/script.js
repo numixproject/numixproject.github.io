@@ -12,19 +12,7 @@ $(window).scroll(function () {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-var siteCarousel = function () {
+var carousel = function () {
     if ($('.our-themes').length > 0) {
         $('.our-themes').owlCarousel({
             center: false,
@@ -70,4 +58,4 @@ var siteCarousel = function () {
         navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
     });
 };
-siteCarousel();
+carousel();
