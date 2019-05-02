@@ -8,13 +8,13 @@
 @font-face {
     font-family: 'Source Sans Pro Light';
     font-style: normal;
-    src: url('../fonts/SourceSansPro-Regular.ttf') ;
+    src: url('../fonts/SourceSansPro-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Source Sans Pro Light';
     font-style: normal;
-    src: url('../fonts/SourceSansPro-Light.ttf') ;
+    src: url('../fonts/SourceSansPro-Light.ttf');
 }
 
 .hide {
@@ -29,7 +29,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     text-align: justify;
     line-height: 1.5;
     color: #606c71;
@@ -44,20 +44,20 @@ body {
     background: #FFFFFF;
 }
 
-#header.fix-header{
+#header.fix-header {
     width: 100%;
-    box-shadow: 0 0 2px rgba(0,0,0,0.15);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
     position: fixed;
     top: -60px;
     animation: show 250ms ease forwards running;
 }
 
-@keyframes show{
-    0%{
+@keyframes show {
+    0% {
         top: -60px;
     }
-    
-    100%{
+
+    100% {
         top: 0
     }
 }
@@ -69,6 +69,15 @@ body {
     color: #50322c;
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
+}
+
+#logo img {
+    vertical-align: middle;
+    margin-right: 6px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -6px
 }
 
 #logo span {
@@ -103,6 +112,7 @@ body {
     outline: none;
     padding-bottom: 5px;
     border-bottom: 2px solid #F1544D;
+    color: #F1544D;
 }
 
 #description,
@@ -129,11 +139,12 @@ body {
     width: 64%;
 }
 
-#description .description-logo{
+#description .description-logo {
     width: 215px;
     height: 215px;
     float: right;
     margin-right: 60px;
+    margin-top: 8px;
 }
 
 #description h1 {
@@ -156,7 +167,7 @@ body {
     position: relative;
 }
 
-#description .button {
+.button {
     margin: 1em 0;
     margin-right: 0px;
     font-size: 1.05em;
@@ -168,34 +179,32 @@ body {
     border-radius: 2em;
     display: inline-block;
     color: #F47F77;
-    background: #FFF;
-    transition: all 0.15s ease;
     box-sizing: border-box;
     border: 1px solid #F47F77;
     position: relative;
     transition: all 250ms ease
 }
 
-#description .button:hover {
+.button:hover {
     border: 1px solid #F1544D;
     color: #F1544D;
 }
 
-#description .button.github {
+.button.github {
     text-indent: 1.4em;
     color: #fff;
-    transition: all 250ms ease; 
+    transition: all 250ms ease;
     background-color: #f6f6f6;
     color: #7f8c8d;
     border-color: #f6f6f6;
 }
 
-#description .button.github:hover{
+.button.github:hover {
     border: 1px solid #ececef;
     background: #ececef;
 }
 
-#description .button svg {
+.button svg {
     position: absolute;
     left: 0.4em;
     top: 0.4em;
@@ -204,32 +213,36 @@ body {
 
 #description .bottom,
 #contact-us,
-#our-work{
-    margin-top: 40px;
+#our-work {
+    margin-top: 2em;
     text-align: center;
     color: #7f8c8d;
 }
 
 #description .bottom h1,
 #contact-us h1,
-#our-work h1{
+#our-work h1,
+#top-section h1,
+#our-products h1 {
     font-family: "Source Sans Pro";
-    font-size: 30px;
+    font-size: 1.9em;
     font-weight: 500;
     color: #EA7269;
 }
 
 #description .bottom p,
 #contact-us p,
-#our-work p{
+#our-work p,
+#top-section .inner p,
+#our-products p {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.5;
-    margin-top: 10px;
-    font-size: 17px;
+    margin-top: 1.7em;
+    font-size: 1em;
 }
 
-#products{
+#products {
     max-width: 900px;
     padding-top: 0px;
 }
@@ -255,140 +268,369 @@ body {
     color: #7f8c8d;
 }
 
-#our-work{
-    background: #F6F6F6;
-    padding: 25px 0 35px 0;
+#our-work {
+    background: #F6F6F6F6;
+    padding: 1.5em 0 4em 0;
+    margin-top: 0;
 }
 
-#our-work p{
+#our-work p {
     text-align: left;
     color: #777777
 }
 
-#our-work a{
+#our-work a {
     color: #F47F77;
     transition: all 250ms ease
 }
 
-#our-work a:hover{
+#our-work a:hover {
     color: #F1544D;
     text-decoration: underline
 }
 
-#our-work pre{
+#our-work pre {
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 690px;
     border: 1px solid #bbb;
     border-radius: 3px;
     background: #fcfcfc;
-    margin: 15px auto;
-    padding: 10px;
-    padding-left: 20px;
+    margin: 1em auto;
+    padding: .85em;
+    padding-left: 1.75em;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.95em;
     color: #666;
 }
-#our-work pre code{
+
+#our-work pre code {
     font-family: "SF Mono", "Fira Code", "Consolas", monospace, sans-serif;
 }
 
-#contact-us{
+#contact-us {
     margin-top: 0px;
-    padding: 25px 0 35px 0;
+    padding: 1.7em 0;
 }
 
-#contact-us .media-links{
+#contact-us .media-links {
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px 50px;
+    padding: 1em 4em;
 }
 
-#contact-us ul{
+#contact-us ul {
     display: block;
-    height: 60px;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 70px;
 }
 
-#contact-us ul li{
+#contact-us ul li {
     display: inline-block;
     width: 15%;
     float: left;
     margin: 0 1%;
-    padding-top: 15px;
+    padding-top: 1em;
 }
 
-#contact-us ul li:first-child{
+#contact-us ul li:first-child {
     margin-left: 0;
 }
-#contact-us ul li:last-child{
+
+#contact-us ul li:last-child {
     margin-right: 0;
 }
 
-#contact-us ul li.google-plus a:hover svg{
+#contact-us ul li.google-plus a:hover svg {
     fill: #DD4B39
 }
 
-#contact-us ul li.facebook a:hover svg{
+#contact-us ul li.facebook a:hover svg {
     fill: #475993
 }
 
-#contact-us ul li.gmail a:hover svg{
+#contact-us ul li.gmail a:hover svg {
     fill: #F14336
 }
 
-#contact-us ul li.twitter a:hover svg{
+#contact-us ul li.twitter a:hover svg {
     fill: #03A9F4
 }
 
-#contact-us ul li.reddit a:hover svg{
+#contact-us ul li.reddit a:hover svg {
     fill: #FF3F18
 }
 
-#contact-us ul li.github a:hover svg{
+#contact-us ul li.github a:hover svg {
     fill: #24292E
 }
 
-#contact-us ul li a {
-    stroke-dasharray: 3200;
-    stroke-dashoffset: 3205;    
-}
 
-#contact-us ul li a svg {    
-    stroke-dasharray: 3200;
-    stroke-dashoffset: 3205;
+#contact-us ul li a svg {
     cursor: pointer;
-    height: 32px;
-    width: 32px;
-    fill: #999999;
-    stroke-width: 2.4%;
-    stroke: #333;
+    height: 2em;
+    width: 2em;
+    fill: #777;
     stroke-linejoin: round;
     stroke-linecap: round;
-    transition: stroke-dashoffset 250ms ease-in,fill 250ms ease-in
+    transition: fill 250ms ease
 }
 
-#contact-us ul li a svg:hover {
-    stroke-dashoffset:0;
-}
 
 #footer {
     background: #24292E;
     color: #dfdfdf;
     text-align: center;
-    padding: 5px;
+    padding: 0.2em;
 }
 
-#footer a{
+#footer a {
     color: #dfdfdf;
     font-weight: bold;
 }
 
-#footer span{
+#footer span {
     color: #119955;
     font-family: "Dosis";
 }
+
+
+
+
+
+
+
+#top-section {
+    display: block;
+    height: auto;
+    background-image: url("./../images/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+#top-section:before {
+    display: block;
+    content: "";
+    background: rgba(12, 12, 33, 0.85);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#top-section .inner {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#top-section .inner img {
+    width: 9em;
+    margin-top: 10px;
+}
+
+#top-section .inner h1 {
+    font-size: 4.2em;
+    color: #F1544D;
+    margin: 0;
+    font-weight: bold
+}
+
+#top-section .inner p {
+    width: 80%;
+    color: #fcfcfc;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+#top-section .inner .button {
+    display: inline-block;
+    margin: 20px 0 30px 0;
+    padding: 12px 40px;
+    text-transform: uppercase
+}
+
+
+
+
+
+#our-products h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    font-weight: 300;
+    margin-bottom: 0
+}
+
+#our-products .our-themes .owl-dots {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#our-products .our-themes .owl-dots {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#our-products .our-themes .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 5px;
+}
+
+#our-products .our-themes .owl-dots .owl-dot span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+}
+
+#our-products .our-themes .owl-dots .owl-dot.active span {
+    background-color: #F1544D;
+}
+
+#our-products .product-item {
+    padding: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+#our-products .product-item h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #24292E;
+}
+
+#our-products .product-item img {
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    max-height: 270px;
+    max-width: 270px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#our-products .opensource{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#our-products .opensource .button svg path{
+    fill: #f6f6f6
+}
+
+#our-products .opensource .button.github{
+    text-indent: 1.4em;
+    color: #f6f6f6;
+    transition: all 250ms ease;
+    background-color:  #24292e;
+    color: #f6f6f6;
+    border-color: #24292e;
+}
+
+#our-products .opensource .button.github:hover{
+    opacity: 0.75;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 a {
