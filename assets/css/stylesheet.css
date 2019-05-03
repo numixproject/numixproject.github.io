@@ -32,7 +32,7 @@ body {
     font-weight: 100;
 }
 
-h1{
+h1 {
     font-family: "Source Sans Pro";
     font-size: 1.9em;
     font-weight: 500;
@@ -45,11 +45,12 @@ p {
     line-height: 1.5;
     margin-top: 1.7em;
     font-size: 1em;
+    font-weight: 300;
 }
 
 #header {
-    height:  3.75em;
-    padding: 0.625em  3.75em;
+    height: 3.75em;
+    padding: 0.625em 3.75em;
     position: absolute;
     z-index: 100;
     background: #FFFFFF;
@@ -103,14 +104,15 @@ p {
 }
 
 #header .hide {
-    animation: hide 200ms ease  forwards running;
+    animation: hide 200ms ease forwards running;
 }
 
-@keyframes hide{
-    0%{
+@keyframes hide {
+    0% {
         width: 2em;
     }
-    100%{
+
+    100% {
         width: 0%;
         opacity: 0;
     }
@@ -121,7 +123,7 @@ p {
     margin: 0;
     padding: 0;
     position: absolute;
-    right:  3.75em;
+    right: 3.75em;
     top: 0.625em;
     height: 2.5em;
     line-height: 0.625em;
@@ -176,7 +178,7 @@ p {
     width: 13.5em;
     height: 13.5em;
     float: right;
-    margin-right:  3.75em;
+    margin-right: 3.75em;
     margin-top: 0.5em;
 }
 
@@ -281,7 +283,7 @@ p {
 }
 
 #our-work a,
-#team-section a{
+#team-section a {
     color: #F47F77;
     transition: all 250ms ease
 }
@@ -296,15 +298,12 @@ p {
     display: block;
     width: 100%;
     max-width: 600px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
+    border: 1px solid #eae7e7;
     background: #fcfcfc;
     margin: 1em auto;
-    padding: .85em;
-    padding-left: 1.75em;
+    padding: .85em 1.75em;
     text-align: left;
     font-size: 0.95em;
-    color: #666;
 }
 
 #our-work pre code {
@@ -319,7 +318,7 @@ p {
 #contact-us .media-links {
     max-width: 900px;
     margin: 0 auto;
-    padding: 1em 4em;
+    padding: 1em 1em;
 }
 
 #contact-us ul {
@@ -388,7 +387,9 @@ p {
 }
 
 #footer.fixed-footer {
-    width: 100%
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer a {
@@ -401,7 +402,7 @@ p {
     font-family: "Dosis";
 }
 
-#footer p{
+#footer p {
     margin: none;
     line-height: 1.5;
     margin-top: 0;
@@ -472,7 +473,7 @@ p {
 }
 
 #our-products h1,
-#team-section h1{
+#team-section h1 {
     text-align: center;
     font-size: 2.5em;
     margin-top: 0.5em;
@@ -521,6 +522,10 @@ p {
     color: #24292E;
 }
 
+#our-products .product-item p {
+    height: 50px;
+}
+
 #our-products .product-item img {
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -535,42 +540,42 @@ p {
     margin-top: 1.25em;
 }
 
-#our-products .product-item a svg{
+#our-products .product-item a svg {
     width: 1.875em;
 }
 
-#our-products .product-item a svg path{
+#our-products .product-item a svg path {
     fill: #aaa;
     transition: all 250ms ease;
 }
 
-#our-products .product-item a svg:hover path{
+#our-products .product-item a svg:hover path {
     fill: #40402e
 }
 
-#our-products .opensource{
+#our-products .opensource {
     text-align: center;
     margin-bottom: 3.125em;
 }
 
-#our-products .opensource .button svg path{
+#our-products .opensource .button svg path {
     fill: #f6f6f6
 }
 
-#our-products .opensource .button.github{
+#our-products .opensource .button.github {
     text-indent: 1.4em;
     color: #f6f6f6;
     transition: all 250ms ease;
-    background-color:  #24292e;
+    background-color: #24292e;
     color: #f6f6f6;
     border-color: #24292e;
 }
 
-#our-products .opensource .button.github:hover{
+#our-products .opensource .button.github:hover {
     opacity: 0.75;
 }
 
-#team-section{
+#team-section {
     text-align: center
 }
 
@@ -582,17 +587,17 @@ p {
     padding-top: 1em;
 }
 
-#members-section .profile ,
+#members-section .profile,
 #alumni-section .profile {
     display: inline-block;
     position: relative;
     width: 20%;
     height: 30em;
-    padding:  1em 2em;
+    padding: 1em 2em;
 }
 
 #members-section .profile img,
-#alumni-section .profile img{
+#alumni-section .profile img {
     display: block;
     width: 100%;
     padding: 0.25em;
@@ -618,13 +623,13 @@ p {
     clear: both;
 }
 
-#section-404{
+#section-404 {
     text-align: center;
     position: relative;
     margin-top: 3.75em;
 }
 
-#section-404 h1{
+#section-404 h1 {
     font-family: dosis;
     font-size: 9em;
     font-weight: 700;
@@ -633,12 +638,12 @@ p {
     color: #F1544D;
 }
 
-#section-404 .wrapper{
+#section-404 .wrapper {
     position: relative;
     top: -4em
 }
 
-#section-404 .box{
+#section-404 .box {
     display: inline-block;
     width: 8em;
     height: 8em;
@@ -650,18 +655,18 @@ p {
     overflow: hidden;
 }
 
-#section-404 .box p{
+#section-404 .box p {
     font-size: 4em;
     color: #333333;
     font-family: "dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     transform: rotate(-45deg) translateX(58px) translateY(-70px);
 }
 
-#section-404 p{
+#section-404 p {
     width: 60%;
 }
 
-#section-404 .button{
+#section-404 .button {
     padding: 0.55em 1.2em;
     background: #F1544D;
     border-color: #F1544D;
@@ -672,157 +677,164 @@ p {
     color: #dcdcdc;
 }
 
-#section-404 .button:hover{
+#section-404 .button:hover {
     opacity: 1;
+}
+
+.sidebar,
+#mobile-bar {
+    display: none;
 }
 
 @media screen and (max-width: 900px) {
     p {
         margin-top: 0;
     }
-    
+
     #header {
-        height:  3.2em;
+        height: 3.2em;
     }
-    
+
     #logo img {
         width: 0em;
         height: 1.5em;
     }
-    
+
     #logo span {
         font-size: 1em;
     }
-    
+
     #header .show {
         width: 1.5em;
     }
-    
-    @keyframes hide{
-        0%{
+
+    @keyframes hide {
+        0% {
             width: 1.5em;
         }
-        100%{
+
+        100% {
             width: 0%;
             opacity: 0;
         }
     }
-    
+
     #nav {
         top: 0.75em;
         line-height: 0;
         font-size: .95em;
     }
-    
+
     #nav .nav-item a:hover,
     #nav .nav-item a:active,
     #nav .nav-item.current a {
         outline: none;
         padding-bottom: 0;
-        border-bottom: none; 
+        border-bottom: none;
     }
-    
+
     #description,
     #products {
         margin-top: 3em;
     }
-    
+
     #description .left {
         width: 100%;
         float: none;
         text-align: center;
     }
-    
+
     #description .right {
         width: 100%;
         text-align: center;
     }
-    
+
     #description .description-logo {
         width: 10em;
         height: 10em;
         float: none;
-        margin:  0 auto;
-        text-align: none; 
+        margin: 0 auto;
+        text-align: none;
     }
-    
+
     #description h1.headline {
         font-size: 2.5em;
     }
-    
+
     .button.github {
         background-color: #eaeaea;
         color: #586566;
         border-color: #eaeaea;
     }
-    
+
     #products {
         margin-bottom: 50px;
     }
-    
+
     #products .point {
         width: 100%;
     }
-    
+
     #our-work {
         padding: 1.5em 3em 4em 3em;
     }
 
     #contact-us {
         padding: 1.7em 2em;
-    }    
-    
+    }
+
     #contact-us .media-links {
         max-width: 100%;
     }
-    
+
     #contact-us ul {
-        width: 80%;
+        width: 100%;
         padding-left: 0;
         margin-bottom: 1em;
         text-align: center;
     }
-    
+
     #contact-us ul li {
         float: none;
     }
-    
-    #contact-us ul li a{
+
+    #contact-us ul li a {
         font-size: 0.9em
     }
-    
-    #footer p{
+
+    #footer p {
         font-size: 0.8em;
     }
 
     #top-section {
         margin-top: 3.2em;
     }
-    
+
     #top-section .inner h1 {
         font-size: 3.2em;
     }
-    
+
     #top-section .inner p {
         font-size: 1em;
     }
-    
+
     #top-section .inner .button {
         padding: 0.75em 2em;
         margin-top: 1.5em;
     }
-    
+
     #our-products h1,
-    #team-section h1{
-        font-size: 1.9em;
+    #team-section h1 {
+        font-size: 2.6em;
         margin-top: 1em;
         margin-bottom: 0;
     }
 
-    #members-section .profile, #alumni-section .profile {
+    #members-section .profile,
+    #alumni-section .profile {
         width: 33%;
     }
-    
+
     #section-404 .box p {
         transform: rotate(-45deg) translateX(-4px) translateY(-8px);
     }
@@ -833,12 +845,323 @@ p {
 }
 
 @media screen and (max-width: 500px) {
-    body{
+
+    #top-section {
+        margin-top: 0px;
+    }
+
+    #top-section .inner{
+        padding-top: 2.75em
+    }
+
+    #section-404 h1 {
+        font-size: 6em;
+    }
+
+    #header {
         display: none;
     }
+
+    #mobile-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: #ffffff00;
+        z-index: 9;
+        display: block;
+    }
+    
+    #mobile-bar.open {
+        background-color: #ffffff;
+        animation: open-mobile-bar 250ms ease forwards running
+    }
+    
+    @keyframes open-mobile-bar{
+        0%{
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.25);
+        }
+        
+        100%{
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+        }
+    }
+    
+    #mobile-bar.close {
+        background-color: #ffffff00;
+        animation: close-mobile-bar 250ms ease forwards running
+    }
+    
+    @keyframes close-mobile-bar{
+        0%{
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+        }
+        
+        100%{
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+    
+    #mobile-bar .menu-button {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 8px;
+        right: 12px;
+        cursor: pointer;
+        overflow: hidden;
+
+    }
+
+    #mobile-bar .menu-button span {
+        display: block;
+        width: 24px;
+        height: 4px;
+        background: #F1544D;
+        margin: 3px 0;
+        border-radius: 3px;
+    }
+
+    #mobile-bar .menu-button.close span {
+        animation: close-middle-bar 250ms ease forwards;
+    }
+
+    @keyframes close-middle-bar {
+        100% {
+            opacity: 0;
+        }
+    }
+
+    #mobile-bar .menu-button.close span:first-child {
+        opacity: 1;
+        animation: close-top-bar 250ms ease forwards;
+    }
+
+    @keyframes close-top-bar {
+        100% {
+            transform: rotate(45deg) translateX(5px) translateY(5px);
+        }
+    }
+
+    #mobile-bar .menu-button.close span:last-child {
+        opacity: 1;
+        animation: close-bottom-bar 250ms ease forwards;
+    }
+
+    @keyframes close-bottom-bar {
+        100% {
+            transform: rotate(-45deg) translateX(5px) translateY(-5px);
+        }
+    }
+
+
+    #mobile-bar .menu-button.open span {
+        animation: open-middle-bar 250ms ease forwards running;
+    }
+
+    @keyframes open-middle-bar {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #mobile-bar .menu-button.open span:first-child {
+        opacity: 1;
+        animation: open-top-bar 250ms ease forwards running;
+    }
+
+    @keyframes open-top-bar {
+        0% {
+            transform: rotate(45deg) translateX(5px) translateY(5px);
+        }
+
+        100% {
+            transform: rotate(0deg) translateX(0px) translateY(0px);
+        }
+    }
+
+    #mobile-bar .menu-button.open span:last-child {
+        opacity: 1;
+        animation: open-bottom-bar 250ms ease forwards running;
+    }
+
+    @keyframes open-bottom-bar {
+        0% {
+            transform: rotate(-45deg) translateX(5px) translateY(-5px);
+        }
+
+        100% {
+            transform: rotate(0deg) translateX(0px) translateY(0px);
+        }
+    }
+
+    #mobile-bar .logo {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url("../images/logo.svg") center center no-repeat;
+        top: 5px;
+        left: 50%;
+        margin-left: -15px;
+        background-size: 30px;
+        opacity: 0;
+    }
+
+    #mobile-bar.open .logo{
+        animation: open-mobile-bar-logo 250ms ease forwards running
+    }
+    
+    @keyframes open-mobile-bar-logo{
+        0%{
+            opacity: 0;
+        }
+        
+        100%{
+            opacity: 1;
+        }
+    }
+    
+    #mobile-bar.close .logo{
+        animation: close-mobile-bar-logo 250ms ease forwards running
+    }
+    
+    @keyframes close-mobile-bar-logo{
+        0%{
+            opacity: 1;
+        }
+        
+        100%{
+            opacity: 0;
+        }
+    }
+
+    .sidebar {
+        display: block;
+        text-align: center;
+    }
+
+    .sidebar .logo-box {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar .logo-box #logo {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        height: 200px;
+        padding: 1em;
+        margin: 1em 0 1em 0;
+        position: relative;
+    }
+
+    .sidebar .logo-box #logo img {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        height: 80%;
+        margin-bottom: 1em;
+        position: relative;
+    }
+
+
+    .sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        line-height: 1.5em;
+        padding-left: 1em;
+    }
+
+    .sidebar li {
+        margin-top: 1em;
+    }
+
+    .sidebar li a {
+        font-size: 1.2em;
+        font-family: "dosis";
+        text-transform: uppercase;
+        color: #24292E;
+        transition: all 250ms ease
+    }
+
+    .sidebar li a:hover {
+        color: #F14336
+    }
+
+    .sidebar li a.current {
+        color: #F14336
+    }
+
+    .sidebar .main-menu {
+        margin-bottom: 20px;
+        display: none;
+        padding-left: 0;
+    }
+
+    .sidebar .nav-dropdown h4 {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 10;
+        background-color: #ffffff;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+        transform: translate(-230px, 0);
+        width: 220px;
+    }
+
+    .sidebar .main-menu {
+        display: block;
+    }
+
+    .sidebar.open {
+        animation: open-sidebar 250ms ease running forwards
+    }
+
+    @keyframes open-sidebar {
+        0% {
+            transform: translate(-230px, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    .sidebar.close {
+        animation: close-sidebar 250ms ease running forwards
+    }
+
+    @keyframes close-sidebar {
+        0% {
+            transform: translate(0px, 0);
+        }
+
+        100% {
+            transform: translate(-230, 0);
+        }
+    }
+
+    #team-section {
+        padding: 2em
+    }
+
+    #members-section .profile, #alumni-section .profile {
+        width: 100%;
+    }
+
+    #our-products h1, #team-section h1 {
+        margin-top: 0em;
+    }
 }
-
-
-
-
-
