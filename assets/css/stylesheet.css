@@ -388,8 +388,6 @@ p {
 }
 
 #footer.fixed-footer {
-    position: absolute;
-    bottom: 0;
     width: 100%
 }
 
@@ -679,9 +677,168 @@ p {
 }
 
 @media screen and (max-width: 900px) {
+    p {
+        margin-top: 0;
+    }
+    
+    #header {
+        height:  3.2em;
+    }
+    
+    #logo img {
+        width: 0em;
+        height: 1.5em;
+    }
+    
+    #logo span {
+        font-size: 1em;
+    }
+    
+    #header .show {
+        width: 1.5em;
+    }
+    
+    @keyframes hide{
+        0%{
+            width: 1.5em;
+        }
+        100%{
+            width: 0%;
+            opacity: 0;
+        }
+    }
+    
+    #nav {
+        top: 0.75em;
+        line-height: 0;
+        font-size: .95em;
+    }
+    
+    #nav .nav-item a:hover,
+    #nav .nav-item a:active,
+    #nav .nav-item.current a {
+        outline: none;
+        padding-bottom: 0;
+        border-bottom: none; 
+    }
+    
+    #description,
+    #products {
+        margin-top: 3em;
+    }
+    
+    #description .left {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    
+    #description .right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #description .description-logo {
+        width: 10em;
+        height: 10em;
+        float: none;
+        margin:  0 auto;
+        text-align: none; 
+    }
+    
+    #description h1.headline {
+        font-size: 2.5em;
+    }
+    
+    .button.github {
+        background-color: #eaeaea;
+        color: #586566;
+        border-color: #eaeaea;
+    }
+    
+    #products {
+        margin-bottom: 50px;
+    }
+    
+    #products .point {
+        width: 100%;
+    }
+    
+    #our-work {
+        padding: 1.5em 3em 4em 3em;
+    }
 
+    #contact-us {
+        padding: 1.7em 2em;
+    }    
+    
+    #contact-us .media-links {
+        max-width: 100%;
+    }
+    
+    #contact-us ul {
+        width: 80%;
+        padding-left: 0;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    #contact-us ul li {
+        float: none;
+    }
+    
+    #contact-us ul li a{
+        font-size: 0.9em
+    }
+    
+    #footer p{
+        font-size: 0.8em;
+    }
+
+    #top-section {
+        margin-top: 3.2em;
+    }
+    
+    #top-section .inner h1 {
+        font-size: 3.2em;
+    }
+    
+    #top-section .inner p {
+        font-size: 1em;
+    }
+    
+    #top-section .inner .button {
+        padding: 0.75em 2em;
+        margin-top: 1.5em;
+    }
+    
+    #our-products h1,
+    #team-section h1{
+        font-size: 1.9em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    #members-section .profile, #alumni-section .profile {
+        width: 33%;
+    }
+    
+    #section-404 .box p {
+        transform: rotate(-45deg) translateX(-4px) translateY(-8px);
+    }
+
+    #section-404 p {
+        margin-top: 20px;
+    }
 }
 
-@media screen and (max-width: 400px) {
-
+@media screen and (max-width: 500px) {
+    body{
+        display: none;
+    }
 }
+
+
+
+
+
