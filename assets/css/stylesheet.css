@@ -17,10 +17,6 @@
     src: url('../fonts/SourceSansPro-Light.ttf');
 }
 
-.hide {
-    display: none;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -52,24 +48,26 @@ p {
 }
 
 #header {
-    height: 60px;
-    padding: 10px 60px;
-    position: relative;
+    height:  3.75em;
+    padding: 0.625em  3.75em;
+    position: absolute;
     z-index: 100;
     background: #FFFFFF;
+    width: 100%;
+    top: 0;
 }
 
 #header.fix-header {
     width: 100%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
     position: fixed;
-    top: -60px;
+    top: -3.75em;
     animation: show 250ms ease forwards running;
 }
 
 @keyframes show {
     0% {
-        top: -60px;
+        top: -3.75em;
     }
 
     100% {
@@ -77,10 +75,11 @@ p {
     }
 }
 
+
 #logo {
     display: inline-block;
     font-size: 1.5em;
-    line-height: 40px;
+    line-height: 1em;
     color: #50322c;
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
@@ -88,15 +87,33 @@ p {
 
 #logo img {
     vertical-align: middle;
-    margin-right: 6px;
-    width: 40px;
-    height: 40px;
+    margin-right: 0.375em;
+    width: 0em;
+    height: 2em;
     position: relative;
-    top: -6px
+    top: -0.18em;
 }
 
 #logo span {
     font-size: 1.2em;
+}
+
+#header .show {
+    width: 2em
+}
+
+#header .hide {
+    animation: hide 200ms ease  forwards running;
+}
+
+@keyframes hide{
+    0%{
+        width: 2em;
+    }
+    100%{
+        width: 0%;
+        opacity: 0;
+    }
 }
 
 #nav {
@@ -104,10 +121,10 @@ p {
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 60px;
-    top: 10px;
-    height: 40px;
-    line-height: 10px;
+    right:  3.75em;
+    top: 0.625em;
+    height: 2.5em;
+    line-height: 0.625em;
 }
 
 #nav li {
@@ -125,17 +142,18 @@ p {
 #nav .nav-item a:active,
 #nav .nav-item.current a {
     outline: none;
-    padding-bottom: 5px;
+    padding-bottom: 0.315em;
     border-bottom: 2px solid #F1544D;
     color: #F1544D;
 }
 
 #description,
 #products {
-    padding: 40px 40px 30px;
+    padding: 2.5em 2.5em 1.875em;
     background-color: #fff;
     max-width: 1260px;
     margin: 0 auto;
+    margin-top: 3.75em;
 }
 
 #description .left,
@@ -155,11 +173,11 @@ p {
 }
 
 #description .description-logo {
-    width: 215px;
-    height: 215px;
+    width: 13.5em;
+    height: 13.5em;
     float: right;
-    margin-right: 60px;
-    margin-top: 8px;
+    margin-right:  3.75em;
+    margin-top: 0.5em;
 }
 
 #description h1.headline {
@@ -174,7 +192,7 @@ p {
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
     font-size: 2.4em;
-    margin: 0 0 10px;
+    margin: 0 0 0.625em;
     display: none;
 }
 
@@ -201,11 +219,6 @@ p {
     transition: all 250ms ease
 }
 
-.button:hover {
-    border: 1px solid #F1544D;
-    color: #F1544D;
-}
-
 .button.github {
     text-indent: 1.4em;
     color: #fff;
@@ -213,11 +226,6 @@ p {
     background-color: #f6f6f6;
     color: #7f8c8d;
     border-color: #f6f6f6;
-}
-
-.button.github:hover {
-    border: 1px solid #ececef;
-    background: #ececef;
 }
 
 .button svg {
@@ -287,7 +295,7 @@ p {
 #our-work pre {
     display: block;
     width: 100%;
-    max-width: 690px;
+    max-width: 600px;
     border: 1px solid #bbb;
     border-radius: 3px;
     background: #fcfcfc;
@@ -318,7 +326,7 @@ p {
     display: block;
     width: 50%;
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 4.375em;
 }
 
 #contact-us ul li {
@@ -412,6 +420,7 @@ p {
     background-attachment: fixed;
     background-position: center;
     position: relative;
+    margin-top: 3.75em;
 }
 
 #top-section.team {
@@ -432,14 +441,14 @@ p {
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 1.25em;
+    padding-bottom: 2.5em;
     text-align: center;
 }
 
 #top-section .inner img {
     width: 9em;
-    margin-top: 10px;
+    margin-top: 0.625em;
 }
 
 #top-section .inner h1 {
@@ -459,9 +468,9 @@ p {
 #top-section .inner .button {
     display: inline-block;
     margin: 0;
-    padding: 12px 40px;
+    padding: 0.75em 2.5em;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 0.625em;
 }
 
 #our-products h1,
@@ -474,26 +483,26 @@ p {
 }
 
 #our-products .our-themes .owl-dots {
-    margin-top: 30px;
+    margin-top: 1.875em;
     width: 100%;
     text-align: center;
 }
 
 #our-products .our-themes .owl-dots {
-    margin-top: 30px;
+    margin-top: 1.875em;
     width: 100%;
     text-align: center;
 }
 
 #our-products .our-themes .owl-dots .owl-dot {
     display: inline-block;
-    margin: 5px;
+    margin: 0.315em;
 }
 
 #our-products .our-themes .owl-dots .owl-dot span {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     border-radius: 50%;
     background-color: #e1e1e1;
 }
@@ -517,19 +526,19 @@ p {
 #our-products .product-item img {
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    max-height: 270px;
-    max-width: 270px;
+    max-height: 16.875em;
+    max-width: 16.875em;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 0.95em;
 }
 
 #our-products .product-item a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
 
 #our-products .product-item a svg{
-    width: 30px;
+    width: 1.875em;
 }
 
 #our-products .product-item a svg path{
@@ -543,7 +552,7 @@ p {
 
 #our-products .opensource{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 3.125em;
 }
 
 #our-products .opensource .button svg path{
@@ -614,6 +623,7 @@ p {
 #section-404{
     text-align: center;
     position: relative;
+    margin-top: 3.75em;
 }
 
 #section-404 h1{
@@ -622,7 +632,7 @@ p {
     font-weight: 700;
     padding: 0;
     margin: 0;
-    color: #333333
+    color: #F1544D;
 }
 
 #section-404 .wrapper{
@@ -655,8 +665,8 @@ p {
 
 #section-404 .button{
     padding: 0.55em 1.2em;
-    background: #24292E;
-    border-color: #24292E;
+    background: #F1544D;
+    border-color: #F1544D;
     font-family: "Dosis";
     text-transform: uppercase;
     font-size: 0.9em;
@@ -665,5 +675,13 @@ p {
 }
 
 #section-404 .button:hover{
-    opacity: 1
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
 }
